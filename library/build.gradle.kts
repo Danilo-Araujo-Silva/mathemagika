@@ -1,285 +1,336 @@
-import com.company.team.project.dsl.model.enum_.*
-import com.company.team.project.dsl.model.extension.*
-import com.github.salomonbrys.gradle.kotlin.js.jstests.node.Engine.Companion.mocha
-
 plugins {
 	kotlin("multiplatform")
 	id("maven-publish")
-
-	id("com.github.salomonbrys.gradle.kotlin.js.mpp-tests.node")
 }
 
 kotlin {
-	configureTargetAttributes(ModuleEnum.`common-multiple_sources`)
-
-//	targets.all {
-//			compilations.all {
-//				tasks[compileKotlinTaskName].kotlinOptions {
-//					allWarningsAsErrors = true
-//				}
-//			}
-//	}
-
-	androidNativeArm32(TargetEnum.`library-single_source@android_native_arm32`) {
+	androidNativeArm32 {
 	}
 
-	androidNativeArm64(TargetEnum.`library-single_source@android_native_arm64`) {
+	androidNativeArm64 {
 	}
 
-	iosArm32(TargetEnum.`library-single_source@ios_arm32`) {
+	iosArm32 {
 		binaries {
 			framework {}
 		}
 	}
 
-	iosArm64(TargetEnum.`library-single_source@ios_arm64`) {
+	iosArm64 {
 		binaries {
 			framework {}
 		}
 	}
 
-	iosX64(TargetEnum.`library-single_source@ios_x64`) {
+	iosX64 {
 		binaries {
 			framework {}
 		}
 	}
 
-	js(TargetEnum.`library-single_source@js`) {
-		kotlinJsNodeTests {
-			thisTarget {
-				engine = mocha
-			}
+	js {
+		browser {
 		}
 
-		configure(listOf(compilations[CompilationEnum.main.id!!], compilations[CompilationEnum.test.id!!])) {
-			tasks.getByName(compileKotlinTaskName) {
-				kotlinOptions {
-//					languageVersion = "1.3"
-					metaInfo = true
-					sourceMap = true
-					sourceMapEmbedSources = "always"
-					moduleKind = "umd"
-				}
-			}
-		}
-
-		configure(listOf(compilations[CompilationEnum.main.id!!])) {
-			tasks.getByName(compileKotlinTaskName) {
-				kotlinOptions {
-//					outputFile = "${project.buildDir.path}/js/${project.name}.js"
-					main = "call"
-				}
-			}
+		nodejs {
 		}
 	}
 
-	jvm(TargetEnum.`library-single_source@jvm`) {
+	jvm {
 	}
 
-	linuxArm32Hfp(TargetEnum.`library-single_source@linux_arm32_hfp`) {
+	linuxArm32Hfp {
 	}
 
-	linuxMips32(TargetEnum.`library-single_source@linux_mips32`) {
+	linuxMips32 {
 	}
 
-	linuxMipsel32(TargetEnum.`library-single_source@linux_mipsel32`) {
+	linuxMipsel32 {
 	}
 
-	linuxX64(TargetEnum.`library-single_source@linux_x64`) {
+	linuxX64 {
 	}
 
-	macosX64(TargetEnum.`library-single_source@macos_x64`) {
+	macosX64 {
 	}
 
-	mingwX64(TargetEnum.`library-single_source@mingw_x64`) {
+	mingwX64 {
 	}
 
-	wasm32(TargetEnum.`library-single_source@wasm32`) {
+	wasm32 {
+	}
+
+	jvm {
 	}
 
 	sourceSets {
-		all {
-			val sourceSetEnum =
-				when (name) {
-					SourceSetEnum.`common-single_source@common@main`.kotlinId -> SourceSetEnum.`common-single_source@common@main`
-					SourceSetEnum.`common-single_source@common@test`.kotlinId -> SourceSetEnum.`common-single_source@common@test`
-					else -> SourceSetEnum.getByKotlinIdAndModule(name, ModuleEnum.`library-single_source`)!!
-				}
+		val commonMain by getting {
+			kotlin.setSrcDirs(listOf(getPath("main", "kotlin", "common")))
+			resources.setSrcDirs(listOf(getPath("main", "resources", "common")))
 
-			if (CompilationEnum.main == sourceSetEnum.compilation) {
-				kotlin.srcDir(getMainSourcesPath(sourceSetEnum))
-				resources.srcDir(getMainResourcesPath(sourceSetEnum))
-			} else if (CompilationEnum.test == sourceSetEnum.compilation) {
-				kotlin.srcDir(getTestSourcesPath(sourceSetEnum))
-				resources.srcDir(getTestResourcesPath(sourceSetEnum))
-			}
-
-//			languageSettings {
-//				progressiveMode = true
-//			}
-		}
-
-		configureSourceSet(SourceSetEnum.`library-single_source@common@main`) {
 			dependencies {
+				implementation(project(":common"))
 				implementation(kotlin("stdlib-common"))
 			}
-
-//			languageSettings {
-//				languageVersion = "1.3" // possible values: "1.0", "1.1", "1.2", "1.3"
-//				apiVersion = "1.3" // possible values: "1.0", "1.1", "1.2", "1.3"
-//				enableLanguageFeature("InlineClasses") // language feature name
-//				useExperimentalAnnotation("kotlin.ExperimentalUnsignedTypes") // annotation FQ-name
-//				progressiveMode = true // false by default
-//			}
 		}
 
-		configureSourceSet(SourceSetEnum.`library-single_source@common@test`) {
+		val commonTest by getting {
+			kotlin.setSrcDirs(listOf(getPath("test", "kotlin", "common")))
+			resources.setSrcDirs(listOf(getPath("test", "resources", "common")))
+
 			dependencies {
+				implementation(project(":common"))
 				implementation(kotlin("test-common"))
 				implementation(kotlin("test-annotations-common"))
 			}
 		}
 
-		configureSourceSet(SourceSetEnum.`library-single_source@android_native_arm32@main`) {
+		val nativeMain by creating {
+			kotlin.setSrcDirs(listOf(getPath("main", "kotlin", "native")))
+			resources.setSrcDirs(listOf(getPath("main", "resources", "native")))
+
+			dependsOn(commonMain)
+		}
+		val nativeTest by creating {
+			kotlin.setSrcDirs(listOf(getPath("test", "kotlin", "native")))
+			resources.setSrcDirs(listOf(getPath("test", "resources", "native")))
+
+			dependsOn(commonTest)
 		}
 
-		configureSourceSet(SourceSetEnum.`library-single_source@android_native_arm32@test`) {
+		val androidNativeArm32Main by getting {
+			kotlin.setSrcDirs(listOf(getPath("main", "kotlin", "android_native_arm32")))
+			resources.setSrcDirs(listOf(getPath("main", "resources", "android_native_arm32")))
+
+			dependsOn(commonMain)
+			dependsOn(nativeMain)
+		}
+		val androidNativeArm32Test by getting {
+			kotlin.setSrcDirs(listOf(getPath("test", "kotlin", "android_native_arm32")))
+			resources.setSrcDirs(listOf(getPath("test", "resources", "android_native_arm32")))
+
+			dependsOn(commonTest)
+			dependsOn(nativeTest)
 		}
 
-		configureSourceSet(SourceSetEnum.`library-single_source@android_native_arm64@main`) {
+		val androidNativeArm64Main by getting {
+			kotlin.setSrcDirs(listOf(getPath("main", "kotlin", "android_native_arm64")))
+			resources.setSrcDirs(listOf(getPath("main", "resources", "android_native_arm64")))
+
+			dependsOn(commonMain)
+			dependsOn(nativeMain)
+		}
+		val androidNativeArm64Test by getting {
+			kotlin.setSrcDirs(listOf(getPath("test", "kotlin", "android_native_arm64")))
+			resources.setSrcDirs(listOf(getPath("test", "resources", "android_native_arm64")))
+
+			dependsOn(commonTest)
+			dependsOn(nativeTest)
 		}
 
-		configureSourceSet(SourceSetEnum.`library-single_source@android_native_arm64@test`) {
+		val iosArm32Main by getting {
+			kotlin.setSrcDirs(listOf(getPath("main", "kotlin", "ios_arm32")))
+			resources.setSrcDirs(listOf(getPath("main", "resources", "ios_arm32")))
+
+			dependsOn(commonMain)
+			dependsOn(nativeMain)
+		}
+		val iosArm32Test by getting {
+			kotlin.setSrcDirs(listOf(getPath("test", "kotlin", "ios_arm32")))
+			resources.setSrcDirs(listOf(getPath("test", "resources", "ios_arm32")))
+
+			dependsOn(commonTest)
+			dependsOn(nativeTest)
 		}
 
-		configureSourceSet(SourceSetEnum.`library-single_source@ios_arm32@main`) {
+		val iosArm64Main by getting {
+			kotlin.setSrcDirs(listOf(getPath("main", "kotlin", "ios_arm64")))
+			resources.setSrcDirs(listOf(getPath("main", "resources", "ios_arm64")))
+
+			dependsOn(commonMain)
+			dependsOn(nativeMain)
+		}
+		val iosArm64Test by getting {
+			kotlin.setSrcDirs(listOf(getPath("test", "kotlin", "ios_arm64")))
+			resources.setSrcDirs(listOf(getPath("test", "resources", "ios_arm64")))
+
+			dependsOn(commonTest)
+			dependsOn(nativeTest)
 		}
 
-		configureSourceSet(SourceSetEnum.`library-single_source@ios_arm32@test`) {
+		val iosX64Main by getting {
+			kotlin.setSrcDirs(listOf(getPath("main", "kotlin", "ios_x64")))
+			resources.setSrcDirs(listOf(getPath("main", "resources", "ios_x64")))
+
+			dependsOn(commonMain)
+			dependsOn(nativeMain)
+		}
+		val iosX64Test by getting {
+			kotlin.setSrcDirs(listOf(getPath("test", "kotlin", "ios_x64")))
+			resources.setSrcDirs(listOf(getPath("test", "resources", "ios_x64")))
+
+			dependsOn(commonTest)
+			dependsOn(nativeTest)
 		}
 
-		configureSourceSet(SourceSetEnum.`library-single_source@ios_arm64@main`) {
-		}
+		val jsMain by getting {
+			kotlin.setSrcDirs(listOf(getPath("main", "kotlin", "js")))
+			resources.setSrcDirs(listOf(getPath("main", "resources", "js")))
 
-		configureSourceSet(SourceSetEnum.`library-single_source@ios_arm64@test`) {
-		}
+			dependsOn(commonMain)
+			dependsOn(nativeMain)
 
-		configureSourceSet(SourceSetEnum.`library-single_source@ios_x64@main`) {
-		}
-
-		configureSourceSet(SourceSetEnum.`library-single_source@ios_x64@test`) {
-		}
-
-		configureSourceSet(SourceSetEnum.`library-single_source@js@main`) {
 			dependencies {
 				implementation(kotlin("stdlib-js"))
 			}
 		}
+		val jsTest by getting {
+			kotlin.setSrcDirs(listOf(getPath("test", "kotlin", "js")))
+			resources.setSrcDirs(listOf(getPath("test", "resources", "js")))
 
-		configureSourceSet(SourceSetEnum.`library-single_source@js@test`) {
+			dependsOn(commonTest)
+
 			dependencies {
 				implementation(kotlin("test-js"))
 			}
 		}
 
-		configureSourceSet(SourceSetEnum.`library-single_source@jvm@main`) {
+		val jvmMain by getting {
+			kotlin.setSrcDirs(listOf(getPath("main", "kotlin", "jvm")))
+			resources.setSrcDirs(listOf(getPath("main", "resources", "jvm")))
+
+			dependsOn(commonMain)
+			dependsOn(nativeMain)
+
 			dependencies {
 				implementation(kotlin("stdlib-jdk8"))
 			}
 		}
+		val jvmTest by getting {
+			kotlin.setSrcDirs(listOf(getPath("test", "kotlin", "jvm")))
+			resources.setSrcDirs(listOf(getPath("test", "resources", "jvm")))
 
-		configureSourceSet(SourceSetEnum.`library-single_source@jvm@test`) {
+			dependsOn(commonTest)
+
 			dependencies {
 				implementation(kotlin("test"))
 				implementation(kotlin("test-junit"))
 			}
 		}
 
-		configureSourceSet(SourceSetEnum.`library-single_source@linux_arm32_hfp@main`) {
+		val linuxArm32HfpMain by getting {
+			kotlin.setSrcDirs(listOf(getPath("main", "kotlin", "linux_arm32_hfp")))
+			resources.setSrcDirs(listOf(getPath("main", "resources", "linux_arm32_hfp")))
+
+			dependsOn(commonMain)
+			dependsOn(nativeMain)
+		}
+		val linuxArm32HfpTest by getting {
+			kotlin.setSrcDirs(listOf(getPath("test", "kotlin", "linux_arm32_hfp")))
+			resources.setSrcDirs(listOf(getPath("test", "resources", "linux_arm32_hfp")))
+
+			dependsOn(commonTest)
+			dependsOn(nativeTest)
 		}
 
-		configureSourceSet(SourceSetEnum.`library-single_source@linux_arm32_hfp@test`) {
+		val linuxMips32Main by getting {
+			kotlin.setSrcDirs(listOf(getPath("main", "kotlin", "linux_mips32")))
+			resources.setSrcDirs(listOf(getPath("main", "resources", "linux_mips32")))
+
+			dependsOn(commonMain)
+			dependsOn(nativeMain)
+		}
+		val linuxMips32Test by getting {
+			kotlin.setSrcDirs(listOf(getPath("test", "kotlin", "linux_mips32")))
+			resources.setSrcDirs(listOf(getPath("test", "resources", "linux_mips32")))
+
+			dependsOn(commonTest)
+			dependsOn(nativeTest)
 		}
 
-		configureSourceSet(SourceSetEnum.`library-single_source@linux_mips32@main`) {
+		val linuxMipsel32Main by getting {
+			kotlin.setSrcDirs(listOf(getPath("main", "kotlin", "linux_mipsel32")))
+			resources.setSrcDirs(listOf(getPath("main", "resources", "linux_mipsel32")))
+
+			dependsOn(commonMain)
+			dependsOn(nativeMain)
+		}
+		val linuxMipsel32Test by getting {
+			kotlin.setSrcDirs(listOf(getPath("test", "kotlin", "linux_mipsel32")))
+			resources.setSrcDirs(listOf(getPath("test", "resources", "linux_mipsel32")))
+
+			dependsOn(commonTest)
+			dependsOn(nativeTest)
 		}
 
-		configureSourceSet(SourceSetEnum.`library-single_source@linux_mips32@test`) {
+		val linuxX64Main by getting {
+			kotlin.setSrcDirs(listOf(getPath("main", "kotlin", "linux_x64")))
+			resources.setSrcDirs(listOf(getPath("main", "resources", "linux_x64")))
+
+			dependsOn(commonMain)
+			dependsOn(nativeMain)
+		}
+		val linuxX64Test by getting {
+			kotlin.setSrcDirs(listOf(getPath("test", "kotlin", "linux_x64")))
+			resources.setSrcDirs(listOf(getPath("test", "resources", "linux_x64")))
+
+			dependsOn(commonTest)
+			dependsOn(nativeTest)
 		}
 
-		configureSourceSet(SourceSetEnum.`library-single_source@linux_mipsel32@main`) {
+		val macosX64Main by getting {
+			kotlin.setSrcDirs(listOf(getPath("main", "kotlin", "macos_x64")))
+			resources.setSrcDirs(listOf(getPath("main", "resources", "macos_x64")))
+
+			dependsOn(commonMain)
+			dependsOn(nativeMain)
+		}
+		val macosX64Test by getting {
+			kotlin.setSrcDirs(listOf(getPath("test", "kotlin", "macos_x64")))
+			resources.setSrcDirs(listOf(getPath("test", "resources", "macos_x64")))
+
+			dependsOn(commonTest)
+			dependsOn(nativeTest)
 		}
 
-		configureSourceSet(SourceSetEnum.`library-single_source@linux_mipsel32@test`) {
+		val mingwX64Main by getting {
+			kotlin.setSrcDirs(listOf(getPath("main", "kotlin", "mingw_x64")))
+			resources.setSrcDirs(listOf(getPath("main", "resources", "mingw_x64")))
+
+			dependsOn(commonMain)
+			dependsOn(nativeMain)
+		}
+		val mingwX64Test by getting {
+			kotlin.setSrcDirs(listOf(getPath("test", "kotlin", "mingw_x64")))
+			resources.setSrcDirs(listOf(getPath("test", "resources", "mingw_x64")))
+
+			dependsOn(commonTest)
+			dependsOn(nativeTest)
 		}
 
-		configureSourceSet(SourceSetEnum.`library-single_source@linux_x64@main`) {
-		}
+		val wasm32Main by getting {
+			kotlin.setSrcDirs(listOf(getPath("main", "kotlin", "wasm32")))
+			resources.setSrcDirs(listOf(getPath("main", "resources", "wasm32")))
 
-		configureSourceSet(SourceSetEnum.`library-single_source@linux_x64@test`) {
+			dependsOn(commonMain)
+			dependsOn(nativeMain)
 		}
+		val wasm32Test by getting {
+			kotlin.setSrcDirs(listOf(getPath("test", "kotlin", "wasm32")))
+			resources.setSrcDirs(listOf(getPath("test", "resources", "wasm32")))
 
-		configureSourceSet(SourceSetEnum.`library-single_source@macos_x64@main`) {
-		}
-
-		configureSourceSet(SourceSetEnum.`library-single_source@macos_x64@test`) {
-		}
-
-		configureSourceSet(SourceSetEnum.`library-single_source@mingw_x64@main`) {
-		}
-
-		configureSourceSet(SourceSetEnum.`library-single_source@mingw_x64@test`) {
-		}
-
-		configureSourceSet(SourceSetEnum.`library-single_source@wasm32@main`) {
-		}
-
-		configureSourceSet(SourceSetEnum.`library-single_source@wasm32@test`) {
+			dependsOn(commonTest)
+			dependsOn(nativeTest)
 		}
 	}
 }
 
-//// Used in android-ios library
-//configurations {
-//	compileClasspath
-//}
-
-fun getPath(sourceTypeEnum: SourceTypeEnum, compilationEnum: CompilationEnum, sourceSetEnum: SourceSetEnum): String {
-	var output = "src/${compilationEnum.id!!}/${sourceTypeEnum.id!!}"
-
-	if (SourceTypeEnum.kotlin == sourceTypeEnum) {
-		output += "/${project.module.group!!.replace(".", "/")}/${project.module.path}"
-	}
-
-	if (sourceSetEnum.target?.preset?.name != null) {
-		output += "/" + sourceSetEnum.target?.preset?.name
-	}
-
-	output += "/common"
-
-	return output
-}
-
-fun getSourcesPath(compilationEnum: CompilationEnum, sourceSetEnum: SourceSetEnum): String {
-	return getPath(SourceTypeEnum.kotlin, compilationEnum, sourceSetEnum)
-}
-
-fun getResourcesPath(compilationEnum: CompilationEnum, sourceSetEnum: SourceSetEnum): String {
-	return getPath(SourceTypeEnum.resources, compilationEnum, sourceSetEnum)
-}
-
-fun getMainSourcesPath(sourceSetEnum: SourceSetEnum): String {
-	return getSourcesPath(CompilationEnum.main, sourceSetEnum)
-}
-
-fun getTestSourcesPath(sourceSetEnum: SourceSetEnum): String {
-	return getSourcesPath(CompilationEnum.test, sourceSetEnum)
-}
-
-fun getMainResourcesPath(sourceSetEnum: SourceSetEnum): String {
-	return getResourcesPath(CompilationEnum.main, sourceSetEnum)
-}
-
-fun getTestResourcesPath(sourceSetEnum: SourceSetEnum): String {
-	return getResourcesPath(CompilationEnum.test, sourceSetEnum)
+/**
+ *
+ */
+fun getPath(compilation: String, type: String, name: String): String {
+	return if (type == "kotlin")
+		"src/$compilation/$type/com/daniloaraujosilva/mathemagika/library/$name/common"
+	else
+		"src/$compilation/$type/$name"
 }

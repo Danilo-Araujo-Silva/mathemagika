@@ -1,0 +1,20 @@
+####	.gitgnore:
+####		https://git-scm.com/docs/gitignore
+
+**/.DS_Store
+**/._.DS_Store
+**/*.iml
+**/*.class
+**/*.cache
+
+**/.idea/
+**/.gradle/
+**/build/
+**/out/
+*.hprof
+nohup.out
+
+local.properties
+/temporary/
+
+**/*.xcuserdatad/

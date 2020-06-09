@@ -1,0 +1,22 @@
+version: 2
+jobs:
+  jdk8:
+    docker:
+      - image: openjdk:8-jdk
+      - image: circleci/openjdk:8-jdk-node-browsers
+    environment:
+      BUILD_CI: CIRCLE_CI
+      BUILD_OS: LINUX
+      BASH_ENV: ~/.bashrc
+      GRADLE_OPTS: -Xmx3048m -Xms3048m
+    steps:
+      - checkout
+      - run: ./resources/scripts/ci/install_java.sh
+      - run: ./resources/scripts/ci/install_npm.sh
+      - run: ./resources/scripts/ci/show_relevant_information.sh
+      - run: ./resources/scripts/complete_run.sh
+workflows:
+  version: 2
+  all:
+    jobs:
+      - jdk8

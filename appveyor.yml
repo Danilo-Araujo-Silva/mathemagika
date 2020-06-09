@@ -1,0 +1,12 @@
+image:
+  - Visual Studio 2017
+environment:
+    BASH_ENV: ~/.bashrc
+    BUILD_CI: APPVEYOR
+    BUILD_OS: WINDOWS
+    GRADLE_OPTS: "-Xmx3048m -Xms3048m"
+install:
+  - bash resources/scripts/ci/install_java.sh
+  - bash resources/scripts/ci/show_relevant_information.sh
+build_script:
+  - bash resources/scripts/complete_run.sh

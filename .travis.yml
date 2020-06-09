@@ -1,0 +1,20 @@
+matrix:
+  include:
+    - language: java
+      os: osx
+      osx_image: xcode11.3
+      env:
+        - BUILD_CI=TRAVIS
+        - BUILD_OS=MAC_OS
+        - BASH_ENV=~/.bashrc
+        - GRADLE_OPTS="-Xmx3048m -Xms3048m"
+      before_install:
+        - ./resources/scripts/ci/install_java.sh
+        - source "$HOME/.sdkman/bin/sdkman-init.sh"
+        - ./resources/scripts/ci/install_npm.sh
+        - ./resources/scripts/ci/show_relevant_information.sh
+      install: true
+      script:
+        - ./resources/scripts/complete_run.sh
+  allow_failures:
+    env: ALLOW_FAILURE=true

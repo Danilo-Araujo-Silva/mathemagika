@@ -1,5 +1,9 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
+plugins {
+	kotlin("multiplatform")
+}
+
 buildscript {
 	// TODO Due to Gradle limitation we needed to bundle all code of the plugins together.
 	apply("plugin/bundle.gradle.kts")

@@ -26,7 +26,7 @@ object ExampleObject {
 	 *
 	 */
 	fun exampleMethod(): List<String> {
-		val output = ArrayList<String>()
+		val output = mutableListOf<String>()
 //		output.addAll(com.daniloaraujosilva.mathemagika.common.common.exampleFunction())
 		output.add(exampleProperty)
 

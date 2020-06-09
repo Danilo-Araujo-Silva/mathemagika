@@ -1,7 +1,5 @@
 package com.daniloaraujosilva.mathemagika.library.jvm.common
 
-import java.util.ArrayList
-
 /**
  *
  */
@@ -28,7 +26,7 @@ object ExampleObject {
 	 *
 	 */
 	fun exampleMethod(): List<String> {
-		val output = ArrayList<String>()
+		val output = mutableListOf<String>()
 		output.addAll(com.daniloaraujosilva.mathemagika.common.common.exampleFunction())
 		output.addAll(com.daniloaraujosilva.mathemagika.library.common.exampleFunction())
 		output.add(exampleProperty)

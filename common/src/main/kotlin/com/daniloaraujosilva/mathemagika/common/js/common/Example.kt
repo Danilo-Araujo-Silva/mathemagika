@@ -3,8 +3,7 @@ package com.daniloaraujosilva.mathemagika.common.js.common
 /**
  *
  */
-val exampleValue = exampleFunction()
-    .toString()
+val exampleValue = exampleFunction().toString()
 
 /**
  *
@@ -21,7 +20,7 @@ object ExampleObject {
 	/**
 	 *
 	 */
-	private const val exampleProperty = "com.company.team.project.common.single_source.js.common"
+	private const val exampleProperty = "com.daniloaraujosilva.mathemagika.common.js.common"
 
 	/**
 	 *
@@ -66,10 +65,10 @@ object ExampleObject {
 // * 	if the package is ok and return it. Otherwise this method throws an exception.
 // */
 //fun checkExampleObjectPackageAndReturnIt(): String {
-//	val expectedPackage = "com.company.team.project.common.multiple_sources.js"
+//	val expectedPackage = "com.daniloaraujosilva.mathemagika.common.multiple_sources.js"
 //	if (
 //		ExampleObject::class.js.name
-//		=== `_`.com.company.team.project.common.multiple_sources.js.ExampleObject::class.js.name
+//		=== `_`.com.daniloaraujosilva.mathemagika.common.multiple_sources.js.ExampleObject::class.js.name
 //	) {
 //		return expectedPackage
 //	}

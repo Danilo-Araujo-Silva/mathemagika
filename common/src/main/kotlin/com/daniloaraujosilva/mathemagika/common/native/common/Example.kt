@@ -3,8 +3,7 @@ package com.daniloaraujosilva.mathemagika.common.native.common
 /**
  *
  */
-val exampleValue = exampleFunction()
-    .toString()
+val exampleValue = exampleFunction().toString()
 
 /**
  *
@@ -21,14 +20,14 @@ object ExampleObject {
 	/**
 	 *
 	 */
-	private const val exampleProperty = "com.company.team.project.common.single_source.native.common"
+	private const val exampleProperty = "com.daniloaraujosilva.mathemagika.common.native.common"
 
 	/**
 	 *
 	 */
 	fun exampleMethod(): List<String> {
 		val output = ArrayList<String>()
-		output.addAll(com.daniloaraujosilva.mathemagika.common.common.exampleFunction())
+//		output.addAll(com.daniloaraujosilva.mathemagika.common.common.exampleFunction())
 		output.add(exampleProperty)
 
 		return output

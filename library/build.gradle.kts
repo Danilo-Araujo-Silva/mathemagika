@@ -60,9 +60,6 @@ kotlin {
 	wasm32 {
 	}
 
-	jvm {
-	}
-
 	sourceSets {
 		val commonMain by getting {
 			kotlin.setSrcDirs(listOf(getPath("main", "kotlin", "common")))
@@ -79,7 +76,6 @@ kotlin {
 			resources.setSrcDirs(listOf(getPath("test", "resources", "common")))
 
 			dependencies {
-				implementation(project(":common"))
 				implementation(kotlin("test-common"))
 				implementation(kotlin("test-annotations-common"))
 			}
@@ -102,14 +98,12 @@ kotlin {
 			kotlin.setSrcDirs(listOf(getPath("main", "kotlin", "android_native_arm32")))
 			resources.setSrcDirs(listOf(getPath("main", "resources", "android_native_arm32")))
 
-			dependsOn(commonMain)
 			dependsOn(nativeMain)
 		}
 		val androidNativeArm32Test by getting {
 			kotlin.setSrcDirs(listOf(getPath("test", "kotlin", "android_native_arm32")))
 			resources.setSrcDirs(listOf(getPath("test", "resources", "android_native_arm32")))
 
-			dependsOn(commonTest)
 			dependsOn(nativeTest)
 		}
 
@@ -117,14 +111,12 @@ kotlin {
 			kotlin.setSrcDirs(listOf(getPath("main", "kotlin", "android_native_arm64")))
 			resources.setSrcDirs(listOf(getPath("main", "resources", "android_native_arm64")))
 
-			dependsOn(commonMain)
 			dependsOn(nativeMain)
 		}
 		val androidNativeArm64Test by getting {
 			kotlin.setSrcDirs(listOf(getPath("test", "kotlin", "android_native_arm64")))
 			resources.setSrcDirs(listOf(getPath("test", "resources", "android_native_arm64")))
 
-			dependsOn(commonTest)
 			dependsOn(nativeTest)
 		}
 
@@ -132,14 +124,12 @@ kotlin {
 			kotlin.setSrcDirs(listOf(getPath("main", "kotlin", "ios_arm32")))
 			resources.setSrcDirs(listOf(getPath("main", "resources", "ios_arm32")))
 
-			dependsOn(commonMain)
 			dependsOn(nativeMain)
 		}
 		val iosArm32Test by getting {
 			kotlin.setSrcDirs(listOf(getPath("test", "kotlin", "ios_arm32")))
 			resources.setSrcDirs(listOf(getPath("test", "resources", "ios_arm32")))
 
-			dependsOn(commonTest)
 			dependsOn(nativeTest)
 		}
 
@@ -147,14 +137,12 @@ kotlin {
 			kotlin.setSrcDirs(listOf(getPath("main", "kotlin", "ios_arm64")))
 			resources.setSrcDirs(listOf(getPath("main", "resources", "ios_arm64")))
 
-			dependsOn(commonMain)
 			dependsOn(nativeMain)
 		}
 		val iosArm64Test by getting {
 			kotlin.setSrcDirs(listOf(getPath("test", "kotlin", "ios_arm64")))
 			resources.setSrcDirs(listOf(getPath("test", "resources", "ios_arm64")))
 
-			dependsOn(commonTest)
 			dependsOn(nativeTest)
 		}
 
@@ -162,23 +150,18 @@ kotlin {
 			kotlin.setSrcDirs(listOf(getPath("main", "kotlin", "ios_x64")))
 			resources.setSrcDirs(listOf(getPath("main", "resources", "ios_x64")))
 
-			dependsOn(commonMain)
 			dependsOn(nativeMain)
 		}
 		val iosX64Test by getting {
 			kotlin.setSrcDirs(listOf(getPath("test", "kotlin", "ios_x64")))
 			resources.setSrcDirs(listOf(getPath("test", "resources", "ios_x64")))
 
-			dependsOn(commonTest)
 			dependsOn(nativeTest)
 		}
 
 		val jsMain by getting {
 			kotlin.setSrcDirs(listOf(getPath("main", "kotlin", "js")))
 			resources.setSrcDirs(listOf(getPath("main", "resources", "js")))
-
-			dependsOn(commonMain)
-			dependsOn(nativeMain)
 
 			dependencies {
 				implementation(kotlin("stdlib-js"))
@@ -187,8 +170,6 @@ kotlin {
 		val jsTest by getting {
 			kotlin.setSrcDirs(listOf(getPath("test", "kotlin", "js")))
 			resources.setSrcDirs(listOf(getPath("test", "resources", "js")))
-
-			dependsOn(commonTest)
 
 			dependencies {
 				implementation(kotlin("test-js"))
@@ -199,9 +180,6 @@ kotlin {
 			kotlin.setSrcDirs(listOf(getPath("main", "kotlin", "jvm")))
 			resources.setSrcDirs(listOf(getPath("main", "resources", "jvm")))
 
-			dependsOn(commonMain)
-			dependsOn(nativeMain)
-
 			dependencies {
 				implementation(kotlin("stdlib-jdk8"))
 			}
@@ -209,8 +187,6 @@ kotlin {
 		val jvmTest by getting {
 			kotlin.setSrcDirs(listOf(getPath("test", "kotlin", "jvm")))
 			resources.setSrcDirs(listOf(getPath("test", "resources", "jvm")))
-
-			dependsOn(commonTest)
 
 			dependencies {
 				implementation(kotlin("test"))
@@ -222,14 +198,12 @@ kotlin {
 			kotlin.setSrcDirs(listOf(getPath("main", "kotlin", "linux_arm32_hfp")))
 			resources.setSrcDirs(listOf(getPath("main", "resources", "linux_arm32_hfp")))
 
-			dependsOn(commonMain)
 			dependsOn(nativeMain)
 		}
 		val linuxArm32HfpTest by getting {
 			kotlin.setSrcDirs(listOf(getPath("test", "kotlin", "linux_arm32_hfp")))
 			resources.setSrcDirs(listOf(getPath("test", "resources", "linux_arm32_hfp")))
 
-			dependsOn(commonTest)
 			dependsOn(nativeTest)
 		}
 
@@ -237,14 +211,12 @@ kotlin {
 			kotlin.setSrcDirs(listOf(getPath("main", "kotlin", "linux_mips32")))
 			resources.setSrcDirs(listOf(getPath("main", "resources", "linux_mips32")))
 
-			dependsOn(commonMain)
 			dependsOn(nativeMain)
 		}
 		val linuxMips32Test by getting {
 			kotlin.setSrcDirs(listOf(getPath("test", "kotlin", "linux_mips32")))
 			resources.setSrcDirs(listOf(getPath("test", "resources", "linux_mips32")))
 
-			dependsOn(commonTest)
 			dependsOn(nativeTest)
 		}
 
@@ -252,14 +224,12 @@ kotlin {
 			kotlin.setSrcDirs(listOf(getPath("main", "kotlin", "linux_mipsel32")))
 			resources.setSrcDirs(listOf(getPath("main", "resources", "linux_mipsel32")))
 
-			dependsOn(commonMain)
 			dependsOn(nativeMain)
 		}
 		val linuxMipsel32Test by getting {
 			kotlin.setSrcDirs(listOf(getPath("test", "kotlin", "linux_mipsel32")))
 			resources.setSrcDirs(listOf(getPath("test", "resources", "linux_mipsel32")))
 
-			dependsOn(commonTest)
 			dependsOn(nativeTest)
 		}
 
@@ -267,14 +237,12 @@ kotlin {
 			kotlin.setSrcDirs(listOf(getPath("main", "kotlin", "linux_x64")))
 			resources.setSrcDirs(listOf(getPath("main", "resources", "linux_x64")))
 
-			dependsOn(commonMain)
 			dependsOn(nativeMain)
 		}
 		val linuxX64Test by getting {
 			kotlin.setSrcDirs(listOf(getPath("test", "kotlin", "linux_x64")))
 			resources.setSrcDirs(listOf(getPath("test", "resources", "linux_x64")))
 
-			dependsOn(commonTest)
 			dependsOn(nativeTest)
 		}
 
@@ -282,14 +250,12 @@ kotlin {
 			kotlin.setSrcDirs(listOf(getPath("main", "kotlin", "macos_x64")))
 			resources.setSrcDirs(listOf(getPath("main", "resources", "macos_x64")))
 
-			dependsOn(commonMain)
 			dependsOn(nativeMain)
 		}
 		val macosX64Test by getting {
 			kotlin.setSrcDirs(listOf(getPath("test", "kotlin", "macos_x64")))
 			resources.setSrcDirs(listOf(getPath("test", "resources", "macos_x64")))
 
-			dependsOn(commonTest)
 			dependsOn(nativeTest)
 		}
 
@@ -297,14 +263,12 @@ kotlin {
 			kotlin.setSrcDirs(listOf(getPath("main", "kotlin", "mingw_x64")))
 			resources.setSrcDirs(listOf(getPath("main", "resources", "mingw_x64")))
 
-			dependsOn(commonMain)
 			dependsOn(nativeMain)
 		}
 		val mingwX64Test by getting {
 			kotlin.setSrcDirs(listOf(getPath("test", "kotlin", "mingw_x64")))
 			resources.setSrcDirs(listOf(getPath("test", "resources", "mingw_x64")))
 
-			dependsOn(commonTest)
 			dependsOn(nativeTest)
 		}
 
@@ -312,14 +276,12 @@ kotlin {
 			kotlin.setSrcDirs(listOf(getPath("main", "kotlin", "wasm32")))
 			resources.setSrcDirs(listOf(getPath("main", "resources", "wasm32")))
 
-			dependsOn(commonMain)
 			dependsOn(nativeMain)
 		}
 		val wasm32Test by getting {
 			kotlin.setSrcDirs(listOf(getPath("test", "kotlin", "wasm32")))
 			resources.setSrcDirs(listOf(getPath("test", "resources", "wasm32")))
 
-			dependsOn(commonTest)
 			dependsOn(nativeTest)
 		}
 	}
@@ -330,7 +292,10 @@ kotlin {
  */
 fun getPath(compilation: String, type: String, name: String): String {
 	return if (type == "kotlin")
-		"src/$compilation/$type/com/daniloaraujosilva/mathemagika/library/$name/common"
+		if (name == "common")
+			"src/$compilation/$type/com/daniloaraujosilva/mathemagika/library/$name"
+		else
+			"src/$compilation/$type/com/daniloaraujosilva/mathemagika/library/$name/common"
 	else
 		"src/$compilation/$type/$name"
 }

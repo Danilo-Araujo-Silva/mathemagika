@@ -3,8 +3,7 @@ package com.daniloaraujosilva.mathemagika.common.wasm32.common
 /**
  *
  */
-val exampleValue = exampleFunction()
-    .toString()
+val exampleValue = exampleFunction().toString()
 
 /**
  *
@@ -21,7 +20,7 @@ object ExampleObject {
 	/**
 	 *
 	 */
-	private const val exampleProperty = "com.company.team.project.common.single_source.linux_arm32_hfp.common"
+	private const val exampleProperty = "com.daniloaraujosilva.mathemagika.common.linux_arm32_hfp.common"
 
 	/**
 	 *

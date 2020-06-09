@@ -8,7 +8,7 @@ import java.io.File.separator
 
 val buildFilename = "build.gradle(\\.kts)?".toRegex()
 val includeModules = ".*".toRegex()
-val excludeModules = "^\$|^buildSrc.*|^temporary.*|^plugin.*|^application.*|^library.*|".toRegex()
+val excludeModules = "^\$|^buildSrc.*|^temporary.*|^plugin.*|^application.*|".toRegex()
 
 println(
 	"""

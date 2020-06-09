@@ -21,7 +21,7 @@ object ExampleObject {
 	/**
 	 *
 	 */
-	private const val exampleProperty = "com.company.team.project.common.single_source.common"
+	private const val exampleProperty = "com.daniloaraujosilva.mathemagika.common.common"
 
 	/**
 	 *
@@ -38,7 +38,7 @@ object ExampleObject {
  *
  */
 fun formatOuput(input: List<String>?, showBanner: Boolean = false): String {
-	val prefix = "com.company.team.project."
+	val prefix = "com.daniloaraujosilva.mathemagika."
 
 	var output = ""
 

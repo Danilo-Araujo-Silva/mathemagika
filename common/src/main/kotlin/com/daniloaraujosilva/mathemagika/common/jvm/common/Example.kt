@@ -5,8 +5,7 @@ import java.util.ArrayList
 /**
  *
  */
-val exampleValue = exampleFunction()
-    .toString()
+val exampleValue = exampleFunction().toString()
 
 /**
  *
@@ -23,7 +22,7 @@ object ExampleObject {
 	/**
 	 *
 	 */
-	private const val exampleProperty = "com.company.team.project.common.single_source.jvm.common"
+	private const val exampleProperty = "com.daniloaraujosilva.mathemagika.common.jvm.common"
 
 	/**
 	 *

@@ -3,8 +3,7 @@ package com.daniloaraujosilva.mathemagika.common.linux_mips32.common
 /**
  *
  */
-val exampleValue = exampleFunction()
-    .toString()
+val exampleValue = exampleFunction().toString()
 
 /**
  *
@@ -21,13 +20,14 @@ object ExampleObject {
 	/**
 	 *
 	 */
-	private const val exampleProperty = "com.company.team.project.common.single_source.linux_arm32_hfp.common"
+	private const val exampleProperty = "com.daniloaraujosilva.mathemagika.common.linux_arm32_hfp.common"
 
 	/**
 	 *
 	 */
 	fun exampleMethod(): List<String> {
 		val output = ArrayList<String>()
+		output.addAll(com.daniloaraujosilva.mathemagika.common.common.exampleFunction())
 		output.add(exampleProperty)
 
 		return output

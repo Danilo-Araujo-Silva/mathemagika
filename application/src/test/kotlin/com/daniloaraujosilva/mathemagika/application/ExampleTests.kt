@@ -1,4 +1,4 @@
-package com.daniloaraujosilva.mathemagika.application.terminal.jvm.terminal
+package com.daniloaraujosilva.mathemagika.application
 
 import org.junit.Test
 import kotlin.test.assertTrue

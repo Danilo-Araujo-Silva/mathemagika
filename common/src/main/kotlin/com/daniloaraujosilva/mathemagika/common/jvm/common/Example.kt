@@ -1,7 +1,5 @@
 package com.daniloaraujosilva.mathemagika.common.jvm.common
 
-import java.util.ArrayList
-
 /**
  *
  */

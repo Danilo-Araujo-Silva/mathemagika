@@ -34,8 +34,9 @@ buildscript {
 	}
 
 	dependencies {
-		// For Terminal modules
-		classpath("com.github.jengelman.gradle.plugins:shadow:5.0.0")
+		// TODO See if we can move this only for the module that needs it.
+		// This classpath dependency is needed for JVM modules generate fat jars.
+		classpath(getDependency("build.gradle.kts", "com.github.jengelman.gradle.plugins:shadow"))
 	}
 }
 

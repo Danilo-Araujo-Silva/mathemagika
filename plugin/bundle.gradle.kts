@@ -259,3 +259,5 @@ Dependencies.add("junit:junit:4.12", setOf("buildSrc/build.gradle.kts"))
 Dependencies.add("com.fasterxml.jackson.core:jackson-databind:2.10.1", setOf("buildSrc/build.gradle.kts"))
 Dependencies.add("com.fasterxml.jackson.module:jackson-module-kotlin:2.9.8", setOf("buildSrc/build.gradle.kts"))
 Dependencies.add("com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.9.8", setOf("buildSrc/build.gradle.kts"))
+
+Dependencies.add("com.github.jengelman.gradle.plugins:shadow:5.0.0", setOf("build.gradle.kts"))

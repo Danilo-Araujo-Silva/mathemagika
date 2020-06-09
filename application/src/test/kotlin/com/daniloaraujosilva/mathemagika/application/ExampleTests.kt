@@ -1,4 +1,4 @@
-package com.company.team.project.application.terminal.jvm.terminal
+package com.daniloaraujosilva.mathemagika.application.terminal.jvm.terminal
 
 import org.junit.Test
 import kotlin.test.assertTrue

@@ -152,12 +152,6 @@ object Properties {
 		if (keys.isNullOrEmpty()) return null
 
 		keys.forEach {
-			println("$it - local: ${local[it]}")
-			println("$it - environment: ${environment[it]}")
-			println("$it - system: ${system[it]}")
-			println("$it - gradle: ${gradle[it]}")
-			println("$it - globalGradle: ${globalGradle[it]}")
-
 			val value = when {
 				local.containsKey(it) -> local[it]
 				environment.containsKey(it) -> environment[it]

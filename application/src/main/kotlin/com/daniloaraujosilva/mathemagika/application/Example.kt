@@ -1,4 +1,4 @@
-package com.company.team.project.application.terminal.jvm.terminal
+package com.daniloaraujosilva.mathemagika.application
 
 /**
  *
@@ -10,7 +10,7 @@ fun main() {
 /**
  *
  */
-val exampleValue = com.company.team.project.common.single_source.common.formatOuput(exampleFunction(), true)
+val exampleValue = com.daniloaraujosilva.mathemagika.common.common.formatOuput(exampleFunction(), true)
 
 /**
  *
@@ -34,8 +34,8 @@ object ExampleObject {
 	 */
 	fun exampleMethod(): List<String> {
 		val output = ArrayList<String>()
-		output.addAll(com.company.team.project.common.multiple_sources.jvm.exampleFunction())
-		output.addAll(com.company.team.project.common.single_source.jvm.common.exampleFunction())
+		output.addAll(com.daniloaraujosilva.mathemagika.common.jvm.common.exampleFunction())
+		output.addAll(com.daniloaraujosilva.mathemagika.library.jvm.common.exampleFunction())
 		output.add(exampleProperty)
 
 		return output

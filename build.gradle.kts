@@ -27,33 +27,11 @@ buildscript {
 		maven( url = "https://kotlin.bintray.com/kotlinx" )
 		maven( url = "https://dl.bintray.com/kotlin/kotlin-js-wrappers" )
 		maven( url = "https://dl.bintray.com/jetbrains/kotlin-native-dependencies" )
-
-//		// For JS
-//		maven( url = "https://dl.bintray.com/salomonbrys/gradle-plugins" )
 	}
 
 	dependencies {
-//		classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion")
-//		classpath("org.jetbrains.kotlin:kotlin-allopen:$kotlinVersion")
-//		classpath("org.jetbrains.kotlin:kotlin-serialization:$kotlinVersion")
-//
-//		// For Terminal modules
-//		classpath("com.github.jengelman.gradle.plugins:shadow:5.0.0")
-//
-//		// For Spring Boot modules
-//		classpath("org.springframework.boot:spring-boot-gradle-plugin:2.2.2.RELEASE")
-//
-//		// For Android modules
-//		classpath("com.android.tools.build:gradle:3.3.2")
-//		classpath("com.android.tools.build:gradle:3.5.3")
-//		classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion")
-//
-//		// For JavaScript modules
-//		classpath("org.jetbrains.kotlin:kotlin-frontend-plugin:0.0.45")
-//		classpath("com.github.salomonbrys.gradle.kotlin.js:kotlin-js-gradle-utils:1.2.0")
-//
-//		// TODO Add reference in the future
-////		classpath ("com.company.team.project:plugin-jvm-gradle")
+		// For Terminal modules
+		classpath("com.github.jengelman.gradle.plugins:shadow:5.0.0")
 	}
 }
 

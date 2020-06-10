@@ -16,7 +16,7 @@ import java.util.regex.Pattern
 inline fun <reified Return> convertFromMathematicaTo(any: Any?, vararg arguments: Any? = arrayOf()): Return {
 	val returnClass = kotlinClass<Return>()
 
-	if (any == null) throw IllegalArgumentException("Cannot null to ${returnClass.qualifiedName}.")
+//	if (any == null) throw IllegalArgumentException("Cannot convert null to ${returnClass.qualifiedName}.")
 
 	val result: Return? = convertFromMathematicaToOrNull<Return>(any, arguments)
 		?: throw IllegalArgumentException("The conversion returned null, hence is not  possible to convert ${returnClass.qualifiedName}. Use convertToOrNull if necessary.")

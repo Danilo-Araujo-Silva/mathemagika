@@ -7,6 +7,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.generated.integrate
 import com.daniloaraujosilva.mathemagika.library.jvm.common.generated.normal
 import com.daniloaraujosilva.mathemagika.library.jvm.common.generated.series
 import com.daniloaraujosilva.mathemagika.library.jvm.common.generated.zeta
+import com.daniloaraujosilva.mathemagika.library.jvm.common.runOnMathematica
 import java.nio.file.Paths
 
 fun main() {
@@ -18,19 +19,38 @@ fun main() {
 fun test() {
 //	println(Mathematica().kernelLink.evaluateToInputForm("Zeta[2]", 0))
 //	println(Integrate("x^3", "x").run<String>())
+//	println(
+//		d(
+//			normal(
+//				series(
+//					integrate(
+//						zeta("x"),
+//						"x"
+//					),
+//					"{x, 0, 6}"
+//				)
+//			),
+//			"{x, 2}"
+//		).run<String>()
+//	)
+
 	println(
-		d(
-			normal(
-				series(
-					integrate(
-						zeta("x"),
-						"x"
+		"""
+			${
+				d(
+					normal(
+						series(
+							integrate(
+								zeta("x"),
+								"x"
+							),
+							"{x, 0, 6}"
+						)
 					),
-					"{x, 0, 6}"
+					"{x, 2}"
 				)
-			),
-			"{x, 2}"
-		).run<String>()
+			}/.x -> 10 // FullSimplify
+		""".trimIndent().runOnMathematica<String>()
 	)
 }
 

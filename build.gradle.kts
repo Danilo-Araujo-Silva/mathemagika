@@ -42,7 +42,14 @@ buildscript {
 
 allprojects {
 	repositories {
-		flatDir { dirs("$rootDir/plugin", "/Applications/Mathematica.app/Contents/SystemFiles/Links/JLink") }
+		flatDir {
+			dirs(
+				"$rootDir/plugin",
+				// TODO Flexibilize this to use an environment variable and try to automatically use a default pass depending
+				//	on the OS.
+				"/Applications/Mathematica.app/Contents/SystemFiles/Links/JLink"
+			)
+		}
 		mavenLocal()
 		gradlePluginPortal()
 		mavenCentral()

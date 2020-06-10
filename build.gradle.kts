@@ -1,4 +1,8 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+import org.gradle.nativeplatform.platform.OperatingSystem.isLinux
+import org.gradle.nativeplatform.platform.OperatingSystem.isWindows
+import org.gradle.nativeplatform.platform.OperatingSystem.isMacOsX
+import java.lang.IllegalArgumentException
 
 plugins {
 	kotlin("multiplatform")
@@ -40,14 +44,18 @@ buildscript {
 	}
 }
 
+apply("plugin/bundle.gradle.kts")
+
+@Suppress("unchecked_cast", "nothing_to_inline")
+fun <T> uncheckedCast(target: Any?): T = target as T
+val getPropertyOrDefault = uncheckedCast<(vararg keys: String, default: String) -> String>(extra["getPropertyOrDefault"])
+
 allprojects {
 	repositories {
 		flatDir {
 			dirs(
 				"$rootDir/plugin",
-				// TODO Flexibilize this to use an environment variable and try to automatically use a default pass depending
-				//	on the OS.
-				"/Applications/Mathematica.app/Contents/SystemFiles/Links/JLink"
+				getMathematicaJLinkHome()
 			)
 		}
 		mavenLocal()
@@ -69,5 +77,26 @@ tasks.withType<KotlinCompile> {
 	kotlinOptions {
 		freeCompilerArgs = listOf("-Xskip-metadata-version-check")
 	}
+}
+
+fun getMathematicaJLinkHome(): String {
+	var jlinkHome = getProperty("JLINK_HOME")
+	if (jlinkHome == null) jlinkHome = getProperty("jlink.home")
+	if (jlinkHome == null) jlinkHome = getProperty("jLinkHome")
+	if (jlinkHome == null) {
+		if (isMacOsX()) {
+			jlinkHome = "/Applications/Mathematica.app/Contents/SystemFiles/Links/JLink"
+		} else if (isLinux()) {
+			// TODO Define a default path
+		} else if (isWindows()) {
+			// TODO Define a default path
+		}
+	}
+
+	if (jlinkHome == null) throw IllegalArgumentException(
+		"It was not possible to automatically identify the path to the JLink.jar library. Try to set the environment variable JLINK_HOME."
+	)
+
+	return jlinkHome
 }
 

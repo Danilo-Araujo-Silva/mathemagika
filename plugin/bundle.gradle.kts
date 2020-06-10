@@ -188,6 +188,7 @@ if (rootProject.name == "buildSrc") {
 
 // TODO Export more methods
 extra["getProperty"] = { key: String -> Properties.get(key) }
+extra["getPropertyOrDefault"] = { (vararg keys: String, default: String) -> Properties.getOrDefault(keys, default = default) }
 
 //======================================================================================================================
 

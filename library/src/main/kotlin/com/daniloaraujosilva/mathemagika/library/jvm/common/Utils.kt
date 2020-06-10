@@ -1,10 +1,13 @@
 package com.daniloaraujosilva.mathemagika.library.jvm.common
 
+import com.daniloaraujosilva.mathemagika.common.common.OperatingSystem
 import com.daniloaraujosilva.mathemagika.common.jvm.common.isSuperclassOf
 import com.daniloaraujosilva.mathemagika.common.jvm.common.kotlinClass
 import java.math.BigDecimal
 import java.math.BigInteger
+import java.util.Locale
 import java.util.regex.Pattern
+
 
 /**
  *
@@ -30,8 +33,7 @@ inline fun <reified Return> convertFromMathematicaToOrNull(any: Any?, vararg arg
 	val returnClass = kotlinClass<Return>()
 	val anyAsString = any.toString()
 
-	val fromMathematicaList = {
-			input: String -> input.drop(1).dropLast(1).split(", ").toMutableList()
+	val fromMathematicaList = {input: String -> input.drop(1).dropLast(1).split(", ").toMutableList()
 	}
 
 	return when {
@@ -117,4 +119,18 @@ inline fun <reified Return> convertFromMathematicaToOrNull(any: Any?, vararg arg
 			throw IllegalArgumentException("Unrecognized class $returnClass.")
 		}
 	} as Return
+}
+
+fun detectOperatingSystem(): OperatingSystem {
+	val os = System.getProperty("os.name", "generic").toLowerCase(Locale.ENGLISH)
+
+	return if (os.indexOf("mac") >= 0 || os.indexOf("darwin") >= 0) {
+		OperatingSystem.MAC_OS_X
+	} else if (os.indexOf("win") >= 0) {
+		OperatingSystem.WINDOWS
+	} else if (os.indexOf("nux") >= 0) {
+		OperatingSystem.LINUX
+	} else {
+		OperatingSystem.OTHER
+	}
 }

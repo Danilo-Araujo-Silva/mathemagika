@@ -1,13 +1,37 @@
 package com.daniloaraujosilva.mathemagika.library.common.jvm
 
+import com.daniloaraujosilva.mathemagika.common.common.OperatingSystem
+import com.daniloaraujosilva.mathemagika.library.jvm.common.detectOperatingSystem
 import com.wolfram.jlink.*
+import java.lang.IllegalArgumentException
+
+fun getLinkName(): String {
+	var linkName = System.getProperty("MATH_KERNEL_HOME")
+	if (linkName == null) linkName = System.getProperty("math_kernel.home")
+	if (linkName == null) linkName = System.getProperty("mathKernelHome")
+	if (linkName == null) {
+		val os = detectOperatingSystem()
+		linkName = when {
+			os == OperatingSystem.LINUX -> "math -mathlink"
+			os == OperatingSystem.MAC_OS_X -> "/Applications/Mathematica.app/Contents/MacOS/MathKernel -mathlink"
+			os == OperatingSystem.WINDOWS -> "c:\\program files\\wolfram research\\mathematica\\10.0\\mathkernel"
+			else -> null
+		}
+	}
+
+	if (linkName == null) throw IllegalArgumentException(
+		"It was not possible to automatically identify the path to the MathKernel. Try to set the environment variable MATH_KERNEL_HOME."
+	)
+
+	return linkName
+}
 
 /**
  * TODO Try to automatically support Windows and Linux as well.
  */
 class Mathematica(
 	linkMode: String = "launch",
-	linkName: String = "/Applications/Mathematica.app/Contents/MacOS/MathKernel -mathlink"
+	linkName: String = getLinkName()
 ) : KernelLink {
 
 	/**

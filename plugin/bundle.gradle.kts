@@ -128,27 +128,55 @@ object Properties {
 	 *
 	 */
 	fun get(vararg keys: String): String {
-		return this.getAndCast<String>(*keys) ?: throw IllegalArgumentException("Property key(s) ${keys} not found.")
+		return get(keys.toList())
+	}
+
+	/**
+	 *
+	 */
+	fun get(keys: List<String>): String {
+		return this.getAndCast<String>(keys) ?: throw IllegalArgumentException("Property key(s) ${keys} not found.")
 	}
 
 	/**
 	 *
 	 */
 	fun getOrNull(vararg keys: String): String? {
-		return getAndCast<String>(*keys)
+		return getOrNull(keys.toList())
 	}
 
 	/**
 	 *
 	 */
-	inline fun <reified R> getOrDefault(vararg keys: String, default: R?): R? {
+	fun getOrNull(keys: List<String>): String? {
+		return getAndCast<String>(keys)
+	}
+
+	/**
+	 *
+	 */
+	inline fun <reified R> getOrDefault(vararg keys: String, default: R): R {
 		return getAndCast<R>(*keys) ?: default
 	}
 
 	/**
 	 *
 	 */
+	inline fun <reified R> getOrDefault(keys: List<String>, default: R): R {
+		return getAndCast<R>(keys) ?: default
+	}
+
+	/**
+	 *
+	 */
 	inline fun <reified R> getAndCast(vararg keys: String): R? {
+		return getAndCast(keys.toList())
+	}
+
+	/**
+	 *
+	 */
+	inline fun <reified R> getAndCast(keys: List<String>): R? {
 		if (keys.isNullOrEmpty()) return null
 
 		keys.forEach {
@@ -187,8 +215,9 @@ if (rootProject.name == "buildSrc") {
 }
 
 // TODO Export more methods
-extra["getProperty"] = { key: String -> Properties.get(key) }
-extra["getPropertyOrDefault"] = { (vararg keys: String, default: String) -> Properties.getOrDefault(keys, default = default) }
+extra["getProperty"] = { keys: List<String> -> Properties.get(keys) }
+extra["getPropertyOrNull"] = { keys: List<String> -> Properties.getOrNull(keys) }
+extra["getPropertyOrDefault"] = { keys: List<String>, default: String -> Properties.getOrDefault(keys, default) }
 
 //======================================================================================================================
 

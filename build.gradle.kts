@@ -1,7 +1,4 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-import org.gradle.nativeplatform.platform.OperatingSystem.isLinux
-import org.gradle.nativeplatform.platform.OperatingSystem.isWindows
-import org.gradle.nativeplatform.platform.OperatingSystem.isMacOsX
 import java.lang.IllegalArgumentException
 
 plugins {
@@ -14,10 +11,12 @@ buildscript {
 
 	@Suppress("unchecked_cast", "nothing_to_inline")
 	fun <T> uncheckedCast(target: Any?): T = target as T
-	val getProperty = uncheckedCast<(key: String) -> String>(extra["getProperty"])
+	val getProperty = uncheckedCast<(keys: List<String>) -> String>(extra["getProperty"])
+	val getPropertyOrNull = uncheckedCast<(keys: List<String>) -> String?>(extra["getPropertyOrNull"])
+	val getPropertyOrDefault = uncheckedCast<(keys: List<String>, default: String) -> String>(extra["getPropertyOrDefault"])
 	val getDependency = uncheckedCast<(group: String, dependencyId: String) -> String>(extra["getDependency"])
 
-	val kotlinVersion = getProperty("kotlin.version")
+	val kotlinVersion = getProperty(listOf("KOTLIN_VERSION", "kotlin.version", "kotlinVersion"))
 
 	repositories {
 		flatDir { dirs("$rootDir/plugin") }
@@ -48,7 +47,9 @@ apply("plugin/bundle.gradle.kts")
 
 @Suppress("unchecked_cast", "nothing_to_inline")
 fun <T> uncheckedCast(target: Any?): T = target as T
-val getPropertyOrDefault = uncheckedCast<(vararg keys: String, default: String) -> String>(extra["getPropertyOrDefault"])
+val getProperty = uncheckedCast<(keys: List<String>) -> String>(extra["getProperty"])
+val getPropertyOrNull = uncheckedCast<(keys: List<String>) -> String?>(extra["getPropertyOrNull"])
+val getPropertyOrDefault = uncheckedCast<(keys: List<String>, default: String) -> String>(extra["getPropertyOrDefault"])
 
 allprojects {
 	repositories {
@@ -80,16 +81,19 @@ tasks.withType<KotlinCompile> {
 }
 
 fun getMathematicaJLinkHome(): String {
-	var jlinkHome = getProperty("JLINK_HOME")
-	if (jlinkHome == null) jlinkHome = getProperty("jlink.home")
-	if (jlinkHome == null) jlinkHome = getProperty("jLinkHome")
+	var jlinkHome = getPropertyOrNull(listOf("JLINK_HOME", "jlink.home", "jLinkHome"))
 	if (jlinkHome == null) {
-		if (isMacOsX()) {
-			jlinkHome = "/Applications/Mathematica.app/Contents/SystemFiles/Links/JLink"
-		} else if (isLinux()) {
-			// TODO Define a default path
-		} else if (isWindows()) {
-			// TODO Define a default path
+		val os = org.gradle.internal.os.OperatingSystem.current()
+		when {
+			os.isMacOsX() -> {
+				jlinkHome = "/Applications/Mathematica.app/Contents/SystemFiles/Links/JLink"
+			}
+			os.isLinux() -> {
+				// TODO Define a default path
+			}
+			os.isWindows() -> {
+				// TODO Define a default path
+			}
 		}
 	}
 

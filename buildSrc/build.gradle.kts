@@ -10,9 +10,10 @@ apply("../plugin/bundle.gradle.kts")
 @Suppress("unchecked_cast", "nothing_to_inline")
 inline fun <T> uncheckedCast(target: Any?): T = target as T
 
-val getProperty = uncheckedCast<(key: String) -> String>(extra["getProperty"])
+val getProperty = uncheckedCast<(keys: List<String>) -> String>(extra["getProperty"])
+val getPropertyOrNull = uncheckedCast<(keys: List<String>) -> String?>(extra["getPropertyOrNull"])
+val getPropertyOrDefault = uncheckedCast<(keys: List<String>, default: String) -> String>(extra["getPropertyOrDefault"])
 val getDependency = uncheckedCast<(group: String, dependencyId: String) -> String>(extra["getDependency"])
-val getDependencyVersion = uncheckedCast<(group: String, dependencyId: String) -> String>(extra["getDependencyVersion"])
 
 repositories {
 	flatDir { dirs("$rootDir/plugin") }

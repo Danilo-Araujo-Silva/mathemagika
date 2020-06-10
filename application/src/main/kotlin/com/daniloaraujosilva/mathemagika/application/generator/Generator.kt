@@ -2,23 +2,43 @@ package com.daniloaraujosilva.mathemagika.application.generator
 
 import com.daniloaraujosilva.mathemagika.library.common.jvm.Mathematica
 import com.daniloaraujosilva.mathemagika.library.jvm.common.convertFromMathematicaTo
+import com.daniloaraujosilva.mathemagika.common.common.kotlinKeywordsAndSymbols
 import com.daniloaraujosilva.mathemagika.library.jvm.common.generated.*
 import com.daniloaraujosilva.mathemagika.library.jvm.common.run
-import com.daniloaraujosilva.mathemagika.library.common.jvm.EvaluationTypeEnum.OUTPUT_FORM
-import type
+import java.nio.file.Path
 import java.nio.file.Paths
+import java.time.LocalDateTime
 
 @ExperimentalUnsignedTypes
 fun main() {
-//	generateAndSaveMathematicaFunctions()
+//	generateAndExportMathematicaFunctionsTogether()
+
+//	generateAndExportMathematicaFunctionsIndividually()
 
 	test()
 }
 
 @ExperimentalUnsignedTypes
 fun test() {
+	println(prime(10000).run<String>())
+
+	println(n(zeta("1+2I"), 100).run<String>())
+
+	println(integrate("x^10", "x").run<String>())
+
+	println(series(sin("x"), "{x, 1, 10}").run<String>())
+
+	println(
+		"""
+			Series[E^x, {x, 0, 10}]
+  	""".run()
+	)
+
+
+//	println(`$VoiceStyles`().run<String>())
+
 //	println(Mathematica().kernelLink.evaluateToInputForm("Zeta[2]", 0))
-//	println(Integrate("x^3", "x").run<String>())
+//	println(integrate("x^3", "x").run<String>())
 //	println(
 //		d(
 //			normal(
@@ -56,39 +76,72 @@ fun test() {
 //		""".trimIndent().run<String>()
 //	)
 
-	println(
-		"""
-			${
-		n(
-			d(
-				normal(
-					series(
-						integrate(
-							zeta("x"),
-							"x"
-						),
-						"{x, 0, 6}"
-					)
-				),
-				"{x, 2}"
-			),
-			100
-		)
-		}/.x -> 10 // FullSimplify // Timing // TableForm // ToString
-		""".trimIndent().run<String>(options = mutableMapOf(type to OUTPUT_FORM))
-	)
+	println(n(zetaZero(1), 100).run<String>())
+
+//	println(
+//		"""
+//			${
+//		n(
+//			d(
+//				normal(
+//					series(
+//						integrate(
+//							zeta("x"),
+//							"x"
+//						),
+//						"{x, 0, 6}"
+//					)
+//				),
+//				"{x, 2}"
+//			),
+//			100
+//		)
+//		}/.x -> 10 // FullSimplify // Timing // TableForm // ToString
+//		""".trimIndent().run<String>(options = mutableMapOf(type to OUTPUT_FORM))
+//	)
 }
 
 lateinit var mathematica: Mathematica
 
+lateinit var basePath: Path
+
 @ExperimentalUnsignedTypes
-fun generateAndSaveMathematicaFunctions() {
+fun generateAndExportMathematicaFunctionsIndividually() {
+	try {
+		println("Start time: ${LocalDateTime.now()}")
+
+		basePath = Paths.get("library/src/main/kotlin/com/daniloaraujosilva/mathemagika/library/jvm/common/generated")
+
+		mathematica = Mathematica()
+
+		val functionNames = getAllFunctionsNames()
+
+		println(
+			"""
+			Functions to be generated:
+
+			${functionNames}
+		""".trimIndent()
+		)
+
+		for (functionName in functionNames) {
+			generateAndExportFunction(functionName)
+		}
+	} finally {
+		mathematica.closeKernelLink()
+
+		println("End time: ${LocalDateTime.now()}")
+	}
+}
+
+@ExperimentalUnsignedTypes
+fun generateAndExportMathematicaFunctionsTogether() {
 	try {
 		mathematica = Mathematica()
 
-		val path = Paths.get("library/src/main/kotlin/com/daniloaraujosilva/mathemagika/library/jvm/common/generated/MathematicaFunctions.kt")
+		basePath = Paths.get("library/src/main/kotlin/com/daniloaraujosilva/mathemagika/library/jvm/common/generated/MathematicaFunctions.kt")
 
-		path.toFile().writeText(generateFunctionsFileContent())
+		basePath.toFile().writeText(generateFunctionsFileContent())
 	} finally {
 		mathematica.closeKernelLink()
 	}
@@ -128,6 +181,25 @@ fun generateAllFunctions(): String {
 	return output
 }
 
+fun generateAndExportFunction(functionName: String) {
+	println("Exporting function $functionName:")
+
+	val content =
+		"""
+			|package com.daniloaraujosilva.mathemagika.library.jvm.common.generated
+			|
+			|import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
+			|
+			|${generateFunctionDocumentation(functionName)}
+			|${generateFunction(functionName)}
+			|
+		""".trimMargin()
+
+	Paths.get(basePath.toFile().absolutePath, "${functionName.capitalize()}.kt").toFile().writeText(content)
+
+	println("Function $functionName exported.")
+}
+
 fun generateFunction(functionName: String): String {
 		lateinit var rawFunctionName: String
 		lateinit var methodName: String
@@ -140,10 +212,10 @@ fun generateFunction(functionName: String): String {
 			methodName = rawFunctionName
 		}
 
-	// break, continue, do, false, for, if, null, return, throw, true, while
-
 	// errors TravelDirectionsData
 	methodName = methodName.decapitalize()
+
+	if (methodName in kotlinKeywordsAndSymbols) methodName = "`$methodName`"
 
 	var result =
 		"""
@@ -159,10 +231,13 @@ fun generateFunction(functionName: String): String {
 fun getAllFunctionsNames(): MutableList<String> {
 	val result = mathematica.evaluateToOutputForm(
 //		"""
-//		|Names[RegularExpression["\\${'$'}VoiceStyles|Integra.*|Zeta.*|Series|D|Normal"]]
+//		|Names[RegularExpression["\\${'$'}VoiceStyles|Integra.*|Zeta.*|Series|D|Normal|Continue|TravelDirectionsData|N"]]
+//		""".trimMargin()
+//		"""
+//		|Names[RegularExpression["\${'$'}?[A-Za-z0-9].*"]]
 //		""".trimMargin()
 		"""
-		|Names[RegularExpression["\${'$'}?[A-Za-z0-9].*"]]
+		|Names[RegularExpression[".*"]]
 		""".trimMargin()
 	)
 

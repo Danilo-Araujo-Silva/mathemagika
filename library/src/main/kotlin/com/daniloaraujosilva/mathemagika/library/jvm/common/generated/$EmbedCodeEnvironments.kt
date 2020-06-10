@@ -1,0 +1,213 @@
+package com.daniloaraujosilva.mathemagika.library.jvm.common.generated
+
+import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
+
+/**
+ *````
+ * 
+ *                   Android
+ *                   C#
+ *                   C++-VisualStudio
+ *                   GoogleDocs
+ *                   HTML
+ *                   Java
+ *                   Java-Jersey
+ *                   JavaScript
+ *                   Perl
+ *                   PHP
+ *                   Python
+ *                   Python2
+ *                   R
+ *                   Ruby
+ *                   Scala
+ *                   Swift
+ * Name:             VisualBasic
+ * 
+ *                   Missing[UnknownSymbol, Android][FullName]
+ *                   Missing[UnknownSymbol, C#][FullName]
+ *                   Missing[UnknownSymbol, C++-VisualStudio][FullName]
+ *                   Missing[UnknownSymbol, GoogleDocs][FullName]
+ *                   Missing[UnknownSymbol, HTML][FullName]
+ *                   Missing[UnknownSymbol, Java][FullName]
+ *                   Missing[UnknownSymbol, Java-Jersey][FullName]
+ *                   Missing[UnknownSymbol, JavaScript][FullName]
+ *                   Missing[UnknownSymbol, Perl][FullName]
+ *                   Missing[UnknownSymbol, PHP][FullName]
+ *                   Missing[UnknownSymbol, Python][FullName]
+ *                   Missing[UnknownSymbol, Python2][FullName]
+ *                   Missing[UnknownSymbol, R][FullName]
+ *                   Missing[UnknownSymbol, Ruby][FullName]
+ *                   Missing[UnknownSymbol, Scala][FullName]
+ *                   Missing[UnknownSymbol, Swift][FullName]
+ * Full name:        Missing[UnknownSymbol, VisualBasic][FullName]
+ * 
+ * Usage:            {Missing[UnknownSymbol, Android][Usage], Missing[UnknownSymbol, C#][Usage], Missing[UnknownSymbol, C++-VisualStudio][Usage], Missing[UnknownSymbol, GoogleDocs][Usage], Missing[UnknownSymbol, HTML][Usage], Missing[UnknownSymbol, Java][Usage], Missing[UnknownSymbol, Java-Jersey][Usage], Missing[UnknownSymbol, JavaScript][Usage], Missing[UnknownSymbol, Perl][Usage], Missing[UnknownSymbol, PHP][Usage], Missing[UnknownSymbol, Python][Usage], Missing[UnknownSymbol, Python2][Usage], Missing[UnknownSymbol, R][Usage], Missing[UnknownSymbol, Ruby][Usage], Missing[UnknownSymbol, Scala][Usage], Missing[UnknownSymbol, Swift][Usage], Missing[UnknownSymbol, VisualBasic][Usage]}
+ * 
+ *                   Missing[UnknownSymbol, Android][Options]
+ *                   Missing[UnknownSymbol, C#][Options]
+ *                   Missing[UnknownSymbol, C++-VisualStudio][Options]
+ *                   Missing[UnknownSymbol, GoogleDocs][Options]
+ *                   Missing[UnknownSymbol, HTML][Options]
+ *                   Missing[UnknownSymbol, Java][Options]
+ *                   Missing[UnknownSymbol, Java-Jersey][Options]
+ *                   Missing[UnknownSymbol, JavaScript][Options]
+ *                   Missing[UnknownSymbol, Perl][Options]
+ *                   Missing[UnknownSymbol, PHP][Options]
+ *                   Missing[UnknownSymbol, Python][Options]
+ *                   Missing[UnknownSymbol, Python2][Options]
+ *                   Missing[UnknownSymbol, R][Options]
+ *                   Missing[UnknownSymbol, Ruby][Options]
+ *                   Missing[UnknownSymbol, Scala][Options]
+ *                   Missing[UnknownSymbol, Swift][Options]
+ * Options:          Missing[UnknownSymbol, VisualBasic][Options]
+ * 
+ *                   Missing[UnknownSymbol, Android][Attributes]
+ *                   Missing[UnknownSymbol, C#][Attributes]
+ *                   Missing[UnknownSymbol, C++-VisualStudio][Attributes]
+ *                   Missing[UnknownSymbol, GoogleDocs][Attributes]
+ *                   Missing[UnknownSymbol, HTML][Attributes]
+ *                   Missing[UnknownSymbol, Java][Attributes]
+ *                   Missing[UnknownSymbol, Java-Jersey][Attributes]
+ *                   Missing[UnknownSymbol, JavaScript][Attributes]
+ *                   Missing[UnknownSymbol, Perl][Attributes]
+ *                   Missing[UnknownSymbol, PHP][Attributes]
+ *                   Missing[UnknownSymbol, Python][Attributes]
+ *                   Missing[UnknownSymbol, Python2][Attributes]
+ *                   Missing[UnknownSymbol, R][Attributes]
+ *                   Missing[UnknownSymbol, Ruby][Attributes]
+ *                   Missing[UnknownSymbol, Scala][Attributes]
+ *                   Missing[UnknownSymbol, Swift][Attributes]
+ * Attributes:       Missing[UnknownSymbol, VisualBasic][Attributes]
+ * 
+ *                   local: <>{Missing[UnknownSymbol, Android][Documentation], Missing[UnknownSymbol, C#][Documentation], Missing[UnknownSymbol, C++-VisualStudio][Documentation], Missing[UnknownSymbol, GoogleDocs][Documentation], Missing[UnknownSymbol, HTML][Documentation], Missing[UnknownSymbol, Java][Documentation], Missing[UnknownSymbol, Java-Jersey][Documentation], Missing[UnknownSymbol, JavaScript][Documentation], Missing[UnknownSymbol, Perl][Documentation], Missing[UnknownSymbol, PHP][Documentation], Missing[UnknownSymbol, Python][Documentation], Missing[UnknownSymbol, Python2][Documentation], Missing[UnknownSymbol, R][Documentation], Missing[UnknownSymbol, Ruby][Documentation], Missing[UnknownSymbol, Scala][Documentation], Missing[UnknownSymbol, Swift][Documentation], Missing[UnknownSymbol, VisualBasic][Documentation]}[Local]
+ * Documentation:    web: <>{Missing[UnknownSymbol, Android][Documentation], Missing[UnknownSymbol, C#][Documentation], Missing[UnknownSymbol, C++-VisualStudio][Documentation], Missing[UnknownSymbol, GoogleDocs][Documentation], Missing[UnknownSymbol, HTML][Documentation], Missing[UnknownSymbol, Java][Documentation], Missing[UnknownSymbol, Java-Jersey][Documentation], Missing[UnknownSymbol, JavaScript][Documentation], Missing[UnknownSymbol, Perl][Documentation], Missing[UnknownSymbol, PHP][Documentation], Missing[UnknownSymbol, Python][Documentation], Missing[UnknownSymbol, Python2][Documentation], Missing[UnknownSymbol, R][Documentation], Missing[UnknownSymbol, Ruby][Documentation], Missing[UnknownSymbol, Scala][Documentation], Missing[UnknownSymbol, Swift][Documentation], Missing[UnknownSymbol, VisualBasic][Documentation]}[Web]
+ * 
+ *                   Missing[UnknownSymbol, Android][Definitions]
+ *                   Missing[UnknownSymbol, C#][Definitions]
+ *                   Missing[UnknownSymbol, C++-VisualStudio][Definitions]
+ *                   Missing[UnknownSymbol, GoogleDocs][Definitions]
+ *                   Missing[UnknownSymbol, HTML][Definitions]
+ *                   Missing[UnknownSymbol, Java][Definitions]
+ *                   Missing[UnknownSymbol, Java-Jersey][Definitions]
+ *                   Missing[UnknownSymbol, JavaScript][Definitions]
+ *                   Missing[UnknownSymbol, Perl][Definitions]
+ *                   Missing[UnknownSymbol, PHP][Definitions]
+ *                   Missing[UnknownSymbol, Python][Definitions]
+ *                   Missing[UnknownSymbol, Python2][Definitions]
+ *                   Missing[UnknownSymbol, R][Definitions]
+ *                   Missing[UnknownSymbol, Ruby][Definitions]
+ *                   Missing[UnknownSymbol, Scala][Definitions]
+ *                   Missing[UnknownSymbol, Swift][Definitions]
+ * Definitions:      Missing[UnknownSymbol, VisualBasic][Definitions]
+ * 
+ *                   Missing[UnknownSymbol, Android][OwnValues]
+ *                   Missing[UnknownSymbol, C#][OwnValues]
+ *                   Missing[UnknownSymbol, C++-VisualStudio][OwnValues]
+ *                   Missing[UnknownSymbol, GoogleDocs][OwnValues]
+ *                   Missing[UnknownSymbol, HTML][OwnValues]
+ *                   Missing[UnknownSymbol, Java][OwnValues]
+ *                   Missing[UnknownSymbol, Java-Jersey][OwnValues]
+ *                   Missing[UnknownSymbol, JavaScript][OwnValues]
+ *                   Missing[UnknownSymbol, Perl][OwnValues]
+ *                   Missing[UnknownSymbol, PHP][OwnValues]
+ *                   Missing[UnknownSymbol, Python][OwnValues]
+ *                   Missing[UnknownSymbol, Python2][OwnValues]
+ *                   Missing[UnknownSymbol, R][OwnValues]
+ *                   Missing[UnknownSymbol, Ruby][OwnValues]
+ *                   Missing[UnknownSymbol, Scala][OwnValues]
+ *                   Missing[UnknownSymbol, Swift][OwnValues]
+ * Own values:       Missing[UnknownSymbol, VisualBasic][OwnValues]
+ * 
+ *                   Missing[UnknownSymbol, Android][DownValues]
+ *                   Missing[UnknownSymbol, C#][DownValues]
+ *                   Missing[UnknownSymbol, C++-VisualStudio][DownValues]
+ *                   Missing[UnknownSymbol, GoogleDocs][DownValues]
+ *                   Missing[UnknownSymbol, HTML][DownValues]
+ *                   Missing[UnknownSymbol, Java][DownValues]
+ *                   Missing[UnknownSymbol, Java-Jersey][DownValues]
+ *                   Missing[UnknownSymbol, JavaScript][DownValues]
+ *                   Missing[UnknownSymbol, Perl][DownValues]
+ *                   Missing[UnknownSymbol, PHP][DownValues]
+ *                   Missing[UnknownSymbol, Python][DownValues]
+ *                   Missing[UnknownSymbol, Python2][DownValues]
+ *                   Missing[UnknownSymbol, R][DownValues]
+ *                   Missing[UnknownSymbol, Ruby][DownValues]
+ *                   Missing[UnknownSymbol, Scala][DownValues]
+ *                   Missing[UnknownSymbol, Swift][DownValues]
+ * Down values:      Missing[UnknownSymbol, VisualBasic][DownValues]
+ * 
+ *                   Missing[UnknownSymbol, Android][UpValues]
+ *                   Missing[UnknownSymbol, C#][UpValues]
+ *                   Missing[UnknownSymbol, C++-VisualStudio][UpValues]
+ *                   Missing[UnknownSymbol, GoogleDocs][UpValues]
+ *                   Missing[UnknownSymbol, HTML][UpValues]
+ *                   Missing[UnknownSymbol, Java][UpValues]
+ *                   Missing[UnknownSymbol, Java-Jersey][UpValues]
+ *                   Missing[UnknownSymbol, JavaScript][UpValues]
+ *                   Missing[UnknownSymbol, Perl][UpValues]
+ *                   Missing[UnknownSymbol, PHP][UpValues]
+ *                   Missing[UnknownSymbol, Python][UpValues]
+ *                   Missing[UnknownSymbol, Python2][UpValues]
+ *                   Missing[UnknownSymbol, R][UpValues]
+ *                   Missing[UnknownSymbol, Ruby][UpValues]
+ *                   Missing[UnknownSymbol, Scala][UpValues]
+ *                   Missing[UnknownSymbol, Swift][UpValues]
+ * Up values:        Missing[UnknownSymbol, VisualBasic][UpValues]
+ * 
+ *                   Missing[UnknownSymbol, Android][SubValues]
+ *                   Missing[UnknownSymbol, C#][SubValues]
+ *                   Missing[UnknownSymbol, C++-VisualStudio][SubValues]
+ *                   Missing[UnknownSymbol, GoogleDocs][SubValues]
+ *                   Missing[UnknownSymbol, HTML][SubValues]
+ *                   Missing[UnknownSymbol, Java][SubValues]
+ *                   Missing[UnknownSymbol, Java-Jersey][SubValues]
+ *                   Missing[UnknownSymbol, JavaScript][SubValues]
+ *                   Missing[UnknownSymbol, Perl][SubValues]
+ *                   Missing[UnknownSymbol, PHP][SubValues]
+ *                   Missing[UnknownSymbol, Python][SubValues]
+ *                   Missing[UnknownSymbol, Python2][SubValues]
+ *                   Missing[UnknownSymbol, R][SubValues]
+ *                   Missing[UnknownSymbol, Ruby][SubValues]
+ *                   Missing[UnknownSymbol, Scala][SubValues]
+ *                   Missing[UnknownSymbol, Swift][SubValues]
+ * Sub values:       Missing[UnknownSymbol, VisualBasic][SubValues]
+ * 
+ *                   Missing[UnknownSymbol, Android][DefaultValues]
+ *                   Missing[UnknownSymbol, C#][DefaultValues]
+ *                   Missing[UnknownSymbol, C++-VisualStudio][DefaultValues]
+ *                   Missing[UnknownSymbol, GoogleDocs][DefaultValues]
+ *                   Missing[UnknownSymbol, HTML][DefaultValues]
+ *                   Missing[UnknownSymbol, Java][DefaultValues]
+ *                   Missing[UnknownSymbol, Java-Jersey][DefaultValues]
+ *                   Missing[UnknownSymbol, JavaScript][DefaultValues]
+ *                   Missing[UnknownSymbol, Perl][DefaultValues]
+ *                   Missing[UnknownSymbol, PHP][DefaultValues]
+ *                   Missing[UnknownSymbol, Python][DefaultValues]
+ *                   Missing[UnknownSymbol, Python2][DefaultValues]
+ *                   Missing[UnknownSymbol, R][DefaultValues]
+ *                   Missing[UnknownSymbol, Ruby][DefaultValues]
+ *                   Missing[UnknownSymbol, Scala][DefaultValues]
+ *                   Missing[UnknownSymbol, Swift][DefaultValues]
+ * Default value:    Missing[UnknownSymbol, VisualBasic][DefaultValues]
+ * 
+ *                   Missing[UnknownSymbol, Android][NValues]
+ *                   Missing[UnknownSymbol, C#][NValues]
+ *                   Missing[UnknownSymbol, C++-VisualStudio][NValues]
+ *                   Missing[UnknownSymbol, GoogleDocs][NValues]
+ *                   Missing[UnknownSymbol, HTML][NValues]
+ *                   Missing[UnknownSymbol, Java][NValues]
+ *                   Missing[UnknownSymbol, Java-Jersey][NValues]
+ *                   Missing[UnknownSymbol, JavaScript][NValues]
+ *                   Missing[UnknownSymbol, Perl][NValues]
+ *                   Missing[UnknownSymbol, PHP][NValues]
+ *                   Missing[UnknownSymbol, Python][NValues]
+ *                   Missing[UnknownSymbol, Python2][NValues]
+ *                   Missing[UnknownSymbol, R][NValues]
+ *                   Missing[UnknownSymbol, Ruby][NValues]
+ *                   Missing[UnknownSymbol, Scala][NValues]
+ *                   Missing[UnknownSymbol, Swift][NValues]
+ * Numeric values:   Missing[UnknownSymbol, VisualBasic][NValues]
+ */
+fun `$EmbedCodeEnvironments`(vararg arguments: Any?, options: MutableMap<String, Any?> = mutableMapOf()): MathematicaFunction {
+	return MathematicaFunction("\$EmbedCodeEnvironments", arguments.toMutableList(), options)
+}

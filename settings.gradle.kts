@@ -5,7 +5,7 @@ apply("plugin/bundle.gradle.kts")
 
 pluginManagement {
 	repositories {
-		flatDir { dirs("plugin") }
+		flatDir { dirs("$rootDir/plugin") }
 		mavenLocal()
 		gradlePluginPortal()
 		mavenCentral()

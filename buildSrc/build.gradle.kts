@@ -15,7 +15,7 @@ val getDependency = uncheckedCast<(group: String, dependencyId: String) -> Strin
 val getDependencyVersion = uncheckedCast<(group: String, dependencyId: String) -> String>(extra["getDependencyVersion"])
 
 repositories {
-	flatDir { dirs("plugin") }
+	flatDir { dirs("$rootDir/plugin") }
 	mavenLocal()
 	gradlePluginPortal()
 	mavenCentral()

@@ -12,6 +12,8 @@ dependencies {
 
 	implementation(kotlin("stdlib-jdk8"))
 
+	implementation(mapOf("name" to "JLink"))
+
 	testImplementation(kotlin("test"))
 	testImplementation(kotlin("test-junit"))
 }

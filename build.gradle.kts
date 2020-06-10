@@ -16,7 +16,7 @@ buildscript {
 	val kotlinVersion = getProperty("kotlin.version")
 
 	repositories {
-		flatDir { dirs("plugin") }
+		flatDir { dirs("$rootDir/plugin") }
 		mavenLocal()
 		gradlePluginPortal()
 		mavenCentral()
@@ -42,7 +42,7 @@ buildscript {
 
 allprojects {
 	repositories {
-		flatDir { dirs("plugin") }
+		flatDir { dirs("$rootDir/plugin", "/Applications/Mathematica.app/Contents/SystemFiles/Links/JLink") }
 		mavenLocal()
 		gradlePluginPortal()
 		mavenCentral()
@@ -63,3 +63,4 @@ tasks.withType<KotlinCompile> {
 		freeCompilerArgs = listOf("-Xskip-metadata-version-check")
 	}
 }
+

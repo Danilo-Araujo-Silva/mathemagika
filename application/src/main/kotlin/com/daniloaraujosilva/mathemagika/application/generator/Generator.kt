@@ -2,18 +2,36 @@ package com.daniloaraujosilva.mathemagika.application.generator
 
 import com.daniloaraujosilva.mathemagika.library.common.jvm.Mathematica
 import com.daniloaraujosilva.mathemagika.library.jvm.common.convertFromMathematicaTo
-import com.daniloaraujosilva.mathemagika.library.jvm.common.generated.Integrate
+import com.daniloaraujosilva.mathemagika.library.jvm.common.generated.d
+import com.daniloaraujosilva.mathemagika.library.jvm.common.generated.integrate
+import com.daniloaraujosilva.mathemagika.library.jvm.common.generated.normal
+import com.daniloaraujosilva.mathemagika.library.jvm.common.generated.series
+import com.daniloaraujosilva.mathemagika.library.jvm.common.generated.zeta
 import java.nio.file.Paths
 
 fun main() {
-	generateAndSaveMathematicaFunctions()
+//	generateAndSaveMathematicaFunctions()
 
 	test()
 }
 
 fun test() {
 //	println(Mathematica().kernelLink.evaluateToInputForm("Zeta[2]", 0))
-	println(Integrate("x^3", "x").run<String>())
+//	println(Integrate("x^3", "x").run<String>())
+	println(
+		d(
+			normal(
+				series(
+					integrate(
+						zeta("x"),
+						"x"
+					),
+					"{x, 0, 6}"
+				)
+			),
+			"{x, 2}"
+		).run<String>()
+	)
 }
 
 lateinit var mathematica: Mathematica
@@ -75,6 +93,8 @@ fun generateFunction(functionName: String): String {
 			methodName = rawFunctionName
 		}
 
+	methodName = methodName.decapitalize()
+
 	var result =
 		"""
 		|fun $methodName(vararg arguments: Any?, options: MutableMap<String, Any?> = mutableMapOf()): MathematicaFunction {
@@ -89,7 +109,7 @@ fun generateFunction(functionName: String): String {
 fun getAllFunctionsNames(): MutableList<String> {
 	val result = mathematica.evaluateToOutputForm(
 		"""
-		|Names[RegularExpression["\\${'$'}VoiceStyles|Integra.*"]]
+		|Names[RegularExpression["\\${'$'}VoiceStyles|Integra.*|Zeta.*|Series|D|Normal"]]
 		""".trimMargin()
 //		"""
 //		|Names[RegularExpression["\${'$'}?[A-Za-z0-9].*"]]

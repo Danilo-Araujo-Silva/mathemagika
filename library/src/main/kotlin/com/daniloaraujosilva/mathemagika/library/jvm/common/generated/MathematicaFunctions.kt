@@ -6,6 +6,49 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
 /**
  *````
  * 
+ * Name:             D
+ * 
+ * Full name:        System`D
+ * 
+ *                   D[f, x] gives the partial derivative ∂ f/∂ x. 
+ *                                                               n      n
+ *                   D[f, {x, n}] gives the multiple derivative ∂  f/∂ x .
+ *                   D[f, x, y, …] gives the partial derivative ⋯ (∂/∂ y) (∂/∂ x)  f.
+ *                                                                                     m    m    n    n
+ *                   D[f, {x, n}, {y, m}, …] gives the multiple partial derivative ⋯ (∂ /∂ y ) (∂ /∂ x )  f.
+ *                   D[f, {{x , x , …}}] for a scalar f gives the vector derivative (∂ f/∂ x , ∂ f/∂ x , …). 
+ *                           1   2                                                          1         2
+ * Usage:            D[f, {array}] gives an array derivative.
+ * 
+ * Options:          NonConstants -> {}
+ * 
+ *                   Protected
+ * Attributes:       ReadProtected
+ * 
+ *                   local: paclet:ref/D
+ * Documentation:    web: http://reference.wolfram.com/language/ref/D.html
+ * 
+ * Definitions:      None
+ * 
+ * Own values:       None
+ * 
+ * Down values:      None
+ * 
+ * Up values:        None
+ * 
+ * Sub values:       None
+ * 
+ * Default value:    None
+ * 
+ * Numeric values:   None
+ */
+fun d(vararg arguments: Any?, options: MutableMap<String, Any?> = mutableMapOf()): MathematicaFunction {
+	return MathematicaFunction("D", arguments.toMutableList(), options)
+}
+
+/**
+ *````
+ * 
  * Name:             Integral
  * 
  * Full name:        System`Integral
@@ -33,7 +76,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  * 
  * Numeric values:   None
  */
-fun Integral(vararg arguments: Any?, options: MutableMap<String, Any?> = mutableMapOf()): MathematicaFunction {
+fun integral(vararg arguments: Any?, options: MutableMap<String, Any?> = mutableMapOf()): MathematicaFunction {
 	return MathematicaFunction("Integral", arguments.toMutableList(), options)
 }
 
@@ -82,8 +125,165 @@ fun Integral(vararg arguments: Any?, options: MutableMap<String, Any?> = mutable
  * 
  * Numeric values:   None
  */
-fun Integrate(vararg arguments: Any?, options: MutableMap<String, Any?> = mutableMapOf()): MathematicaFunction {
+fun integrate(vararg arguments: Any?, options: MutableMap<String, Any?> = mutableMapOf()): MathematicaFunction {
 	return MathematicaFunction("Integrate", arguments.toMutableList(), options)
+}
+
+/**
+ *````
+ * 
+ * Name:             Normal
+ * 
+ * Full name:        System`Normal
+ * 
+ *                   Normal[expr] converts expr to a normal expression from a variety of special forms. 
+ *                   Normal[expr, h] converts objects with head h in expr to normal expressions.
+ *                   Normal[expr, {h , h , …}] converts objects with head h  to normal expressions.
+ * Usage:                           1   2                                  i
+ * 
+ * Options:          None
+ * 
+ * Attributes:       Protected
+ * 
+ *                   local: paclet:ref/Normal
+ * Documentation:    web: http://reference.wolfram.com/language/ref/Normal.html
+ * 
+ * Definitions:      None
+ * 
+ * Own values:       None
+ * 
+ * Down values:      None
+ * 
+ * Up values:        None
+ * 
+ * Sub values:       None
+ * 
+ * Default value:    None
+ * 
+ * Numeric values:   None
+ */
+fun normal(vararg arguments: Any?, options: MutableMap<String, Any?> = mutableMapOf()): MathematicaFunction {
+	return MathematicaFunction("Normal", arguments.toMutableList(), options)
+}
+
+/**
+ *````
+ * 
+ * Name:             Series
+ * 
+ * Full name:        System`Series
+ * 
+ *                                                                                                                          n
+ *                   Series[f, {x, x , n}] generates a power series expansion for f about the point x = x  to order (x - x ) , where n is an explicit integer. 
+ *                                  0                                                                    0                0
+ *                   Series[f, x  x ] generates the leading term of a power series expansion for f about the point x = x . 
+ *                                  0                                                                                    0
+ *                   Series[f, {x, x , n }, {y, y , n }, …] successively finds series expansions with respect to x, then y, etc. 
+ * Usage:                           0   x        0   y
+ * 
+ *                   Analytic -> True
+ *                   Assumptions :> $Assumptions
+ * Options:          SeriesTermGoal -> Automatic
+ * 
+ * Attributes:       Protected
+ * 
+ *                   local: paclet:ref/Series
+ * Documentation:    web: http://reference.wolfram.com/language/ref/Series.html
+ * 
+ * Definitions:      None
+ * 
+ * Own values:       None
+ * 
+ * Down values:      None
+ * 
+ * Up values:        None
+ * 
+ * Sub values:       None
+ * 
+ * Default value:    None
+ * 
+ * Numeric values:   None
+ */
+fun series(vararg arguments: Any?, options: MutableMap<String, Any?> = mutableMapOf()): MathematicaFunction {
+	return MathematicaFunction("Series", arguments.toMutableList(), options)
+}
+
+/**
+ *````
+ * 
+ * Name:             Zeta
+ * 
+ * Full name:        System`Zeta
+ * 
+ *                   Zeta[s] gives the Riemann zeta function ζ(s). 
+ * Usage:            Zeta[s, a] gives the generalized Riemann zeta function ζ(s, a). 
+ * 
+ * Options:          IncludeSingularTerm -> False
+ * 
+ *                   Listable
+ *                   NumericFunction
+ * Attributes:       Protected
+ * 
+ *                   local: paclet:ref/Zeta
+ * Documentation:    web: http://reference.wolfram.com/language/ref/Zeta.html
+ * 
+ * Definitions:      None
+ * 
+ * Own values:       None
+ * 
+ * Down values:      None
+ * 
+ * Up values:        None
+ * 
+ * Sub values:       None
+ * 
+ * Default value:    None
+ * 
+ * Numeric values:   None
+ */
+fun zeta(vararg arguments: Any?, options: MutableMap<String, Any?> = mutableMapOf()): MathematicaFunction {
+	return MathematicaFunction("Zeta", arguments.toMutableList(), options)
+}
+
+/**
+ *````
+ * 
+ * Name:             ZetaZero
+ * 
+ * Full name:        System`ZetaZero
+ * 
+ *                                                th
+ *                   ZetaZero[k] represents the k   zero of the Riemann zeta function on the critical line.
+ *                                                   th
+ * Usage:            ZetaZero[k, t] represents the k   zero with imaginary part greater than t.
+ * 
+ * Options:          None
+ * 
+ *                   Listable
+ *                   NHoldFirst
+ *                   NumericFunction
+ *                   Protected
+ * Attributes:       ReadProtected
+ * 
+ *                   local: paclet:ref/ZetaZero
+ * Documentation:    web: http://reference.wolfram.com/language/ref/ZetaZero.html
+ * 
+ * Definitions:      None
+ * 
+ * Own values:       None
+ * 
+ * Down values:      None
+ * 
+ * Up values:        None
+ * 
+ * Sub values:       None
+ * 
+ * Default value:    None
+ * 
+ * Numeric values:   None
+ */
+fun zetaZero(vararg arguments: Any?, options: MutableMap<String, Any?> = mutableMapOf()): MathematicaFunction {
+	return MathematicaFunction("ZetaZero", arguments.toMutableList(), options)
 }
 
 /**

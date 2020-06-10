@@ -70,6 +70,8 @@ data class MathematicaFunction(
 
 			val command = evaluate()
 
+			println("Running command: $command")
+
 			val evaluationTypeEnum: EvaluationTypeEnum =
 				options.getOrDefault("evaluationType", INPUT_FORM) as EvaluationTypeEnum
 

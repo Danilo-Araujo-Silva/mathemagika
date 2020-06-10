@@ -26,13 +26,9 @@ fun test() {
 
 	println(integrate("x^10", "x").run<String>())
 
-	println(series(sin("x"), "{x, 1, 10}").run<String>())
+	println(normal(series(sin("x"), "{x, 1, 10}")).run<String>())
 
-	println(
-		"""
-			Series[E^x, {x, 0, 10}]
-  	""".run()
-	)
+	println(n("${normal(series(sin("x"), "{x, 0, 10}"))}/.x-> 10", 100).run<String>())
 
 
 //	println(`$VoiceStyles`().run<String>())

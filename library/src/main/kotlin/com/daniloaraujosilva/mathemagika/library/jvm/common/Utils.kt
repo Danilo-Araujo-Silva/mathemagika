@@ -29,7 +29,7 @@ inline fun <reified Return> convertFromMathematicaTo(any: Any?, vararg arguments
  */
 @ExperimentalUnsignedTypes
 @Suppress("IMPLICIT_CAST_TO_ANY")
-inline fun <reified Return> convertFromMathematicaToOrNull(any: Any?, vararg arguments: Any? = arrayOf()): Return? {
+inline fun <reified Return> convertFromMathematicaToOrNull(any: Any?, @Suppress("UNUSED_PARAMETER") vararg arguments: Any? = arrayOf()): Return? {
 	val returnClass = kotlinClass<Return>()
 	val anyAsString = any.toString()
 

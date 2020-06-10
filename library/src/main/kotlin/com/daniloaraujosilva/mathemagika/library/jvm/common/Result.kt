@@ -32,19 +32,13 @@ data class Result(val rawResult: Any?, val evaluationTypeEnum: EvaluationTypeEnu
 				}
 			}
 			OUTPUT_FORM == evaluationTypeEnum -> {
-				val stringRawResult = rawResult as String
-
-				rawResult as Return
+				rawResult as Return // Should be String
 			}
 			IMAGE == evaluationTypeEnum -> {
-				val byteArrayRawResult = rawResult as ByteArray
-
-				rawResult as Return
+				rawResult as Return // Should be ByteArray
 			}
 			TYPE_SET == evaluationTypeEnum -> {
-				val byteArrayRawResult = rawResult as ByteArray
-
-				rawResult as Return
+				rawResult as Return // Should be ByteArray
 			}
 			else -> throw IllegalArgumentException("""Unrecognized kind of evaluation "$evaluationTypeEnum".""")
 		}

@@ -25,7 +25,7 @@ inline fun <reified Return> String.runOnMathematica(vararg arguments: Any? = arr
  *
  */
 @ExperimentalUnsignedTypes
-inline fun <reified Return> String.runOnMathematicaOrNull(vararg arguments: Any? = arrayOf()): Return? {
+inline fun <reified Return> String.runOnMathematicaOrNull(@Suppress("UNUSED_PARAMETER") vararg arguments: Any? = arrayOf()): Return? {
 	lateinit var mathematica: Mathematica
 
 	try {

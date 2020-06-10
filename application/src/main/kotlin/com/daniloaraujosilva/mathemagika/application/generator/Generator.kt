@@ -10,12 +10,14 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.generated.zeta
 import com.daniloaraujosilva.mathemagika.library.jvm.common.runOnMathematica
 import java.nio.file.Paths
 
+@ExperimentalUnsignedTypes
 fun main() {
 //	generateAndSaveMathematicaFunctions()
 
 	test()
 }
 
+@ExperimentalUnsignedTypes
 fun test() {
 //	println(Mathematica().kernelLink.evaluateToInputForm("Zeta[2]", 0))
 //	println(Integrate("x^3", "x").run<String>())
@@ -56,6 +58,7 @@ fun test() {
 
 lateinit var mathematica: Mathematica
 
+@ExperimentalUnsignedTypes
 fun generateAndSaveMathematicaFunctions() {
 	try {
 		mathematica = Mathematica()
@@ -68,6 +71,7 @@ fun generateAndSaveMathematicaFunctions() {
 	}
 }
 
+@ExperimentalUnsignedTypes
 fun generateFunctionsFileContent(): String {
 	var content =
 		"""

@@ -93,6 +93,9 @@ fun generateFunction(functionName: String): String {
 			methodName = rawFunctionName
 		}
 
+	// break, continue, do, false, for, if, null, return, throw, true, while
+
+	// errors TravelDirectionsData
 	methodName = methodName.decapitalize()
 
 	var result =
@@ -108,12 +111,12 @@ fun generateFunction(functionName: String): String {
 @ExperimentalUnsignedTypes
 fun getAllFunctionsNames(): MutableList<String> {
 	val result = mathematica.evaluateToOutputForm(
-		"""
-		|Names[RegularExpression["\\${'$'}VoiceStyles|Integra.*|Zeta.*|Series|D|Normal"]]
-		""".trimMargin()
 //		"""
-//		|Names[RegularExpression["\${'$'}?[A-Za-z0-9].*"]]
+//		|Names[RegularExpression["\\${'$'}VoiceStyles|Integra.*|Zeta.*|Series|D|Normal"]]
 //		""".trimMargin()
+		"""
+		|Names[RegularExpression["\${'$'}?[A-Za-z0-9].*"]]
+		""".trimMargin()
 	)
 
 	return convertFromMathematicaTo(result)

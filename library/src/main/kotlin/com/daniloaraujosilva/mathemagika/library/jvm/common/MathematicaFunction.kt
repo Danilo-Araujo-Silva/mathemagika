@@ -114,4 +114,11 @@ data class MathematicaFunction(
 	inline fun <reified Return> extract(): Return {
 		return result.extract()
 	}
+
+	/**
+	 * Evaluates the Mathematica function to a String.
+	 */
+	override fun toString(): String {
+		return evaluate()
+	}
 }

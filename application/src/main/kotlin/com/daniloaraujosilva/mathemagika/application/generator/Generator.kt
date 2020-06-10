@@ -2,12 +2,15 @@ package com.daniloaraujosilva.mathemagika.application.generator
 
 import com.daniloaraujosilva.mathemagika.library.common.jvm.Mathematica
 import com.daniloaraujosilva.mathemagika.library.jvm.common.convertFromMathematicaTo
+import com.daniloaraujosilva.mathemagika.library.jvm.common.generated.n
 import com.daniloaraujosilva.mathemagika.library.jvm.common.generated.d
 import com.daniloaraujosilva.mathemagika.library.jvm.common.generated.integrate
 import com.daniloaraujosilva.mathemagika.library.jvm.common.generated.normal
 import com.daniloaraujosilva.mathemagika.library.jvm.common.generated.series
 import com.daniloaraujosilva.mathemagika.library.jvm.common.generated.zeta
-import com.daniloaraujosilva.mathemagika.library.jvm.common.runOnMathematica
+import com.daniloaraujosilva.mathemagika.library.jvm.common.run
+import com.daniloaraujosilva.mathemagika.library.common.jvm.EvaluationTypeEnum.OUTPUT_FORM
+import type
 import java.nio.file.Paths
 
 @ExperimentalUnsignedTypes
@@ -39,20 +42,45 @@ fun test() {
 	println(
 		"""
 			${
-				d(
-					normal(
-						series(
-							integrate(
-								zeta("x"),
-								"x"
-							),
-							"{x, 0, 6}"
-						)
+				n(
+					d(
+						normal(
+							series(
+								integrate(
+									zeta("x"),
+									"x"
+								),
+								"{x, 0, 6}"
+							)
+						),
+						"{x, 2}"
 					),
-					"{x, 2}"
+					100
 				)
-			}/.x -> 10 // FullSimplify
-		""".trimIndent().runOnMathematica<String>()
+			}/.x -> 10 // FullSimplify // Timing // TableForm // ToString
+		""".trimIndent().run<String>()
+	)
+
+	println(
+		"""
+			${
+		n(
+			d(
+				normal(
+					series(
+						integrate(
+							zeta("x"),
+							"x"
+						),
+						"{x, 0, 6}"
+					)
+				),
+				"{x, 2}"
+			),
+			100
+		)
+		}/.x -> 10 // FullSimplify // Timing // TableForm // ToString
+		""".trimIndent().run<String>(options = mutableMapOf(type to OUTPUT_FORM))
 	)
 }
 

@@ -3,10 +3,34 @@ package com.daniloaraujosilva.mathemagika.library.jvm.common
 import com.daniloaraujosilva.mathemagika.common.common.OperatingSystem
 import com.daniloaraujosilva.mathemagika.common.jvm.common.isSuperclassOf
 import com.daniloaraujosilva.mathemagika.common.jvm.common.kotlinClass
+import com.daniloaraujosilva.mathemagika.library.common.jvm.EvaluationTypeEnum
+import com.daniloaraujosilva.mathemagika.library.common.jvm.EvaluationTypeEnum.UNIT
+import com.daniloaraujosilva.mathemagika.library.common.jvm.EvaluationTypeEnum.INPUT_FORM
+import com.daniloaraujosilva.mathemagika.library.common.jvm.EvaluationTypeEnum.OUTPUT_FORM
+import com.daniloaraujosilva.mathemagika.library.common.jvm.EvaluationTypeEnum.IMAGE
+import com.daniloaraujosilva.mathemagika.library.common.jvm.EvaluationTypeEnum.TYPE_SET
+import com.daniloaraujosilva.mathemagika.library.common.jvm.Mathematica
+import com.daniloaraujosilva.mathemagika.library.common.jvm.Result
+import type
 import java.math.BigDecimal
 import java.math.BigInteger
-import java.util.Locale
+import java.util.*
 import java.util.regex.Pattern
+import kotlin.collections.ArrayList
+import kotlin.collections.HashMap
+import kotlin.collections.HashSet
+import kotlin.collections.List
+import kotlin.collections.Map
+import kotlin.collections.MutableList
+import kotlin.collections.MutableMap
+import kotlin.collections.MutableSet
+import kotlin.collections.Set
+import kotlin.collections.mutableMapOf
+import kotlin.collections.toHashSet
+import kotlin.collections.toList
+import kotlin.collections.toMutableList
+import kotlin.collections.toMutableSet
+import kotlin.collections.toSet
 
 
 /**
@@ -119,6 +143,59 @@ inline fun <reified Return> convertFromMathematicaToOrNull(any: Any?, @Suppress(
 			throw IllegalArgumentException("Unrecognized class $returnClass.")
 		}
 	} as Return
+}
+
+fun executeOnMathematica(command: String, vararg arguments: Any?, options: Map<String, Any?> = mutableMapOf()): Result {
+	val mathematica by lazy { Mathematica() }
+
+	try {
+		val evaluationTypeEnum: EvaluationTypeEnum =
+			options.getOrDefault(type, INPUT_FORM) as EvaluationTypeEnum
+
+		return with(mathematica) {
+			when {
+				UNIT == evaluationTypeEnum -> Result(
+					null,
+					UNIT
+				)
+				INPUT_FORM == evaluationTypeEnum -> Result(
+					evaluateToInputForm(command),
+					INPUT_FORM
+				)
+				OUTPUT_FORM == evaluationTypeEnum -> {
+					val pageWidth = options.getAndCastOrDefault("pageWidth", 0)
+
+					Result(
+						evaluateToOutputForm(command, pageWidth),
+						OUTPUT_FORM
+					)
+				}
+				IMAGE == evaluationTypeEnum -> {
+					val width = options.getAndCastOrDefault("width", 0)
+					val height = options.getAndCastOrDefault("height", 0)
+					val dpi = options.getAndCastOrDefault("dpi", 0)
+					val useFE = options.getAndCastOrDefault("useFrontEnd", false)
+
+					Result(
+						evaluateToImage(command, width, height, dpi, useFE),
+						IMAGE
+					)
+				}
+				TYPE_SET == evaluationTypeEnum -> {
+					val width = options.getAndCastOrDefault("width", 0)
+					val useStandardForm = options.getAndCastOrDefault("useStandardForm", true)
+
+					Result(
+						evaluateToTypeset(command, width, useStandardForm),
+						TYPE_SET
+					)
+				}
+				else -> throw IllegalArgumentException("""Unrecognized kind of evaluation "$evaluationTypeEnum".""")
+			}
+		}
+	} finally {
+		mathematica.closeKernelLink()
+	}
 }
 
 fun detectOperatingSystem(): OperatingSystem {

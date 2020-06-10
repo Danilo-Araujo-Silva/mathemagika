@@ -87,8 +87,36 @@ class Mathematica(
 	/**
 	 *
 	 */
+	override fun evaluateToInputForm(expression: String?, pageWidth: Int): String {
+		return kernelLink.evaluateToInputForm(expression, pageWidth)
+	}
+
+	/**
+	 *
+	 */
+	override fun evaluateToInputForm(expression: Expr?, pageWidth: Int): String {
+		return kernelLink.evaluateToInputForm(expression, pageWidth)
+	}
+
+	/**
+	 *
+	 */
 	fun evaluateToOutputForm(expression: String?): String {
 		return kernelLink.evaluateToOutputForm(expression, 0)
+	}
+
+	/**
+	 *
+	 */
+	override fun evaluateToOutputForm(expression: String?, pageWidth: Int): String {
+		return kernelLink.evaluateToOutputForm(expression, pageWidth)
+	}
+
+	/**
+	 *
+	 */
+	override fun evaluateToOutputForm(expression: Expr?, pageWidth: Int): String {
+		return kernelLink.evaluateToOutputForm(expression, pageWidth)
 	}
 
 	/**
@@ -101,8 +129,50 @@ class Mathematica(
 	/**
 	 *
 	 */
+	override fun evaluateToImage(expression: String?, width: Int, height: Int): ByteArray {
+		return kernelLink.evaluateToImage(expression, width, height)
+	}
+
+	/**
+	 *
+	 */
+	override fun evaluateToImage(expression: Expr?, width: Int, height: Int): ByteArray {
+		return kernelLink.evaluateToImage(expression, width, height)
+	}
+
+	/**
+	 *
+	 */
+	override fun evaluateToImage(expression: String?, width: Int, height: Int, dpi: Int, useFrontEnd: Boolean): ByteArray {
+		return kernelLink.evaluateToImage(expression, width, height, dpi, useFrontEnd)
+	}
+
+	/**
+	 *
+	 */
+	override fun evaluateToImage(expression: Expr?, width: Int, height: Int, dpi: Int, useFrontEnd: Boolean): ByteArray {
+		return kernelLink.evaluateToImage(expression, width, height, dpi, useFrontEnd)
+	}
+
+	/**
+	 *
+	 */
 	fun evaluateToTypeset(expression: String?): ByteArray? {
 		return kernelLink.evaluateToTypeset(expression, 0, true)
+	}
+
+	/**
+	 *
+	 */
+	override fun evaluateToTypeset(expression: String?, width: Int, useStandForm: Boolean): ByteArray {
+		return kernelLink.evaluateToTypeset(expression, width, useStandForm)
+	}
+
+	/**
+	 *
+	 */
+	override fun evaluateToTypeset(expression: Expr?, width: Int, useStandForm: Boolean): ByteArray {
+		return kernelLink.evaluateToTypeset(expression, width, useStandForm)
 	}
 
 	// Inherited methods:
@@ -299,14 +369,6 @@ class Mathematica(
 		TODO("Not yet implemented")
 	}
 
-	override fun evaluateToOutputForm(s: String?, pageWidth: Int): String {
-		TODO("Not yet implemented")
-	}
-
-	override fun evaluateToOutputForm(e: Expr?, pageWidth: Int): String {
-		TODO("Not yet implemented")
-	}
-
 	override fun removePacketListener(listener: PacketListener?) {
 		TODO("Not yet implemented")
 	}
@@ -344,22 +406,6 @@ class Mathematica(
 	}
 
 	override fun connect(timeoutMillis: Long) {
-		TODO("Not yet implemented")
-	}
-
-	override fun evaluateToImage(s: String?, width: Int, height: Int): ByteArray {
-		TODO("Not yet implemented")
-	}
-
-	override fun evaluateToImage(e: Expr?, width: Int, height: Int): ByteArray {
-		TODO("Not yet implemented")
-	}
-
-	override fun evaluateToImage(s: String?, width: Int, height: Int, dpi: Int, useFE: Boolean): ByteArray {
-		TODO("Not yet implemented")
-	}
-
-	override fun evaluateToImage(e: Expr?, width: Int, height: Int, dpi: Int, useFE: Boolean): ByteArray {
 		TODO("Not yet implemented")
 	}
 
@@ -515,14 +561,6 @@ class Mathematica(
 		TODO("Not yet implemented")
 	}
 
-	override fun evaluateToTypeset(s: String?, width: Int, useStdForm: Boolean): ByteArray {
-		TODO("Not yet implemented")
-	}
-
-	override fun evaluateToTypeset(e: Expr?, width: Int, useStdForm: Boolean): ByteArray {
-		TODO("Not yet implemented")
-	}
-
 	override fun putSymbol(s: String?) {
 		TODO("Not yet implemented")
 	}
@@ -572,14 +610,6 @@ class Mathematica(
 	}
 
 	override fun getLastError(): Throwable {
-		TODO("Not yet implemented")
-	}
-
-	override fun evaluateToInputForm(expression: String?, pageWidth: Int): String {
-		TODO("Not yet implemented")
-	}
-
-	override fun evaluateToInputForm(expression: Expr?, pageWidth: Int): String {
 		TODO("Not yet implemented")
 	}
 }

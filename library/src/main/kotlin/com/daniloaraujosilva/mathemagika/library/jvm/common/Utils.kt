@@ -11,7 +11,6 @@ import com.daniloaraujosilva.mathemagika.library.common.jvm.EvaluationTypeEnum.I
 import com.daniloaraujosilva.mathemagika.library.common.jvm.EvaluationTypeEnum.TYPE_SET
 import com.daniloaraujosilva.mathemagika.library.common.jvm.Mathematica
 import com.daniloaraujosilva.mathemagika.library.common.jvm.Result
-import type
 import java.math.BigDecimal
 import java.math.BigInteger
 import java.util.*

@@ -145,7 +145,7 @@ inline fun <reified Return> convertFromMathematicaToOrNull(any: Any?, @Suppress(
 	} as Return
 }
 
-fun executeOnMathematica(command: String, vararg arguments: Any?, options: Map<String, Any?> = mutableMapOf()): Result {
+fun executeOnMathematica(command: String, @Suppress("UNUSED_PARAMETER") vararg arguments: Any?, options: Map<String, Any?> = mutableMapOf()): Result {
 	val mathematica by lazy { Mathematica() }
 
 	try {

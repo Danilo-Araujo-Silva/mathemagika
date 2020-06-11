@@ -1,6 +1,5 @@
 package com.daniloaraujosilva.mathemagika.application.generator
 
-import com.daniloaraujosilva.mathemagika.application.test
 import com.daniloaraujosilva.mathemagika.common.common.kotlinKeywordsAndSymbols
 import com.daniloaraujosilva.mathemagika.library.common.jvm.Mathematica
 import com.daniloaraujosilva.mathemagika.library.jvm.common.convertFromMathematicaTo
@@ -12,7 +11,7 @@ import java.time.LocalDateTime
 fun main() {
 //	generateAndExportMathematicaFunctionsIndividually()
 
-	test()
+//	playground()
 }
 
 lateinit var mathematica: Mathematica

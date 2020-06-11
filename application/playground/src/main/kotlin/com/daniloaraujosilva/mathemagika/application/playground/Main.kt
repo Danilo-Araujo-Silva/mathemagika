@@ -5,7 +5,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.generated.*
 
 @ExperimentalUnsignedTypes
 fun main() {
-	var r: String? = null
+	var r: String?
 	val x = "x"
 
 	r =

@@ -1,4 +1,4 @@
-package com.daniloaraujosilva.mathemagika.application
+package com.daniloaraujosilva.mathemagika.application.generator
 
 import org.junit.Test
 import kotlin.test.assertTrue

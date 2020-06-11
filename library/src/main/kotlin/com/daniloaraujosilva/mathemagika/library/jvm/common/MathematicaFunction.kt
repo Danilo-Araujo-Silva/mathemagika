@@ -32,8 +32,8 @@ data class MathematicaFunction(
 	/**
 	 *
 	 */
-	operator fun invoke() {
-		evaluate()
+	operator fun invoke(): String {
+		return evaluate()
 	}
 
 	/**

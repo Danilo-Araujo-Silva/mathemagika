@@ -2,6 +2,11 @@ rootProject.name = "mathemagika"
 
 // TODO Due to Gradle limitation we needed to bundle all code of the plugins together.
 apply("plugin/bundle.gradle.kts")
+@Suppress("unchecked_cast", "nothing_to_inline")
+fun <T> uncheckedCast(target: Any?): T = target as T
+val getProperty = uncheckedCast<(keys: List<String>) -> String>(extra["getProperty"])
+val getPropertyOrNull = uncheckedCast<(keys: List<String>) -> String?>(extra["getPropertyOrNull"])
+val getPropertyOrDefault = uncheckedCast<(keys: List<String>, default: String) -> String>(extra["getPropertyOrDefault"])
 
 pluginManagement {
 	repositories {
@@ -44,3 +49,7 @@ pluginManagement {
 }
 
 apply("plugin/initialize.gradle.kts")
+
+println("Using Kotlin ${getProperty(listOf("kotlin.version"))}")
+
+println()

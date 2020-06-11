@@ -417,8 +417,7 @@ val shadowJar = tasks.withType<ShadowJar> {
 publishing {
 	publications {
 		create<MavenPublication>("mavenLocal") {
-			groupId = "com.daniloaraujosilva"
-			artifactId = "mathemagika"
+			artifactId = "jvm"
 
 			shadow.component(this)
 		}

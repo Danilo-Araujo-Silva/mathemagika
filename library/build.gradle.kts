@@ -401,14 +401,10 @@ fun customizeForMavenCentral(pom: org.gradle.api.publish.maven.MavenPom) = pom.w
 //}
 
 val shadowJar = tasks.withType<ShadowJar> {
-	println("BELHOOOO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
-//	archiveClassifier.set("")
-
-//	archiveClassifier.set(Maven.shadowClassifier)
+	archiveClassifier.set("")
 
 	// Assuming just one target.
 	val target = kotlin.targets.iterator().next()
-	println(target)
 	from(target.compilations["main"].output)
 	val runtimeClasspath = target.compilations["main"].compileDependencyFiles as Configuration
 	configurations = mutableListOf(runtimeClasspath)
@@ -418,78 +414,16 @@ val shadowJar = tasks.withType<ShadowJar> {
 	}
 }
 
-val fatJar = file("$buildDir/libs/library-0.0.1-all.jar")
-println(fatJar.absolutePath)
-val fatJarArtifact = artifacts.add("archives", fatJar) {
-	type = "jar"
-	builtBy(shadowJar)
-}
-
 publishing {
 	publications {
-		create("shadow", MavenPublication::class.java) {
-			println("ALOOOOOOOOOOOOOOOOHAAAAAAAAAAAAAAAAAAAAAA!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
-			(project.extensions.getByName("shadow") as ShadowExtension).component(this)
-		}
-//		shadow { publication ->
-//			println("ALOOOOOOOOOOOOOOOOHAAAAAAAAAAAAAAAAAAAAAA!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
-//			project.shadow.component(publication)
-//		}
+		create<MavenPublication>("mavenLocal") {
+			groupId = "com.daniloaraujosilva"
+			artifactId = "mathemagika"
 
-//		create<MavenPublication>("mavenLocal") {
-//			println("ALOOOOOOOOOOOOOOOOHAAAAAAAAAAAAAAAAAAAAAA!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
-////			shadow.component(this)
-//
-////			(project.extensions.getByName("shadow") as ShadowExtension).component(this)
-//
-////			println(fatJarArtifact)
-////			artifact(fatJarArtifact)
-//
-////			customizeForMavenCentral(pom)
-//		}
+			shadow.component(this)
+		}
+		publications.withType<MavenPublication>().all {
+			customizeForMavenCentral(pom)
+		}
 	}
 }
-
-//val jlinkFile = file("/Applications/Mathematica.app/Contents/SystemFiles/Links/JLink/JLink.jar")
-//val jLinkArtifact = artifacts.add("archives", jlinkFile) {
-//	type = "jar"
-//	builtBy(shadowJar)
-//}
-
-//publishing {
-//	publications {
-//		create<MavenPublication>("maven") {
-////			artifact(jLinkArtifact)
-//		}
-//	}
-//}
-
-//publishing {
-//	publications.withType<MavenPublication>().all {
-//		customizeForMavenCentral(pom)
-//		artifact(jar)
-////		subprojects {
-////			tasks.withType<ShadowJar> {
-////				artifact(this)
-////			}
-////		}
-//	}
-//}
-
-//publishing {
-////	create<MavenPublication>("maven") {
-////		subprojects {
-////			tasks.withType<ShadowJar> {
-////				artifact(this)
-////			}
-////		}
-////	}
-////	publications {
-////		create("shadow", MavenPublication::class.java) {
-////			(project.extensions.getByName("shadow") as ShadowExtension).component(this)
-////		}
-////	}
-//	publications.withType<MavenPublication>().all {
-//		customizeForMavenCentral(pom)
-//	}
-//}

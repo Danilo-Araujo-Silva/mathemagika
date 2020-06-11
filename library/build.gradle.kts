@@ -1,9 +1,13 @@
 import groovy.util.Node
+import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
+import com.github.jengelman.gradle.plugins.shadow.ShadowExtension
 
 plugins {
 	kotlin("multiplatform")
+	id("com.github.johnrengelman.shadow")
 	id("maven-publish")
-	id("signing")
+	id("java")
+//	id("signing")
 }
 
 kotlin {
@@ -184,6 +188,7 @@ kotlin {
 			resources.setSrcDirs(listOf(getPath("main", "resources", "jvm")))
 
 			dependencies {
+				implementation(project(":common"))
 				implementation(kotlin("stdlib-jdk8"))
 				implementation(kotlin("reflect"))
 				implementation(mapOf("name" to "JLink"))
@@ -375,12 +380,6 @@ fun customizeForMavenCentral(pom: org.gradle.api.publish.maven.MavenPom) = pom.w
 	}
 }
 
-publishing {
-	publications.withType<MavenPublication>().all {
-		customizeForMavenCentral(pom)
-	}
-}
-
 //// Sign the publications:
 
 ////// Also requires that signing.keyId, signing.password, and signing.secretKeyRingFile are provided as Gradle
@@ -394,3 +393,103 @@ publishing {
 //         signing.sign(this@all)
 //     }
 // }
+
+//tasks.withType<Jar> {
+//	from ({
+//		configurations.runtimeClasspath.get().filter { it.name.endsWith("jar") }.map { zipTree(it) }
+//	})
+//}
+
+val shadowJar = tasks.withType<ShadowJar> {
+	println("BELHOOOO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+//	archiveClassifier.set("")
+
+//	archiveClassifier.set(Maven.shadowClassifier)
+
+	// Assuming just one target.
+	val target = kotlin.targets.iterator().next()
+	println(target)
+	from(target.compilations["main"].output)
+	val runtimeClasspath = target.compilations["main"].compileDependencyFiles as Configuration
+	configurations = mutableListOf(runtimeClasspath)
+
+	dependencies {
+		include(dependency(":common"))
+	}
+}
+
+val fatJar = file("$buildDir/libs/library-0.0.1-all.jar")
+println(fatJar.absolutePath)
+val fatJarArtifact = artifacts.add("archives", fatJar) {
+	type = "jar"
+	builtBy(shadowJar)
+}
+
+publishing {
+	publications {
+		create("shadow", MavenPublication::class.java) {
+			println("ALOOOOOOOOOOOOOOOOHAAAAAAAAAAAAAAAAAAAAAA!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+			(project.extensions.getByName("shadow") as ShadowExtension).component(this)
+		}
+//		shadow { publication ->
+//			println("ALOOOOOOOOOOOOOOOOHAAAAAAAAAAAAAAAAAAAAAA!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+//			project.shadow.component(publication)
+//		}
+
+//		create<MavenPublication>("mavenLocal") {
+//			println("ALOOOOOOOOOOOOOOOOHAAAAAAAAAAAAAAAAAAAAAA!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+////			shadow.component(this)
+//
+////			(project.extensions.getByName("shadow") as ShadowExtension).component(this)
+//
+////			println(fatJarArtifact)
+////			artifact(fatJarArtifact)
+//
+////			customizeForMavenCentral(pom)
+//		}
+	}
+}
+
+//val jlinkFile = file("/Applications/Mathematica.app/Contents/SystemFiles/Links/JLink/JLink.jar")
+//val jLinkArtifact = artifacts.add("archives", jlinkFile) {
+//	type = "jar"
+//	builtBy(shadowJar)
+//}
+
+//publishing {
+//	publications {
+//		create<MavenPublication>("maven") {
+////			artifact(jLinkArtifact)
+//		}
+//	}
+//}
+
+//publishing {
+//	publications.withType<MavenPublication>().all {
+//		customizeForMavenCentral(pom)
+//		artifact(jar)
+////		subprojects {
+////			tasks.withType<ShadowJar> {
+////				artifact(this)
+////			}
+////		}
+//	}
+//}
+
+//publishing {
+////	create<MavenPublication>("maven") {
+////		subprojects {
+////			tasks.withType<ShadowJar> {
+////				artifact(this)
+////			}
+////		}
+////	}
+////	publications {
+////		create("shadow", MavenPublication::class.java) {
+////			(project.extensions.getByName("shadow") as ShadowExtension).component(this)
+////		}
+////	}
+//	publications.withType<MavenPublication>().all {
+//		customizeForMavenCentral(pom)
+//	}
+//}

@@ -1,10 +1,10 @@
-package com.daniloaraujosilva.mathemagika.library.jvm.common.generated
+package com.daniloaraujosilva.mathemagika.library.jvm.common.functions
 
 import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
 
 /**
  *````
- * 
+ *
  *                   /Applications/Mathematica.app/Contents/SystemFiles/Components/Templating/Resources/TemplateLoader
  *                   /Applications/Mathematica.app/Contents/AddOns/Applications
  *                   /Applications/Mathematica.app/Contents/SystemFiles/Links
@@ -24,7 +24,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   /Applications/Mathematica.app/Contents/SystemFiles/Kernel/Packages
  *                   /Applications/Mathematica.app/Contents/Documentation/English/System
  * Name:             /Applications/Mathematica.app/Contents/SystemFiles/Data/ICC
- * 
+ *
  *                   Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/SystemFiles/Components/Templating/Resources/TemplateLoader][FullName]
  *                   Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/AddOns/Applications][FullName]
  *                   Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/SystemFiles/Links][FullName]
@@ -44,9 +44,9 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/SystemFiles/Kernel/Packages][FullName]
  *                   Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/Documentation/English/System][FullName]
  * Full name:        Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/SystemFiles/Data/ICC][FullName]
- * 
+ *
  * Usage:            {Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/SystemFiles/Components/Templating/Resources/TemplateLoader][Usage], Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/AddOns/Applications][Usage], Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/SystemFiles/Links][Usage], Missing[UnknownSymbol, /Users/danilo/Library/Mathematica/Kernel][Usage], Missing[UnknownSymbol, /Users/danilo/Library/Mathematica/Autoload][Usage], Missing[UnknownSymbol, /Users/danilo/Library/Mathematica/Applications][Usage], Missing[UnknownSymbol, /Library/Mathematica/Kernel][Usage], Missing[UnknownSymbol, /Library/Mathematica/Autoload][Usage], Missing[UnknownSymbol, /Library/Mathematica/Applications][Usage], a . b . c or Dot[a, b, c] gives products of vectors, matrices, and tensors. , Missing[UnknownSymbol, /Users/danilo][Usage], Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/AddOns/Packages][Usage], Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/SystemFiles/Autoload][Usage], Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/AddOns/Autoload][Usage], Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/AddOns/Applications][Usage], Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/AddOns/ExtraPackages][Usage], Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/SystemFiles/Kernel/Packages][Usage], Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/Documentation/English/System][Usage], Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/SystemFiles/Data/ICC][Usage]}
- * 
+ *
  *                   Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/SystemFiles/Components/Templating/Resources/TemplateLoader][Options]
  *                   Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/AddOns/Applications][Options]
  *                   Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/SystemFiles/Links][Options]
@@ -66,7 +66,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/SystemFiles/Kernel/Packages][Options]
  *                   Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/Documentation/English/System][Options]
  * Options:          Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/SystemFiles/Data/ICC][Options]
- * 
+ *
  *                   Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/SystemFiles/Components/Templating/Resources/TemplateLoader][Attributes]
  *                   Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/AddOns/Applications][Attributes]
  *                   Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/SystemFiles/Links][Attributes]
@@ -86,10 +86,10 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/SystemFiles/Kernel/Packages][Attributes]
  *                   Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/Documentation/English/System][Attributes]
  * Attributes:       Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/SystemFiles/Data/ICC][Attributes]
- * 
+ *
  *                   local: <>{Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/SystemFiles/Components/Templating/Resources/TemplateLoader][Documentation], Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/AddOns/Applications][Documentation], Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/SystemFiles/Links][Documentation], Missing[UnknownSymbol, /Users/danilo/Library/Mathematica/Kernel][Documentation], Missing[UnknownSymbol, /Users/danilo/Library/Mathematica/Autoload][Documentation], Missing[UnknownSymbol, /Users/danilo/Library/Mathematica/Applications][Documentation], Missing[UnknownSymbol, /Library/Mathematica/Kernel][Documentation], Missing[UnknownSymbol, /Library/Mathematica/Autoload][Documentation], Missing[UnknownSymbol, /Library/Mathematica/Applications][Documentation], <|Local -> paclet:ref/Dot, Web -> http://reference.wolfram.com/language/ref/Dot.html|>, Missing[UnknownSymbol, /Users/danilo][Documentation], Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/AddOns/Packages][Documentation], Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/SystemFiles/Autoload][Documentation], Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/AddOns/Autoload][Documentation], Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/AddOns/Applications][Documentation], Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/AddOns/ExtraPackages][Documentation], Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/SystemFiles/Kernel/Packages][Documentation], Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/Documentation/English/System][Documentation], Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/SystemFiles/Data/ICC][Documentation]}[Local]
  * Documentation:    web: <>{Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/SystemFiles/Components/Templating/Resources/TemplateLoader][Documentation], Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/AddOns/Applications][Documentation], Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/SystemFiles/Links][Documentation], Missing[UnknownSymbol, /Users/danilo/Library/Mathematica/Kernel][Documentation], Missing[UnknownSymbol, /Users/danilo/Library/Mathematica/Autoload][Documentation], Missing[UnknownSymbol, /Users/danilo/Library/Mathematica/Applications][Documentation], Missing[UnknownSymbol, /Library/Mathematica/Kernel][Documentation], Missing[UnknownSymbol, /Library/Mathematica/Autoload][Documentation], Missing[UnknownSymbol, /Library/Mathematica/Applications][Documentation], <|Local -> paclet:ref/Dot, Web -> http://reference.wolfram.com/language/ref/Dot.html|>, Missing[UnknownSymbol, /Users/danilo][Documentation], Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/AddOns/Packages][Documentation], Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/SystemFiles/Autoload][Documentation], Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/AddOns/Autoload][Documentation], Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/AddOns/Applications][Documentation], Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/AddOns/ExtraPackages][Documentation], Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/SystemFiles/Kernel/Packages][Documentation], Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/Documentation/English/System][Documentation], Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/SystemFiles/Data/ICC][Documentation]}[Web]
- * 
+ *
  *                   Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/SystemFiles/Components/Templating/Resources/TemplateLoader][Definitions]
  *                   Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/AddOns/Applications][Definitions]
  *                   Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/SystemFiles/Links][Definitions]
@@ -109,7 +109,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/SystemFiles/Kernel/Packages][Definitions]
  *                   Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/Documentation/English/System][Definitions]
  * Definitions:      Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/SystemFiles/Data/ICC][Definitions]
- * 
+ *
  *                   Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/SystemFiles/Components/Templating/Resources/TemplateLoader][OwnValues]
  *                   Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/AddOns/Applications][OwnValues]
  *                   Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/SystemFiles/Links][OwnValues]
@@ -129,7 +129,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/SystemFiles/Kernel/Packages][OwnValues]
  *                   Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/Documentation/English/System][OwnValues]
  * Own values:       Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/SystemFiles/Data/ICC][OwnValues]
- * 
+ *
  *                   Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/SystemFiles/Components/Templating/Resources/TemplateLoader][DownValues]
  *                   Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/AddOns/Applications][DownValues]
  *                   Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/SystemFiles/Links][DownValues]
@@ -149,7 +149,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/SystemFiles/Kernel/Packages][DownValues]
  *                   Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/Documentation/English/System][DownValues]
  * Down values:      Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/SystemFiles/Data/ICC][DownValues]
- * 
+ *
  *                   Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/SystemFiles/Components/Templating/Resources/TemplateLoader][UpValues]
  *                   Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/AddOns/Applications][UpValues]
  *                   Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/SystemFiles/Links][UpValues]
@@ -169,7 +169,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/SystemFiles/Kernel/Packages][UpValues]
  *                   Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/Documentation/English/System][UpValues]
  * Up values:        Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/SystemFiles/Data/ICC][UpValues]
- * 
+ *
  *                   Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/SystemFiles/Components/Templating/Resources/TemplateLoader][SubValues]
  *                   Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/AddOns/Applications][SubValues]
  *                   Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/SystemFiles/Links][SubValues]
@@ -189,7 +189,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/SystemFiles/Kernel/Packages][SubValues]
  *                   Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/Documentation/English/System][SubValues]
  * Sub values:       Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/SystemFiles/Data/ICC][SubValues]
- * 
+ *
  *                   Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/SystemFiles/Components/Templating/Resources/TemplateLoader][DefaultValues]
  *                   Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/AddOns/Applications][DefaultValues]
  *                   Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/SystemFiles/Links][DefaultValues]
@@ -209,7 +209,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/SystemFiles/Kernel/Packages][DefaultValues]
  *                   Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/Documentation/English/System][DefaultValues]
  * Default value:    Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/SystemFiles/Data/ICC][DefaultValues]
- * 
+ *
  *                   Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/SystemFiles/Components/Templating/Resources/TemplateLoader][NValues]
  *                   Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/AddOns/Applications][NValues]
  *                   Missing[UnknownSymbol, /Applications/Mathematica.app/Contents/SystemFiles/Links][NValues]

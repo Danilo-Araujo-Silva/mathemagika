@@ -1,10 +1,10 @@
-package com.daniloaraujosilva.mathemagika.library.jvm.common.generated
+package com.daniloaraujosilva.mathemagika.library.jvm.common.functions
 
 import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
 
 /**
  *````
- * 
+ *
  *                   String
  *                   RemoteConnection
  *                   SocketByteList
@@ -18,7 +18,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   File
  *                   HTTP
  * Name:             HTTPStreamElement
- * 
+ *
  *                   System`String
  *                   Missing[UnknownSymbol, RemoteConnection][FullName]
  *                   Missing[UnknownSymbol, SocketByteList][FullName]
@@ -32,9 +32,9 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   System`File
  *                   Missing[UnknownSymbol, HTTP][FullName]
  * Full name:        Missing[UnknownSymbol, HTTPStreamElement][FullName]
- * 
+ *
  * Usage:            {String is the head of a character string "text". , Missing[UnknownSymbol, RemoteConnection][Usage], Missing[UnknownSymbol, SocketByteList][Usage], Missing[UnknownSymbol, TCPSocket][Usage], Missing[UnknownSymbol, ZMQSocket][Usage], Missing[UnknownSymbol, HTTP][Usage], Missing[UnknownSymbol, HTTPStreamElement][Usage], Missing[UnknownSymbol, WindowsTextFile][Usage], Missing[UnknownSymbol, GZIP][Usage], Missing[UnknownSymbol, Pipe][Usage], File["path"] is a symbolic representation of a location in the local file system. , Missing[UnknownSymbol, HTTP][Usage], Missing[UnknownSymbol, HTTPStreamElement][Usage]}
- * 
+ *
  *                   None
  *                   Missing[UnknownSymbol, RemoteConnection][Options]
  *                   Missing[UnknownSymbol, SocketByteList][Options]
@@ -48,7 +48,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   None
  *                   Missing[UnknownSymbol, HTTP][Options]
  * Options:          Missing[UnknownSymbol, HTTPStreamElement][Options]
- * 
+ *
  *                   Protected
  *                   Missing[UnknownSymbol, RemoteConnection][Attributes]
  *                   Missing[UnknownSymbol, SocketByteList][Attributes]
@@ -62,10 +62,10 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Protected ReadProtected
  *                   Missing[UnknownSymbol, HTTP][Attributes]
  * Attributes:       Missing[UnknownSymbol, HTTPStreamElement][Attributes]
- * 
+ *
  *                   local: <>{<|Local -> paclet:ref/String, Web -> http://reference.wolfram.com/language/ref/String.html|>, Missing[UnknownSymbol, RemoteConnection][Documentation], Missing[UnknownSymbol, SocketByteList][Documentation], Missing[UnknownSymbol, TCPSocket][Documentation], Missing[UnknownSymbol, ZMQSocket][Documentation], Missing[UnknownSymbol, HTTP][Documentation], Missing[UnknownSymbol, HTTPStreamElement][Documentation], Missing[UnknownSymbol, WindowsTextFile][Documentation], Missing[UnknownSymbol, GZIP][Documentation], Missing[UnknownSymbol, Pipe][Documentation], <|Local -> paclet:ref/File, Web -> http://reference.wolfram.com/language/ref/File.html|>, Missing[UnknownSymbol, HTTP][Documentation], Missing[UnknownSymbol, HTTPStreamElement][Documentation]}[Local]
  * Documentation:    web: <>{<|Local -> paclet:ref/String, Web -> http://reference.wolfram.com/language/ref/String.html|>, Missing[UnknownSymbol, RemoteConnection][Documentation], Missing[UnknownSymbol, SocketByteList][Documentation], Missing[UnknownSymbol, TCPSocket][Documentation], Missing[UnknownSymbol, ZMQSocket][Documentation], Missing[UnknownSymbol, HTTP][Documentation], Missing[UnknownSymbol, HTTPStreamElement][Documentation], Missing[UnknownSymbol, WindowsTextFile][Documentation], Missing[UnknownSymbol, GZIP][Documentation], Missing[UnknownSymbol, Pipe][Documentation], <|Local -> paclet:ref/File, Web -> http://reference.wolfram.com/language/ref/File.html|>, Missing[UnknownSymbol, HTTP][Documentation], Missing[UnknownSymbol, HTTPStreamElement][Documentation]}[Web]
- * 
+ *
  *                   None
  *                   Missing[UnknownSymbol, RemoteConnection][Definitions]
  *                   Missing[UnknownSymbol, SocketByteList][Definitions]
@@ -79,7 +79,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   None
  *                   Missing[UnknownSymbol, HTTP][Definitions]
  * Definitions:      Missing[UnknownSymbol, HTTPStreamElement][Definitions]
- * 
+ *
  *                   None
  *                   Missing[UnknownSymbol, RemoteConnection][OwnValues]
  *                   Missing[UnknownSymbol, SocketByteList][OwnValues]
@@ -93,7 +93,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   None
  *                   Missing[UnknownSymbol, HTTP][OwnValues]
  * Own values:       Missing[UnknownSymbol, HTTPStreamElement][OwnValues]
- * 
+ *
  *                   None
  *                   Missing[UnknownSymbol, RemoteConnection][DownValues]
  *                   Missing[UnknownSymbol, SocketByteList][DownValues]
@@ -107,7 +107,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   None
  *                   Missing[UnknownSymbol, HTTP][DownValues]
  * Down values:      Missing[UnknownSymbol, HTTPStreamElement][DownValues]
- * 
+ *
  *                   None
  *                   Missing[UnknownSymbol, RemoteConnection][UpValues]
  *                   Missing[UnknownSymbol, SocketByteList][UpValues]
@@ -121,7 +121,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   None
  *                   Missing[UnknownSymbol, HTTP][UpValues]
  * Up values:        Missing[UnknownSymbol, HTTPStreamElement][UpValues]
- * 
+ *
  *                   None
  *                   Missing[UnknownSymbol, RemoteConnection][SubValues]
  *                   Missing[UnknownSymbol, SocketByteList][SubValues]
@@ -135,7 +135,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   None
  *                   Missing[UnknownSymbol, HTTP][SubValues]
  * Sub values:       Missing[UnknownSymbol, HTTPStreamElement][SubValues]
- * 
+ *
  *                   None
  *                   Missing[UnknownSymbol, RemoteConnection][DefaultValues]
  *                   Missing[UnknownSymbol, SocketByteList][DefaultValues]
@@ -149,7 +149,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   None
  *                   Missing[UnknownSymbol, HTTP][DefaultValues]
  * Default value:    Missing[UnknownSymbol, HTTPStreamElement][DefaultValues]
- * 
+ *
  *                   None
  *                   Missing[UnknownSymbol, RemoteConnection][NValues]
  *                   Missing[UnknownSymbol, SocketByteList][NValues]

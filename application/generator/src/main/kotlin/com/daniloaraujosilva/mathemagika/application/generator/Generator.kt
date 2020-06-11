@@ -23,7 +23,7 @@ fun generateAndExportMathematicaFunctionsIndividually() {
 	try {
 		println("Start time: ${LocalDateTime.now()}")
 
-		basePath = Paths.get("library/src/main/kotlin/com/daniloaraujosilva/mathemagika/library/jvm/common/generated")
+		basePath = Paths.get("library/src/main/kotlin/com/daniloaraujosilva/mathemagika/library/jvm.common.functions")
 
 		mathematica = Mathematica()
 
@@ -52,7 +52,7 @@ fun generateAndExportMathematicaFunctionsTogether() {
 	try {
 		mathematica = Mathematica()
 
-		basePath = Paths.get("library/src/main/kotlin/com/daniloaraujosilva/mathemagika/library/jvm/common/generated/MathematicaFunctions.kt")
+		basePath = Paths.get("library/src/main/kotlin/com/daniloaraujosilva/mathemagika/library/jvm.common.functions/MathematicaFunctions.kt")
 
 		basePath.toFile().writeText(generateFunctionsFileContent())
 	} finally {
@@ -64,7 +64,7 @@ fun generateAndExportMathematicaFunctionsTogether() {
 fun generateFunctionsFileContent(): String {
 	var content =
 		"""
-			|package com.daniloaraujosilva.mathemagika.library.jvm.common.generated
+			|package com.daniloaraujosilva.mathemagika.library.jvm.common.functions
 			|
 			|import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
 			|${generateAllFunctions()}
@@ -99,7 +99,7 @@ fun generateAndExportFunction(functionName: String) {
 
 	val content =
 		"""
-			|package com.daniloaraujosilva.mathemagika.library.jvm.common.generated
+			|package com.daniloaraujosilva.mathemagika.library.jvm.common.functions
 			|
 			|import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
 			|

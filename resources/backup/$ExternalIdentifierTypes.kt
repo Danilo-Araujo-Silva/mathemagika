@@ -1,10 +1,10 @@
-package com.daniloaraujosilva.mathemagika.library.jvm.common.generated
+package com.daniloaraujosilva.mathemagika.library.jvm.common.functions
 
 import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
 
 /**
  *````
- * 
+ *
  *                   ArXivID
  *                   CASRegistryNumber
  *                   ChEBIID
@@ -54,7 +54,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   PubMedID
  *                   VIAFID
  * Name:             WikidataID
- * 
+ *
  *                   Missing[UnknownSymbol, ArXivID][FullName]
  *                   Missing[UnknownSymbol, CASRegistryNumber][FullName]
  *                   Missing[UnknownSymbol, ChEBIID][FullName]
@@ -104,9 +104,9 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Missing[UnknownSymbol, PubMedID][FullName]
  *                   Missing[UnknownSymbol, VIAFID][FullName]
  * Full name:        Missing[UnknownSymbol, WikidataID][FullName]
- * 
+ *
  * Usage:            {Missing[UnknownSymbol, ArXivID][Usage], Missing[UnknownSymbol, CASRegistryNumber][Usage], Missing[UnknownSymbol, ChEBIID][Usage], Missing[UnknownSymbol, ChEMBLID][Usage], Missing[UnknownSymbol, ChemSpiderID][Usage], Missing[UnknownSymbol, DOI][Usage], Missing[UnknownSymbol, DrugBankID][Usage], Missing[UnknownSymbol, GNDID][Usage], Missing[UnknownSymbol, InChI][Usage], Missing[UnknownSymbol, InChIKey][Usage], Missing[UnknownSymbol, ISAN][Usage], Missing[UnknownSymbol, ISBN10][Usage], Missing[UnknownSymbol, ISBN13][Usage], Missing[UnknownSymbol, ISMN][Usage], Missing[UnknownSymbol, ISNI][Usage], Missing[UnknownSymbol, ISRC][Usage], Missing[UnknownSymbol, ISSN][Usage], Missing[UnknownSymbol, ISWC][Usage], Missing[UnknownSymbol, KEGGID][Usage], Missing[UnknownSymbol, LibraryOfCongressAuthorityID][Usage], Missing[UnknownSymbol, LibraryOfCongressControlNumber][Usage], Missing[UnknownSymbol, MeSHCode][Usage], Missing[UnknownSymbol, MeSHConceptID][Usage], Missing[UnknownSymbol, MeSHDescriptorID][Usage], Missing[UnknownSymbol, MeSHTermID][Usage], Missing[UnknownSymbol, MusicBrainzAreaID][Usage], Missing[UnknownSymbol, MusicBrainzArtistID][Usage], Missing[UnknownSymbol, MusicBrainzEventID][Usage], Missing[UnknownSymbol, MusicBrainzInstrumentID][Usage], Missing[UnknownSymbol, MusicBrainzLabelID][Usage], Missing[UnknownSymbol, MusicBrainzPlaceID][Usage], Missing[UnknownSymbol, MusicBrainzRecordingID][Usage], Missing[UnknownSymbol, MusicBrainzReleaseGroupID][Usage], Missing[UnknownSymbol, MusicBrainzReleaseID][Usage], Missing[UnknownSymbol, MusicBrainzSeriesID][Usage], Missing[UnknownSymbol, MusicBrainzWorkID][Usage], Missing[UnknownSymbol, OCLCControlNumber][Usage], Missing[UnknownSymbol, OCLCWorkID][Usage], Missing[UnknownSymbol, OpenCitationsBibliographicResourceID][Usage], Missing[UnknownSymbol, ORCIDID][Usage], Missing[UnknownSymbol, OSMRelationID][Usage], Missing[UnknownSymbol, PDBStructureID][Usage], Missing[UnknownSymbol, PubChemBioAssayID][Usage], Missing[UnknownSymbol, PubChemCompoundID][Usage], Missing[UnknownSymbol, PubChemSubstanceID][Usage], Missing[UnknownSymbol, PubMedCentralID][Usage], Missing[UnknownSymbol, PubMedID][Usage], Missing[UnknownSymbol, VIAFID][Usage], Missing[UnknownSymbol, WikidataID][Usage]}
- * 
+ *
  *                   Missing[UnknownSymbol, ArXivID][Options]
  *                   Missing[UnknownSymbol, CASRegistryNumber][Options]
  *                   Missing[UnknownSymbol, ChEBIID][Options]
@@ -156,7 +156,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Missing[UnknownSymbol, PubMedID][Options]
  *                   Missing[UnknownSymbol, VIAFID][Options]
  * Options:          Missing[UnknownSymbol, WikidataID][Options]
- * 
+ *
  *                   Missing[UnknownSymbol, ArXivID][Attributes]
  *                   Missing[UnknownSymbol, CASRegistryNumber][Attributes]
  *                   Missing[UnknownSymbol, ChEBIID][Attributes]
@@ -206,10 +206,10 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Missing[UnknownSymbol, PubMedID][Attributes]
  *                   Missing[UnknownSymbol, VIAFID][Attributes]
  * Attributes:       Missing[UnknownSymbol, WikidataID][Attributes]
- * 
+ *
  *                   local: <>{Missing[UnknownSymbol, ArXivID][Documentation], Missing[UnknownSymbol, CASRegistryNumber][Documentation], Missing[UnknownSymbol, ChEBIID][Documentation], Missing[UnknownSymbol, ChEMBLID][Documentation], Missing[UnknownSymbol, ChemSpiderID][Documentation], Missing[UnknownSymbol, DOI][Documentation], Missing[UnknownSymbol, DrugBankID][Documentation], Missing[UnknownSymbol, GNDID][Documentation], Missing[UnknownSymbol, InChI][Documentation], Missing[UnknownSymbol, InChIKey][Documentation], Missing[UnknownSymbol, ISAN][Documentation], Missing[UnknownSymbol, ISBN10][Documentation], Missing[UnknownSymbol, ISBN13][Documentation], Missing[UnknownSymbol, ISMN][Documentation], Missing[UnknownSymbol, ISNI][Documentation], Missing[UnknownSymbol, ISRC][Documentation], Missing[UnknownSymbol, ISSN][Documentation], Missing[UnknownSymbol, ISWC][Documentation], Missing[UnknownSymbol, KEGGID][Documentation], Missing[UnknownSymbol, LibraryOfCongressAuthorityID][Documentation], Missing[UnknownSymbol, LibraryOfCongressControlNumber][Documentation], Missing[UnknownSymbol, MeSHCode][Documentation], Missing[UnknownSymbol, MeSHConceptID][Documentation], Missing[UnknownSymbol, MeSHDescriptorID][Documentation], Missing[UnknownSymbol, MeSHTermID][Documentation], Missing[UnknownSymbol, MusicBrainzAreaID][Documentation], Missing[UnknownSymbol, MusicBrainzArtistID][Documentation], Missing[UnknownSymbol, MusicBrainzEventID][Documentation], Missing[UnknownSymbol, MusicBrainzInstrumentID][Documentation], Missing[UnknownSymbol, MusicBrainzLabelID][Documentation], Missing[UnknownSymbol, MusicBrainzPlaceID][Documentation], Missing[UnknownSymbol, MusicBrainzRecordingID][Documentation], Missing[UnknownSymbol, MusicBrainzReleaseGroupID][Documentation], Missing[UnknownSymbol, MusicBrainzReleaseID][Documentation], Missing[UnknownSymbol, MusicBrainzSeriesID][Documentation], Missing[UnknownSymbol, MusicBrainzWorkID][Documentation], Missing[UnknownSymbol, OCLCControlNumber][Documentation], Missing[UnknownSymbol, OCLCWorkID][Documentation], Missing[UnknownSymbol, OpenCitationsBibliographicResourceID][Documentation], Missing[UnknownSymbol, ORCIDID][Documentation], Missing[UnknownSymbol, OSMRelationID][Documentation], Missing[UnknownSymbol, PDBStructureID][Documentation], Missing[UnknownSymbol, PubChemBioAssayID][Documentation], Missing[UnknownSymbol, PubChemCompoundID][Documentation], Missing[UnknownSymbol, PubChemSubstanceID][Documentation], Missing[UnknownSymbol, PubMedCentralID][Documentation], Missing[UnknownSymbol, PubMedID][Documentation], Missing[UnknownSymbol, VIAFID][Documentation], Missing[UnknownSymbol, WikidataID][Documentation]}[Local]
  * Documentation:    web: <>{Missing[UnknownSymbol, ArXivID][Documentation], Missing[UnknownSymbol, CASRegistryNumber][Documentation], Missing[UnknownSymbol, ChEBIID][Documentation], Missing[UnknownSymbol, ChEMBLID][Documentation], Missing[UnknownSymbol, ChemSpiderID][Documentation], Missing[UnknownSymbol, DOI][Documentation], Missing[UnknownSymbol, DrugBankID][Documentation], Missing[UnknownSymbol, GNDID][Documentation], Missing[UnknownSymbol, InChI][Documentation], Missing[UnknownSymbol, InChIKey][Documentation], Missing[UnknownSymbol, ISAN][Documentation], Missing[UnknownSymbol, ISBN10][Documentation], Missing[UnknownSymbol, ISBN13][Documentation], Missing[UnknownSymbol, ISMN][Documentation], Missing[UnknownSymbol, ISNI][Documentation], Missing[UnknownSymbol, ISRC][Documentation], Missing[UnknownSymbol, ISSN][Documentation], Missing[UnknownSymbol, ISWC][Documentation], Missing[UnknownSymbol, KEGGID][Documentation], Missing[UnknownSymbol, LibraryOfCongressAuthorityID][Documentation], Missing[UnknownSymbol, LibraryOfCongressControlNumber][Documentation], Missing[UnknownSymbol, MeSHCode][Documentation], Missing[UnknownSymbol, MeSHConceptID][Documentation], Missing[UnknownSymbol, MeSHDescriptorID][Documentation], Missing[UnknownSymbol, MeSHTermID][Documentation], Missing[UnknownSymbol, MusicBrainzAreaID][Documentation], Missing[UnknownSymbol, MusicBrainzArtistID][Documentation], Missing[UnknownSymbol, MusicBrainzEventID][Documentation], Missing[UnknownSymbol, MusicBrainzInstrumentID][Documentation], Missing[UnknownSymbol, MusicBrainzLabelID][Documentation], Missing[UnknownSymbol, MusicBrainzPlaceID][Documentation], Missing[UnknownSymbol, MusicBrainzRecordingID][Documentation], Missing[UnknownSymbol, MusicBrainzReleaseGroupID][Documentation], Missing[UnknownSymbol, MusicBrainzReleaseID][Documentation], Missing[UnknownSymbol, MusicBrainzSeriesID][Documentation], Missing[UnknownSymbol, MusicBrainzWorkID][Documentation], Missing[UnknownSymbol, OCLCControlNumber][Documentation], Missing[UnknownSymbol, OCLCWorkID][Documentation], Missing[UnknownSymbol, OpenCitationsBibliographicResourceID][Documentation], Missing[UnknownSymbol, ORCIDID][Documentation], Missing[UnknownSymbol, OSMRelationID][Documentation], Missing[UnknownSymbol, PDBStructureID][Documentation], Missing[UnknownSymbol, PubChemBioAssayID][Documentation], Missing[UnknownSymbol, PubChemCompoundID][Documentation], Missing[UnknownSymbol, PubChemSubstanceID][Documentation], Missing[UnknownSymbol, PubMedCentralID][Documentation], Missing[UnknownSymbol, PubMedID][Documentation], Missing[UnknownSymbol, VIAFID][Documentation], Missing[UnknownSymbol, WikidataID][Documentation]}[Web]
- * 
+ *
  *                   Missing[UnknownSymbol, ArXivID][Definitions]
  *                   Missing[UnknownSymbol, CASRegistryNumber][Definitions]
  *                   Missing[UnknownSymbol, ChEBIID][Definitions]
@@ -259,7 +259,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Missing[UnknownSymbol, PubMedID][Definitions]
  *                   Missing[UnknownSymbol, VIAFID][Definitions]
  * Definitions:      Missing[UnknownSymbol, WikidataID][Definitions]
- * 
+ *
  *                   Missing[UnknownSymbol, ArXivID][OwnValues]
  *                   Missing[UnknownSymbol, CASRegistryNumber][OwnValues]
  *                   Missing[UnknownSymbol, ChEBIID][OwnValues]
@@ -309,7 +309,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Missing[UnknownSymbol, PubMedID][OwnValues]
  *                   Missing[UnknownSymbol, VIAFID][OwnValues]
  * Own values:       Missing[UnknownSymbol, WikidataID][OwnValues]
- * 
+ *
  *                   Missing[UnknownSymbol, ArXivID][DownValues]
  *                   Missing[UnknownSymbol, CASRegistryNumber][DownValues]
  *                   Missing[UnknownSymbol, ChEBIID][DownValues]
@@ -359,7 +359,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Missing[UnknownSymbol, PubMedID][DownValues]
  *                   Missing[UnknownSymbol, VIAFID][DownValues]
  * Down values:      Missing[UnknownSymbol, WikidataID][DownValues]
- * 
+ *
  *                   Missing[UnknownSymbol, ArXivID][UpValues]
  *                   Missing[UnknownSymbol, CASRegistryNumber][UpValues]
  *                   Missing[UnknownSymbol, ChEBIID][UpValues]
@@ -409,7 +409,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Missing[UnknownSymbol, PubMedID][UpValues]
  *                   Missing[UnknownSymbol, VIAFID][UpValues]
  * Up values:        Missing[UnknownSymbol, WikidataID][UpValues]
- * 
+ *
  *                   Missing[UnknownSymbol, ArXivID][SubValues]
  *                   Missing[UnknownSymbol, CASRegistryNumber][SubValues]
  *                   Missing[UnknownSymbol, ChEBIID][SubValues]
@@ -459,7 +459,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Missing[UnknownSymbol, PubMedID][SubValues]
  *                   Missing[UnknownSymbol, VIAFID][SubValues]
  * Sub values:       Missing[UnknownSymbol, WikidataID][SubValues]
- * 
+ *
  *                   Missing[UnknownSymbol, ArXivID][DefaultValues]
  *                   Missing[UnknownSymbol, CASRegistryNumber][DefaultValues]
  *                   Missing[UnknownSymbol, ChEBIID][DefaultValues]
@@ -509,7 +509,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Missing[UnknownSymbol, PubMedID][DefaultValues]
  *                   Missing[UnknownSymbol, VIAFID][DefaultValues]
  * Default value:    Missing[UnknownSymbol, WikidataID][DefaultValues]
- * 
+ *
  *                   Missing[UnknownSymbol, ArXivID][NValues]
  *                   Missing[UnknownSymbol, CASRegistryNumber][NValues]
  *                   Missing[UnknownSymbol, ChEBIID][NValues]

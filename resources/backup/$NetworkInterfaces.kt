@@ -1,10 +1,10 @@
-package com.daniloaraujosilva.mathemagika.library.jvm.common.generated
+package com.daniloaraujosilva.mathemagika.library.jvm.common.functions
 
 import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
 
 /**
  *````
- * 
+ *
  *                   awdl0
  *                   bridge0
  *                   en0
@@ -21,7 +21,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   stf0
  *                   utun0
  * Name:             utun1
- * 
+ *
  *                   Missing[UnknownSymbol, awdl0][FullName]
  *                   Missing[UnknownSymbol, bridge0][FullName]
  *                   Missing[UnknownSymbol, en0][FullName]
@@ -38,9 +38,9 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Missing[UnknownSymbol, stf0][FullName]
  *                   Missing[UnknownSymbol, utun0][FullName]
  * Full name:        Missing[UnknownSymbol, utun1][FullName]
- * 
+ *
  * Usage:            {Missing[UnknownSymbol, awdl0][Usage], Missing[UnknownSymbol, bridge0][Usage], Missing[UnknownSymbol, en0][Usage], Missing[UnknownSymbol, en1][Usage], Missing[UnknownSymbol, en2][Usage], Missing[UnknownSymbol, en3][Usage], Missing[UnknownSymbol, en4][Usage], Missing[UnknownSymbol, en5][Usage], Missing[UnknownSymbol, gif0][Usage], Missing[UnknownSymbol, llw0][Usage], Missing[UnknownSymbol, lo0][Usage], Missing[UnknownSymbol, p2p0][Usage], Missing[UnknownSymbol, pktap0][Usage], Missing[UnknownSymbol, stf0][Usage], Missing[UnknownSymbol, utun0][Usage], Missing[UnknownSymbol, utun1][Usage]}
- * 
+ *
  *                   Missing[UnknownSymbol, awdl0][Options]
  *                   Missing[UnknownSymbol, bridge0][Options]
  *                   Missing[UnknownSymbol, en0][Options]
@@ -57,7 +57,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Missing[UnknownSymbol, stf0][Options]
  *                   Missing[UnknownSymbol, utun0][Options]
  * Options:          Missing[UnknownSymbol, utun1][Options]
- * 
+ *
  *                   Missing[UnknownSymbol, awdl0][Attributes]
  *                   Missing[UnknownSymbol, bridge0][Attributes]
  *                   Missing[UnknownSymbol, en0][Attributes]
@@ -74,10 +74,10 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Missing[UnknownSymbol, stf0][Attributes]
  *                   Missing[UnknownSymbol, utun0][Attributes]
  * Attributes:       Missing[UnknownSymbol, utun1][Attributes]
- * 
+ *
  *                   local: <>{Missing[UnknownSymbol, awdl0][Documentation], Missing[UnknownSymbol, bridge0][Documentation], Missing[UnknownSymbol, en0][Documentation], Missing[UnknownSymbol, en1][Documentation], Missing[UnknownSymbol, en2][Documentation], Missing[UnknownSymbol, en3][Documentation], Missing[UnknownSymbol, en4][Documentation], Missing[UnknownSymbol, en5][Documentation], Missing[UnknownSymbol, gif0][Documentation], Missing[UnknownSymbol, llw0][Documentation], Missing[UnknownSymbol, lo0][Documentation], Missing[UnknownSymbol, p2p0][Documentation], Missing[UnknownSymbol, pktap0][Documentation], Missing[UnknownSymbol, stf0][Documentation], Missing[UnknownSymbol, utun0][Documentation], Missing[UnknownSymbol, utun1][Documentation]}[Local]
  * Documentation:    web: <>{Missing[UnknownSymbol, awdl0][Documentation], Missing[UnknownSymbol, bridge0][Documentation], Missing[UnknownSymbol, en0][Documentation], Missing[UnknownSymbol, en1][Documentation], Missing[UnknownSymbol, en2][Documentation], Missing[UnknownSymbol, en3][Documentation], Missing[UnknownSymbol, en4][Documentation], Missing[UnknownSymbol, en5][Documentation], Missing[UnknownSymbol, gif0][Documentation], Missing[UnknownSymbol, llw0][Documentation], Missing[UnknownSymbol, lo0][Documentation], Missing[UnknownSymbol, p2p0][Documentation], Missing[UnknownSymbol, pktap0][Documentation], Missing[UnknownSymbol, stf0][Documentation], Missing[UnknownSymbol, utun0][Documentation], Missing[UnknownSymbol, utun1][Documentation]}[Web]
- * 
+ *
  *                   Missing[UnknownSymbol, awdl0][Definitions]
  *                   Missing[UnknownSymbol, bridge0][Definitions]
  *                   Missing[UnknownSymbol, en0][Definitions]
@@ -94,7 +94,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Missing[UnknownSymbol, stf0][Definitions]
  *                   Missing[UnknownSymbol, utun0][Definitions]
  * Definitions:      Missing[UnknownSymbol, utun1][Definitions]
- * 
+ *
  *                   Missing[UnknownSymbol, awdl0][OwnValues]
  *                   Missing[UnknownSymbol, bridge0][OwnValues]
  *                   Missing[UnknownSymbol, en0][OwnValues]
@@ -111,7 +111,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Missing[UnknownSymbol, stf0][OwnValues]
  *                   Missing[UnknownSymbol, utun0][OwnValues]
  * Own values:       Missing[UnknownSymbol, utun1][OwnValues]
- * 
+ *
  *                   Missing[UnknownSymbol, awdl0][DownValues]
  *                   Missing[UnknownSymbol, bridge0][DownValues]
  *                   Missing[UnknownSymbol, en0][DownValues]
@@ -128,7 +128,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Missing[UnknownSymbol, stf0][DownValues]
  *                   Missing[UnknownSymbol, utun0][DownValues]
  * Down values:      Missing[UnknownSymbol, utun1][DownValues]
- * 
+ *
  *                   Missing[UnknownSymbol, awdl0][UpValues]
  *                   Missing[UnknownSymbol, bridge0][UpValues]
  *                   Missing[UnknownSymbol, en0][UpValues]
@@ -145,7 +145,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Missing[UnknownSymbol, stf0][UpValues]
  *                   Missing[UnknownSymbol, utun0][UpValues]
  * Up values:        Missing[UnknownSymbol, utun1][UpValues]
- * 
+ *
  *                   Missing[UnknownSymbol, awdl0][SubValues]
  *                   Missing[UnknownSymbol, bridge0][SubValues]
  *                   Missing[UnknownSymbol, en0][SubValues]
@@ -162,7 +162,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Missing[UnknownSymbol, stf0][SubValues]
  *                   Missing[UnknownSymbol, utun0][SubValues]
  * Sub values:       Missing[UnknownSymbol, utun1][SubValues]
- * 
+ *
  *                   Missing[UnknownSymbol, awdl0][DefaultValues]
  *                   Missing[UnknownSymbol, bridge0][DefaultValues]
  *                   Missing[UnknownSymbol, en0][DefaultValues]
@@ -179,7 +179,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Missing[UnknownSymbol, stf0][DefaultValues]
  *                   Missing[UnknownSymbol, utun0][DefaultValues]
  * Default value:    Missing[UnknownSymbol, utun1][DefaultValues]
- * 
+ *
  *                   Missing[UnknownSymbol, awdl0][NValues]
  *                   Missing[UnknownSymbol, bridge0][NValues]
  *                   Missing[UnknownSymbol, en0][NValues]

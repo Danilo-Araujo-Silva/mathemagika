@@ -1,10 +1,10 @@
-package com.daniloaraujosilva.mathemagika.library.jvm.common.generated
+package com.daniloaraujosilva.mathemagika.library.jvm.common.functions
 
 import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
 
 /**
  *````
- * 
+ *
  *                   BingMaps
  *                   DeviantArt
  *                   EsriMap
@@ -23,7 +23,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Vimeo
  *                   Vine
  * Name:             YouTube
- * 
+ *
  *                   Missing[UnknownSymbol, BingMaps][FullName]
  *                   Missing[UnknownSymbol, DeviantArt][FullName]
  *                   Missing[UnknownSymbol, EsriMap][FullName]
@@ -42,9 +42,9 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Missing[UnknownSymbol, Vimeo][FullName]
  *                   Missing[UnknownSymbol, Vine][FullName]
  * Full name:        Missing[UnknownSymbol, YouTube][FullName]
- * 
+ *
  * Usage:            {Missing[UnknownSymbol, BingMaps][Usage], Missing[UnknownSymbol, DeviantArt][Usage], Missing[UnknownSymbol, EsriMap][Usage], Missing[UnknownSymbol, GoogleDocs][Usage], Missing[UnknownSymbol, GoogleForms][Usage], Missing[UnknownSymbol, GoogleMaps][Usage], Missing[UnknownSymbol, GoogleSheets][Usage], Missing[UnknownSymbol, GoogleSlides][Usage], Missing[UnknownSymbol, Imgur][Usage], Missing[UnknownSymbol, Instagram][Usage], Missing[UnknownSymbol, OpenStreetMap][Usage], Missing[UnknownSymbol, Reddit][Usage], Missing[UnknownSymbol, SoundCloud][Usage], Missing[UnknownSymbol, Twitter][Usage], Missing[UnknownSymbol, UStream][Usage], Missing[UnknownSymbol, Vimeo][Usage], Missing[UnknownSymbol, Vine][Usage], Missing[UnknownSymbol, YouTube][Usage]}
- * 
+ *
  *                   Missing[UnknownSymbol, BingMaps][Options]
  *                   Missing[UnknownSymbol, DeviantArt][Options]
  *                   Missing[UnknownSymbol, EsriMap][Options]
@@ -63,7 +63,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Missing[UnknownSymbol, Vimeo][Options]
  *                   Missing[UnknownSymbol, Vine][Options]
  * Options:          Missing[UnknownSymbol, YouTube][Options]
- * 
+ *
  *                   Missing[UnknownSymbol, BingMaps][Attributes]
  *                   Missing[UnknownSymbol, DeviantArt][Attributes]
  *                   Missing[UnknownSymbol, EsriMap][Attributes]
@@ -82,10 +82,10 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Missing[UnknownSymbol, Vimeo][Attributes]
  *                   Missing[UnknownSymbol, Vine][Attributes]
  * Attributes:       Missing[UnknownSymbol, YouTube][Attributes]
- * 
+ *
  *                   local: <>{Missing[UnknownSymbol, BingMaps][Documentation], Missing[UnknownSymbol, DeviantArt][Documentation], Missing[UnknownSymbol, EsriMap][Documentation], Missing[UnknownSymbol, GoogleDocs][Documentation], Missing[UnknownSymbol, GoogleForms][Documentation], Missing[UnknownSymbol, GoogleMaps][Documentation], Missing[UnknownSymbol, GoogleSheets][Documentation], Missing[UnknownSymbol, GoogleSlides][Documentation], Missing[UnknownSymbol, Imgur][Documentation], Missing[UnknownSymbol, Instagram][Documentation], Missing[UnknownSymbol, OpenStreetMap][Documentation], Missing[UnknownSymbol, Reddit][Documentation], Missing[UnknownSymbol, SoundCloud][Documentation], Missing[UnknownSymbol, Twitter][Documentation], Missing[UnknownSymbol, UStream][Documentation], Missing[UnknownSymbol, Vimeo][Documentation], Missing[UnknownSymbol, Vine][Documentation], Missing[UnknownSymbol, YouTube][Documentation]}[Local]
  * Documentation:    web: <>{Missing[UnknownSymbol, BingMaps][Documentation], Missing[UnknownSymbol, DeviantArt][Documentation], Missing[UnknownSymbol, EsriMap][Documentation], Missing[UnknownSymbol, GoogleDocs][Documentation], Missing[UnknownSymbol, GoogleForms][Documentation], Missing[UnknownSymbol, GoogleMaps][Documentation], Missing[UnknownSymbol, GoogleSheets][Documentation], Missing[UnknownSymbol, GoogleSlides][Documentation], Missing[UnknownSymbol, Imgur][Documentation], Missing[UnknownSymbol, Instagram][Documentation], Missing[UnknownSymbol, OpenStreetMap][Documentation], Missing[UnknownSymbol, Reddit][Documentation], Missing[UnknownSymbol, SoundCloud][Documentation], Missing[UnknownSymbol, Twitter][Documentation], Missing[UnknownSymbol, UStream][Documentation], Missing[UnknownSymbol, Vimeo][Documentation], Missing[UnknownSymbol, Vine][Documentation], Missing[UnknownSymbol, YouTube][Documentation]}[Web]
- * 
+ *
  *                   Missing[UnknownSymbol, BingMaps][Definitions]
  *                   Missing[UnknownSymbol, DeviantArt][Definitions]
  *                   Missing[UnknownSymbol, EsriMap][Definitions]
@@ -104,7 +104,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Missing[UnknownSymbol, Vimeo][Definitions]
  *                   Missing[UnknownSymbol, Vine][Definitions]
  * Definitions:      Missing[UnknownSymbol, YouTube][Definitions]
- * 
+ *
  *                   Missing[UnknownSymbol, BingMaps][OwnValues]
  *                   Missing[UnknownSymbol, DeviantArt][OwnValues]
  *                   Missing[UnknownSymbol, EsriMap][OwnValues]
@@ -123,7 +123,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Missing[UnknownSymbol, Vimeo][OwnValues]
  *                   Missing[UnknownSymbol, Vine][OwnValues]
  * Own values:       Missing[UnknownSymbol, YouTube][OwnValues]
- * 
+ *
  *                   Missing[UnknownSymbol, BingMaps][DownValues]
  *                   Missing[UnknownSymbol, DeviantArt][DownValues]
  *                   Missing[UnknownSymbol, EsriMap][DownValues]
@@ -142,7 +142,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Missing[UnknownSymbol, Vimeo][DownValues]
  *                   Missing[UnknownSymbol, Vine][DownValues]
  * Down values:      Missing[UnknownSymbol, YouTube][DownValues]
- * 
+ *
  *                   Missing[UnknownSymbol, BingMaps][UpValues]
  *                   Missing[UnknownSymbol, DeviantArt][UpValues]
  *                   Missing[UnknownSymbol, EsriMap][UpValues]
@@ -161,7 +161,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Missing[UnknownSymbol, Vimeo][UpValues]
  *                   Missing[UnknownSymbol, Vine][UpValues]
  * Up values:        Missing[UnknownSymbol, YouTube][UpValues]
- * 
+ *
  *                   Missing[UnknownSymbol, BingMaps][SubValues]
  *                   Missing[UnknownSymbol, DeviantArt][SubValues]
  *                   Missing[UnknownSymbol, EsriMap][SubValues]
@@ -180,7 +180,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Missing[UnknownSymbol, Vimeo][SubValues]
  *                   Missing[UnknownSymbol, Vine][SubValues]
  * Sub values:       Missing[UnknownSymbol, YouTube][SubValues]
- * 
+ *
  *                   Missing[UnknownSymbol, BingMaps][DefaultValues]
  *                   Missing[UnknownSymbol, DeviantArt][DefaultValues]
  *                   Missing[UnknownSymbol, EsriMap][DefaultValues]
@@ -199,7 +199,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Missing[UnknownSymbol, Vimeo][DefaultValues]
  *                   Missing[UnknownSymbol, Vine][DefaultValues]
  * Default value:    Missing[UnknownSymbol, YouTube][DefaultValues]
- * 
+ *
  *                   Missing[UnknownSymbol, BingMaps][NValues]
  *                   Missing[UnknownSymbol, DeviantArt][NValues]
  *                   Missing[UnknownSymbol, EsriMap][NValues]

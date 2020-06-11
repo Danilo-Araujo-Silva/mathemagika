@@ -1,10 +1,10 @@
-package com.daniloaraujosilva.mathemagika.library.jvm.common.generated
+package com.daniloaraujosilva.mathemagika.library.jvm.common.functions
 
 import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
 
 /**
  *````
- * 
+ *
  *                   AdobeStandard
  *                   ASCII
  *                   CP936
@@ -77,7 +77,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   WindowsThai
  *                   WindowsTurkish
  * Name:             ZapfDingbats
- * 
+ *
  *                   Missing[UnknownSymbol, AdobeStandard][FullName]
  *                   Missing[UnknownSymbol, ASCII][FullName]
  *                   Missing[UnknownSymbol, CP936][FullName]
@@ -150,9 +150,9 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Missing[UnknownSymbol, WindowsThai][FullName]
  *                   Missing[UnknownSymbol, WindowsTurkish][FullName]
  * Full name:        Missing[UnknownSymbol, ZapfDingbats][FullName]
- * 
+ *
  * Usage:            {Missing[UnknownSymbol, AdobeStandard][Usage], Missing[UnknownSymbol, ASCII][Usage], Missing[UnknownSymbol, CP936][Usage], Missing[UnknownSymbol, CP949][Usage], Missing[UnknownSymbol, CP950][Usage], Missing[UnknownSymbol, Custom][Usage], Missing[UnknownSymbol, EUC-JP][Usage], Missing[UnknownSymbol, EUC][Usage], Missing[UnknownSymbol, IBM-850][Usage], Missing[UnknownSymbol, ISO8859-10][Usage], Missing[UnknownSymbol, ISO8859-11][Usage], Missing[UnknownSymbol, ISO8859-13][Usage], Missing[UnknownSymbol, ISO8859-14][Usage], Missing[UnknownSymbol, ISO8859-15][Usage], Missing[UnknownSymbol, ISO8859-16][Usage], Missing[UnknownSymbol, ISO8859-1][Usage], Missing[UnknownSymbol, ISO8859-2][Usage], Missing[UnknownSymbol, ISO8859-3][Usage], Missing[UnknownSymbol, ISO8859-4][Usage], Missing[UnknownSymbol, ISO8859-5][Usage], Missing[UnknownSymbol, ISO8859-6][Usage], Missing[UnknownSymbol, ISO8859-7][Usage], Missing[UnknownSymbol, ISO8859-8][Usage], Missing[UnknownSymbol, ISO8859-9][Usage], Missing[UnknownSymbol, ISOLatin1][Usage], Missing[UnknownSymbol, ISOLatin2][Usage], Missing[UnknownSymbol, ISOLatin3][Usage], Missing[UnknownSymbol, ISOLatin4][Usage], Missing[UnknownSymbol, ISOLatinCyrillic][Usage], Missing[UnknownSymbol, Klingon][Usage], Missing[UnknownSymbol, koi8-r][Usage], Missing[UnknownSymbol, MacintoshArabic][Usage], Missing[UnknownSymbol, MacintoshChineseSimplified][Usage], Missing[UnknownSymbol, MacintoshChineseTraditional][Usage], Missing[UnknownSymbol, MacintoshCroatian][Usage], Missing[UnknownSymbol, MacintoshCyrillic][Usage], Missing[UnknownSymbol, MacintoshGreek][Usage], Missing[UnknownSymbol, MacintoshHebrew][Usage], Missing[UnknownSymbol, MacintoshIcelandic][Usage], Missing[UnknownSymbol, MacintoshKorean][Usage], Missing[UnknownSymbol, MacintoshNonCyrillicSlavic][Usage], Missing[UnknownSymbol, MacintoshRomanian][Usage], Missing[UnknownSymbol, MacintoshRoman][Usage], Missing[UnknownSymbol, MacintoshRomanPDFExport][Usage], Missing[UnknownSymbol, MacintoshThai][Usage], Missing[UnknownSymbol, MacintoshTurkish][Usage], Missing[UnknownSymbol, MacintoshUkrainian][Usage], Missing[UnknownSymbol, Math1][Usage], Missing[UnknownSymbol, Math2][Usage], Missing[UnknownSymbol, Math3][Usage], Missing[UnknownSymbol, Math4][Usage], Missing[UnknownSymbol, Math5][Usage], Missing[UnknownSymbol, Mathematica1][Usage], Missing[UnknownSymbol, Mathematica2][Usage], Missing[UnknownSymbol, Mathematica3][Usage], Missing[UnknownSymbol, Mathematica4][Usage], Missing[UnknownSymbol, Mathematica5][Usage], Missing[UnknownSymbol, Mathematica6][Usage], Missing[UnknownSymbol, Mathematica7][Usage], Missing[UnknownSymbol, PrintableASCII][Usage], Missing[UnknownSymbol, ShiftJIS][Usage], Symbol["name"] refers to a symbol with the specified name. , Missing[UnknownSymbol, UTF-8][Usage], Missing[UnknownSymbol, UTF8][Usage], Missing[UnknownSymbol, WindowsANSI][Usage], Missing[UnknownSymbol, WindowsBaltic][Usage], Missing[UnknownSymbol, WindowsCyrillic][Usage], Missing[UnknownSymbol, WindowsEastEurope][Usage], Missing[UnknownSymbol, WindowsGreek][Usage], Missing[UnknownSymbol, WindowsThai][Usage], Missing[UnknownSymbol, WindowsTurkish][Usage], Missing[UnknownSymbol, ZapfDingbats][Usage]}
- * 
+ *
  *                   Missing[UnknownSymbol, AdobeStandard][Options]
  *                   Missing[UnknownSymbol, ASCII][Options]
  *                   Missing[UnknownSymbol, CP936][Options]
@@ -225,7 +225,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Missing[UnknownSymbol, WindowsThai][Options]
  *                   Missing[UnknownSymbol, WindowsTurkish][Options]
  * Options:          Missing[UnknownSymbol, ZapfDingbats][Options]
- * 
+ *
  *                   Missing[UnknownSymbol, AdobeStandard][Attributes]
  *                   Missing[UnknownSymbol, ASCII][Attributes]
  *                   Missing[UnknownSymbol, CP936][Attributes]
@@ -298,10 +298,10 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Missing[UnknownSymbol, WindowsThai][Attributes]
  *                   Missing[UnknownSymbol, WindowsTurkish][Attributes]
  * Attributes:       Missing[UnknownSymbol, ZapfDingbats][Attributes]
- * 
+ *
  *                   local: <>{Missing[UnknownSymbol, AdobeStandard][Documentation], Missing[UnknownSymbol, ASCII][Documentation], Missing[UnknownSymbol, CP936][Documentation], Missing[UnknownSymbol, CP949][Documentation], Missing[UnknownSymbol, CP950][Documentation], Missing[UnknownSymbol, Custom][Documentation], Missing[UnknownSymbol, EUC-JP][Documentation], Missing[UnknownSymbol, EUC][Documentation], Missing[UnknownSymbol, IBM-850][Documentation], Missing[UnknownSymbol, ISO8859-10][Documentation], Missing[UnknownSymbol, ISO8859-11][Documentation], Missing[UnknownSymbol, ISO8859-13][Documentation], Missing[UnknownSymbol, ISO8859-14][Documentation], Missing[UnknownSymbol, ISO8859-15][Documentation], Missing[UnknownSymbol, ISO8859-16][Documentation], Missing[UnknownSymbol, ISO8859-1][Documentation], Missing[UnknownSymbol, ISO8859-2][Documentation], Missing[UnknownSymbol, ISO8859-3][Documentation], Missing[UnknownSymbol, ISO8859-4][Documentation], Missing[UnknownSymbol, ISO8859-5][Documentation], Missing[UnknownSymbol, ISO8859-6][Documentation], Missing[UnknownSymbol, ISO8859-7][Documentation], Missing[UnknownSymbol, ISO8859-8][Documentation], Missing[UnknownSymbol, ISO8859-9][Documentation], Missing[UnknownSymbol, ISOLatin1][Documentation], Missing[UnknownSymbol, ISOLatin2][Documentation], Missing[UnknownSymbol, ISOLatin3][Documentation], Missing[UnknownSymbol, ISOLatin4][Documentation], Missing[UnknownSymbol, ISOLatinCyrillic][Documentation], Missing[UnknownSymbol, Klingon][Documentation], Missing[UnknownSymbol, koi8-r][Documentation], Missing[UnknownSymbol, MacintoshArabic][Documentation], Missing[UnknownSymbol, MacintoshChineseSimplified][Documentation], Missing[UnknownSymbol, MacintoshChineseTraditional][Documentation], Missing[UnknownSymbol, MacintoshCroatian][Documentation], Missing[UnknownSymbol, MacintoshCyrillic][Documentation], Missing[UnknownSymbol, MacintoshGreek][Documentation], Missing[UnknownSymbol, MacintoshHebrew][Documentation], Missing[UnknownSymbol, MacintoshIcelandic][Documentation], Missing[UnknownSymbol, MacintoshKorean][Documentation], Missing[UnknownSymbol, MacintoshNonCyrillicSlavic][Documentation], Missing[UnknownSymbol, MacintoshRomanian][Documentation], Missing[UnknownSymbol, MacintoshRoman][Documentation], Missing[UnknownSymbol, MacintoshRomanPDFExport][Documentation], Missing[UnknownSymbol, MacintoshThai][Documentation], Missing[UnknownSymbol, MacintoshTurkish][Documentation], Missing[UnknownSymbol, MacintoshUkrainian][Documentation], Missing[UnknownSymbol, Math1][Documentation], Missing[UnknownSymbol, Math2][Documentation], Missing[UnknownSymbol, Math3][Documentation], Missing[UnknownSymbol, Math4][Documentation], Missing[UnknownSymbol, Math5][Documentation], Missing[UnknownSymbol, Mathematica1][Documentation], Missing[UnknownSymbol, Mathematica2][Documentation], Missing[UnknownSymbol, Mathematica3][Documentation], Missing[UnknownSymbol, Mathematica4][Documentation], Missing[UnknownSymbol, Mathematica5][Documentation], Missing[UnknownSymbol, Mathematica6][Documentation], Missing[UnknownSymbol, Mathematica7][Documentation], Missing[UnknownSymbol, PrintableASCII][Documentation], Missing[UnknownSymbol, ShiftJIS][Documentation], <|Local -> paclet:ref/Symbol, Web -> http://reference.wolfram.com/language/ref/Symbol.html|>, Missing[UnknownSymbol, UTF-8][Documentation], Missing[UnknownSymbol, UTF8][Documentation], Missing[UnknownSymbol, WindowsANSI][Documentation], Missing[UnknownSymbol, WindowsBaltic][Documentation], Missing[UnknownSymbol, WindowsCyrillic][Documentation], Missing[UnknownSymbol, WindowsEastEurope][Documentation], Missing[UnknownSymbol, WindowsGreek][Documentation], Missing[UnknownSymbol, WindowsThai][Documentation], Missing[UnknownSymbol, WindowsTurkish][Documentation], Missing[UnknownSymbol, ZapfDingbats][Documentation]}[Local]
  * Documentation:    web: <>{Missing[UnknownSymbol, AdobeStandard][Documentation], Missing[UnknownSymbol, ASCII][Documentation], Missing[UnknownSymbol, CP936][Documentation], Missing[UnknownSymbol, CP949][Documentation], Missing[UnknownSymbol, CP950][Documentation], Missing[UnknownSymbol, Custom][Documentation], Missing[UnknownSymbol, EUC-JP][Documentation], Missing[UnknownSymbol, EUC][Documentation], Missing[UnknownSymbol, IBM-850][Documentation], Missing[UnknownSymbol, ISO8859-10][Documentation], Missing[UnknownSymbol, ISO8859-11][Documentation], Missing[UnknownSymbol, ISO8859-13][Documentation], Missing[UnknownSymbol, ISO8859-14][Documentation], Missing[UnknownSymbol, ISO8859-15][Documentation], Missing[UnknownSymbol, ISO8859-16][Documentation], Missing[UnknownSymbol, ISO8859-1][Documentation], Missing[UnknownSymbol, ISO8859-2][Documentation], Missing[UnknownSymbol, ISO8859-3][Documentation], Missing[UnknownSymbol, ISO8859-4][Documentation], Missing[UnknownSymbol, ISO8859-5][Documentation], Missing[UnknownSymbol, ISO8859-6][Documentation], Missing[UnknownSymbol, ISO8859-7][Documentation], Missing[UnknownSymbol, ISO8859-8][Documentation], Missing[UnknownSymbol, ISO8859-9][Documentation], Missing[UnknownSymbol, ISOLatin1][Documentation], Missing[UnknownSymbol, ISOLatin2][Documentation], Missing[UnknownSymbol, ISOLatin3][Documentation], Missing[UnknownSymbol, ISOLatin4][Documentation], Missing[UnknownSymbol, ISOLatinCyrillic][Documentation], Missing[UnknownSymbol, Klingon][Documentation], Missing[UnknownSymbol, koi8-r][Documentation], Missing[UnknownSymbol, MacintoshArabic][Documentation], Missing[UnknownSymbol, MacintoshChineseSimplified][Documentation], Missing[UnknownSymbol, MacintoshChineseTraditional][Documentation], Missing[UnknownSymbol, MacintoshCroatian][Documentation], Missing[UnknownSymbol, MacintoshCyrillic][Documentation], Missing[UnknownSymbol, MacintoshGreek][Documentation], Missing[UnknownSymbol, MacintoshHebrew][Documentation], Missing[UnknownSymbol, MacintoshIcelandic][Documentation], Missing[UnknownSymbol, MacintoshKorean][Documentation], Missing[UnknownSymbol, MacintoshNonCyrillicSlavic][Documentation], Missing[UnknownSymbol, MacintoshRomanian][Documentation], Missing[UnknownSymbol, MacintoshRoman][Documentation], Missing[UnknownSymbol, MacintoshRomanPDFExport][Documentation], Missing[UnknownSymbol, MacintoshThai][Documentation], Missing[UnknownSymbol, MacintoshTurkish][Documentation], Missing[UnknownSymbol, MacintoshUkrainian][Documentation], Missing[UnknownSymbol, Math1][Documentation], Missing[UnknownSymbol, Math2][Documentation], Missing[UnknownSymbol, Math3][Documentation], Missing[UnknownSymbol, Math4][Documentation], Missing[UnknownSymbol, Math5][Documentation], Missing[UnknownSymbol, Mathematica1][Documentation], Missing[UnknownSymbol, Mathematica2][Documentation], Missing[UnknownSymbol, Mathematica3][Documentation], Missing[UnknownSymbol, Mathematica4][Documentation], Missing[UnknownSymbol, Mathematica5][Documentation], Missing[UnknownSymbol, Mathematica6][Documentation], Missing[UnknownSymbol, Mathematica7][Documentation], Missing[UnknownSymbol, PrintableASCII][Documentation], Missing[UnknownSymbol, ShiftJIS][Documentation], <|Local -> paclet:ref/Symbol, Web -> http://reference.wolfram.com/language/ref/Symbol.html|>, Missing[UnknownSymbol, UTF-8][Documentation], Missing[UnknownSymbol, UTF8][Documentation], Missing[UnknownSymbol, WindowsANSI][Documentation], Missing[UnknownSymbol, WindowsBaltic][Documentation], Missing[UnknownSymbol, WindowsCyrillic][Documentation], Missing[UnknownSymbol, WindowsEastEurope][Documentation], Missing[UnknownSymbol, WindowsGreek][Documentation], Missing[UnknownSymbol, WindowsThai][Documentation], Missing[UnknownSymbol, WindowsTurkish][Documentation], Missing[UnknownSymbol, ZapfDingbats][Documentation]}[Web]
- * 
+ *
  *                   Missing[UnknownSymbol, AdobeStandard][Definitions]
  *                   Missing[UnknownSymbol, ASCII][Definitions]
  *                   Missing[UnknownSymbol, CP936][Definitions]
@@ -374,7 +374,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Missing[UnknownSymbol, WindowsThai][Definitions]
  *                   Missing[UnknownSymbol, WindowsTurkish][Definitions]
  * Definitions:      Missing[UnknownSymbol, ZapfDingbats][Definitions]
- * 
+ *
  *                   Missing[UnknownSymbol, AdobeStandard][OwnValues]
  *                   Missing[UnknownSymbol, ASCII][OwnValues]
  *                   Missing[UnknownSymbol, CP936][OwnValues]
@@ -447,7 +447,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Missing[UnknownSymbol, WindowsThai][OwnValues]
  *                   Missing[UnknownSymbol, WindowsTurkish][OwnValues]
  * Own values:       Missing[UnknownSymbol, ZapfDingbats][OwnValues]
- * 
+ *
  *                   Missing[UnknownSymbol, AdobeStandard][DownValues]
  *                   Missing[UnknownSymbol, ASCII][DownValues]
  *                   Missing[UnknownSymbol, CP936][DownValues]
@@ -520,7 +520,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Missing[UnknownSymbol, WindowsThai][DownValues]
  *                   Missing[UnknownSymbol, WindowsTurkish][DownValues]
  * Down values:      Missing[UnknownSymbol, ZapfDingbats][DownValues]
- * 
+ *
  *                   Missing[UnknownSymbol, AdobeStandard][UpValues]
  *                   Missing[UnknownSymbol, ASCII][UpValues]
  *                   Missing[UnknownSymbol, CP936][UpValues]
@@ -593,7 +593,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Missing[UnknownSymbol, WindowsThai][UpValues]
  *                   Missing[UnknownSymbol, WindowsTurkish][UpValues]
  * Up values:        Missing[UnknownSymbol, ZapfDingbats][UpValues]
- * 
+ *
  *                   Missing[UnknownSymbol, AdobeStandard][SubValues]
  *                   Missing[UnknownSymbol, ASCII][SubValues]
  *                   Missing[UnknownSymbol, CP936][SubValues]
@@ -666,7 +666,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Missing[UnknownSymbol, WindowsThai][SubValues]
  *                   Missing[UnknownSymbol, WindowsTurkish][SubValues]
  * Sub values:       Missing[UnknownSymbol, ZapfDingbats][SubValues]
- * 
+ *
  *                   Missing[UnknownSymbol, AdobeStandard][DefaultValues]
  *                   Missing[UnknownSymbol, ASCII][DefaultValues]
  *                   Missing[UnknownSymbol, CP936][DefaultValues]
@@ -739,7 +739,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Missing[UnknownSymbol, WindowsThai][DefaultValues]
  *                   Missing[UnknownSymbol, WindowsTurkish][DefaultValues]
  * Default value:    Missing[UnknownSymbol, ZapfDingbats][DefaultValues]
- * 
+ *
  *                   Missing[UnknownSymbol, AdobeStandard][NValues]
  *                   Missing[UnknownSymbol, ASCII][NValues]
  *                   Missing[UnknownSymbol, CP936][NValues]

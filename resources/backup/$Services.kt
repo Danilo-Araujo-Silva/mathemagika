@@ -1,10 +1,10 @@
-package com.daniloaraujosilva.mathemagika.library.jvm.common.generated
+package com.daniloaraujosilva.mathemagika.library.jvm.common.functions
 
 import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
 
 /**
  *````
- * 
+ *
  *                   ArXiv
  *                   BingSearch
  *                   ChemSpider
@@ -41,7 +41,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Twitter
  *                   Wikipedia
  * Name:             Yelp
- * 
+ *
  *                   Missing[UnknownSymbol, ArXiv][FullName]
  *                   Missing[UnknownSymbol, BingSearch][FullName]
  *                   Missing[UnknownSymbol, ChemSpider][FullName]
@@ -78,9 +78,9 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Missing[UnknownSymbol, Twitter][FullName]
  *                   Missing[UnknownSymbol, Wikipedia][FullName]
  * Full name:        Missing[UnknownSymbol, Yelp][FullName]
- * 
+ *
  * Usage:            {Missing[UnknownSymbol, ArXiv][Usage], Missing[UnknownSymbol, BingSearch][Usage], Missing[UnknownSymbol, ChemSpider][Usage], Missing[UnknownSymbol, CrossRef][Usage], Missing[UnknownSymbol, Dropbox][Usage], Missing[UnknownSymbol, Facebook][Usage], Missing[UnknownSymbol, Factual][Usage], Missing[UnknownSymbol, FederalReserveEconomicData][Usage], Missing[UnknownSymbol, Fitbit][Usage], Missing[UnknownSymbol, Flickr][Usage], Missing[UnknownSymbol, GoogleAnalytics][Usage], Missing[UnknownSymbol, GoogleCalendar][Usage], Missing[UnknownSymbol, GoogleContacts][Usage], Missing[UnknownSymbol, GoogleCustomSearch][Usage], Missing[UnknownSymbol, GooglePlus][Usage], Missing[UnknownSymbol, GoogleTranslate][Usage], Missing[UnknownSymbol, Instagram][Usage], Missing[UnknownSymbol, IPFS][Usage], Missing[UnknownSymbol, LinkedIn][Usage], Missing[UnknownSymbol, MailChimp][Usage], Missing[UnknownSymbol, MicrosoftTranslator][Usage], Missing[UnknownSymbol, Mixpanel][Usage], Missing[UnknownSymbol, MusicBrainz][Usage], Missing[UnknownSymbol, OpenLibrary][Usage], Missing[UnknownSymbol, OpenPHACTS][Usage], Missing[UnknownSymbol, PubChem][Usage], Missing[UnknownSymbol, PubMed][Usage], Missing[UnknownSymbol, Pushbullet][Usage], Missing[UnknownSymbol, Reddit][Usage], Missing[UnknownSymbol, RunKeeper][Usage], Missing[UnknownSymbol, SeatGeek][Usage], Missing[UnknownSymbol, SurveyMonkey][Usage], Missing[UnknownSymbol, Twilio][Usage], Missing[UnknownSymbol, Twitter][Usage], Missing[UnknownSymbol, Wikipedia][Usage], Missing[UnknownSymbol, Yelp][Usage]}
- * 
+ *
  *                   Missing[UnknownSymbol, ArXiv][Options]
  *                   Missing[UnknownSymbol, BingSearch][Options]
  *                   Missing[UnknownSymbol, ChemSpider][Options]
@@ -117,7 +117,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Missing[UnknownSymbol, Twitter][Options]
  *                   Missing[UnknownSymbol, Wikipedia][Options]
  * Options:          Missing[UnknownSymbol, Yelp][Options]
- * 
+ *
  *                   Missing[UnknownSymbol, ArXiv][Attributes]
  *                   Missing[UnknownSymbol, BingSearch][Attributes]
  *                   Missing[UnknownSymbol, ChemSpider][Attributes]
@@ -154,10 +154,10 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Missing[UnknownSymbol, Twitter][Attributes]
  *                   Missing[UnknownSymbol, Wikipedia][Attributes]
  * Attributes:       Missing[UnknownSymbol, Yelp][Attributes]
- * 
+ *
  *                   local: <>{Missing[UnknownSymbol, ArXiv][Documentation], Missing[UnknownSymbol, BingSearch][Documentation], Missing[UnknownSymbol, ChemSpider][Documentation], Missing[UnknownSymbol, CrossRef][Documentation], Missing[UnknownSymbol, Dropbox][Documentation], Missing[UnknownSymbol, Facebook][Documentation], Missing[UnknownSymbol, Factual][Documentation], Missing[UnknownSymbol, FederalReserveEconomicData][Documentation], Missing[UnknownSymbol, Fitbit][Documentation], Missing[UnknownSymbol, Flickr][Documentation], Missing[UnknownSymbol, GoogleAnalytics][Documentation], Missing[UnknownSymbol, GoogleCalendar][Documentation], Missing[UnknownSymbol, GoogleContacts][Documentation], Missing[UnknownSymbol, GoogleCustomSearch][Documentation], Missing[UnknownSymbol, GooglePlus][Documentation], Missing[UnknownSymbol, GoogleTranslate][Documentation], Missing[UnknownSymbol, Instagram][Documentation], Missing[UnknownSymbol, IPFS][Documentation], Missing[UnknownSymbol, LinkedIn][Documentation], Missing[UnknownSymbol, MailChimp][Documentation], Missing[UnknownSymbol, MicrosoftTranslator][Documentation], Missing[UnknownSymbol, Mixpanel][Documentation], Missing[UnknownSymbol, MusicBrainz][Documentation], Missing[UnknownSymbol, OpenLibrary][Documentation], Missing[UnknownSymbol, OpenPHACTS][Documentation], Missing[UnknownSymbol, PubChem][Documentation], Missing[UnknownSymbol, PubMed][Documentation], Missing[UnknownSymbol, Pushbullet][Documentation], Missing[UnknownSymbol, Reddit][Documentation], Missing[UnknownSymbol, RunKeeper][Documentation], Missing[UnknownSymbol, SeatGeek][Documentation], Missing[UnknownSymbol, SurveyMonkey][Documentation], Missing[UnknownSymbol, Twilio][Documentation], Missing[UnknownSymbol, Twitter][Documentation], Missing[UnknownSymbol, Wikipedia][Documentation], Missing[UnknownSymbol, Yelp][Documentation]}[Local]
  * Documentation:    web: <>{Missing[UnknownSymbol, ArXiv][Documentation], Missing[UnknownSymbol, BingSearch][Documentation], Missing[UnknownSymbol, ChemSpider][Documentation], Missing[UnknownSymbol, CrossRef][Documentation], Missing[UnknownSymbol, Dropbox][Documentation], Missing[UnknownSymbol, Facebook][Documentation], Missing[UnknownSymbol, Factual][Documentation], Missing[UnknownSymbol, FederalReserveEconomicData][Documentation], Missing[UnknownSymbol, Fitbit][Documentation], Missing[UnknownSymbol, Flickr][Documentation], Missing[UnknownSymbol, GoogleAnalytics][Documentation], Missing[UnknownSymbol, GoogleCalendar][Documentation], Missing[UnknownSymbol, GoogleContacts][Documentation], Missing[UnknownSymbol, GoogleCustomSearch][Documentation], Missing[UnknownSymbol, GooglePlus][Documentation], Missing[UnknownSymbol, GoogleTranslate][Documentation], Missing[UnknownSymbol, Instagram][Documentation], Missing[UnknownSymbol, IPFS][Documentation], Missing[UnknownSymbol, LinkedIn][Documentation], Missing[UnknownSymbol, MailChimp][Documentation], Missing[UnknownSymbol, MicrosoftTranslator][Documentation], Missing[UnknownSymbol, Mixpanel][Documentation], Missing[UnknownSymbol, MusicBrainz][Documentation], Missing[UnknownSymbol, OpenLibrary][Documentation], Missing[UnknownSymbol, OpenPHACTS][Documentation], Missing[UnknownSymbol, PubChem][Documentation], Missing[UnknownSymbol, PubMed][Documentation], Missing[UnknownSymbol, Pushbullet][Documentation], Missing[UnknownSymbol, Reddit][Documentation], Missing[UnknownSymbol, RunKeeper][Documentation], Missing[UnknownSymbol, SeatGeek][Documentation], Missing[UnknownSymbol, SurveyMonkey][Documentation], Missing[UnknownSymbol, Twilio][Documentation], Missing[UnknownSymbol, Twitter][Documentation], Missing[UnknownSymbol, Wikipedia][Documentation], Missing[UnknownSymbol, Yelp][Documentation]}[Web]
- * 
+ *
  *                   Missing[UnknownSymbol, ArXiv][Definitions]
  *                   Missing[UnknownSymbol, BingSearch][Definitions]
  *                   Missing[UnknownSymbol, ChemSpider][Definitions]
@@ -194,7 +194,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Missing[UnknownSymbol, Twitter][Definitions]
  *                   Missing[UnknownSymbol, Wikipedia][Definitions]
  * Definitions:      Missing[UnknownSymbol, Yelp][Definitions]
- * 
+ *
  *                   Missing[UnknownSymbol, ArXiv][OwnValues]
  *                   Missing[UnknownSymbol, BingSearch][OwnValues]
  *                   Missing[UnknownSymbol, ChemSpider][OwnValues]
@@ -231,7 +231,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Missing[UnknownSymbol, Twitter][OwnValues]
  *                   Missing[UnknownSymbol, Wikipedia][OwnValues]
  * Own values:       Missing[UnknownSymbol, Yelp][OwnValues]
- * 
+ *
  *                   Missing[UnknownSymbol, ArXiv][DownValues]
  *                   Missing[UnknownSymbol, BingSearch][DownValues]
  *                   Missing[UnknownSymbol, ChemSpider][DownValues]
@@ -268,7 +268,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Missing[UnknownSymbol, Twitter][DownValues]
  *                   Missing[UnknownSymbol, Wikipedia][DownValues]
  * Down values:      Missing[UnknownSymbol, Yelp][DownValues]
- * 
+ *
  *                   Missing[UnknownSymbol, ArXiv][UpValues]
  *                   Missing[UnknownSymbol, BingSearch][UpValues]
  *                   Missing[UnknownSymbol, ChemSpider][UpValues]
@@ -305,7 +305,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Missing[UnknownSymbol, Twitter][UpValues]
  *                   Missing[UnknownSymbol, Wikipedia][UpValues]
  * Up values:        Missing[UnknownSymbol, Yelp][UpValues]
- * 
+ *
  *                   Missing[UnknownSymbol, ArXiv][SubValues]
  *                   Missing[UnknownSymbol, BingSearch][SubValues]
  *                   Missing[UnknownSymbol, ChemSpider][SubValues]
@@ -342,7 +342,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Missing[UnknownSymbol, Twitter][SubValues]
  *                   Missing[UnknownSymbol, Wikipedia][SubValues]
  * Sub values:       Missing[UnknownSymbol, Yelp][SubValues]
- * 
+ *
  *                   Missing[UnknownSymbol, ArXiv][DefaultValues]
  *                   Missing[UnknownSymbol, BingSearch][DefaultValues]
  *                   Missing[UnknownSymbol, ChemSpider][DefaultValues]
@@ -379,7 +379,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Missing[UnknownSymbol, Twitter][DefaultValues]
  *                   Missing[UnknownSymbol, Wikipedia][DefaultValues]
  * Default value:    Missing[UnknownSymbol, Yelp][DefaultValues]
- * 
+ *
  *                   Missing[UnknownSymbol, ArXiv][NValues]
  *                   Missing[UnknownSymbol, BingSearch][NValues]
  *                   Missing[UnknownSymbol, ChemSpider][NValues]

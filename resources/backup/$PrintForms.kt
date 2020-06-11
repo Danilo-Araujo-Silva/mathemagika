@@ -1,10 +1,10 @@
-package com.daniloaraujosilva.mathemagika.library.jvm.common.generated
+package com.daniloaraujosilva.mathemagika.library.jvm.common.functions
 
 import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
 
 /**
  *````
- * 
+ *
  *                   InputForm
  *                   OutputForm
  *                   TextForm
@@ -15,7 +15,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   TeXForm
  *                   StandardForm
  * Name:             TraditionalForm
- * 
+ *
  *                   System`InputForm
  *                   System`OutputForm
  *                   System`TextForm
@@ -26,7 +26,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   System`TeXForm
  *                   System`StandardForm
  * Full name:        System`TraditionalForm
- * 
+ *
  *                   {InputForm[expr] prints as a version of expr suitable for input to the Wolfram Language. }
  *                   {OutputForm[expr] prints as a two-dimensional representation of expr using only keyboard characters. }
  *                   {System`TextForm}
@@ -37,7 +37,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   {TeXForm[expr] prints as a TeX version of expr. }
  *                   {StandardForm[expr] prints as the standard Wolfram Language two-dimensional representation of expr. }
  * Usage:            {TraditionalForm[expr] prints as an approximation to the traditional mathematical notation for expr. }
- * 
+ *
  *                   NumberMarks :> $NumberMarks
  *                   None
  *                   None
@@ -48,7 +48,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   None
  *                   None
  * Options:          ParameterVariables -> {}
- * 
+ *
  *                   Protected
  *                   Protected
  *                   Protected
@@ -59,10 +59,10 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Protected
  *                   Protected                   ReadProtected
  * Attributes:       Protected                   ReadProtected
- * 
+ *
  *                   local: <>{<|Local -> paclet:ref/InputForm, Web -> http://reference.wolfram.com/language/ref/InputForm.html|>, <|Local -> paclet:ref/OutputForm, Web -> http://reference.wolfram.com/language/ref/OutputForm.html|>, None, <|Local -> paclet:ref/CForm, Web -> http://reference.wolfram.com/language/ref/CForm.html|>, <|Local -> paclet:ref/FortranForm, Web -> http://reference.wolfram.com/language/ref/FortranForm.html|>, None, <|Local -> paclet:ref/MathMLForm, Web -> http://reference.wolfram.com/language/ref/MathMLForm.html|>, <|Local -> paclet:ref/TeXForm, Web -> http://reference.wolfram.com/language/ref/TeXForm.html|>, <|Local -> paclet:ref/StandardForm, Web -> http://reference.wolfram.com/language/ref/StandardForm.html|>, <|Local -> paclet:ref/TraditionalForm, Web -> http://reference.wolfram.com/language/ref/TraditionalForm.html|>}[Local]
  * Documentation:    web: <>{<|Local -> paclet:ref/InputForm, Web -> http://reference.wolfram.com/language/ref/InputForm.html|>, <|Local -> paclet:ref/OutputForm, Web -> http://reference.wolfram.com/language/ref/OutputForm.html|>, None, <|Local -> paclet:ref/CForm, Web -> http://reference.wolfram.com/language/ref/CForm.html|>, <|Local -> paclet:ref/FortranForm, Web -> http://reference.wolfram.com/language/ref/FortranForm.html|>, None, <|Local -> paclet:ref/MathMLForm, Web -> http://reference.wolfram.com/language/ref/MathMLForm.html|>, <|Local -> paclet:ref/TeXForm, Web -> http://reference.wolfram.com/language/ref/TeXForm.html|>, <|Local -> paclet:ref/StandardForm, Web -> http://reference.wolfram.com/language/ref/StandardForm.html|>, <|Local -> paclet:ref/TraditionalForm, Web -> http://reference.wolfram.com/language/ref/TraditionalForm.html|>}[Web]
- * 
+ *
  *                   None
  *                   None
  *                   None
@@ -73,7 +73,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   None
  *                   None
  * Definitions:      None
- * 
+ *
  *                   None
  *                   None
  *                   None
@@ -84,7 +84,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   None
  *                   None
  * Own values:       None
- * 
+ *
  *                   None
  *                   None
  *                   None
@@ -95,7 +95,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   None
  *                   None
  * Down values:      None
- * 
+ *
  *                   None
  *                   None
  *                   None
@@ -106,7 +106,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   None
  *                   None
  * Up values:        None
- * 
+ *
  *                   None
  *                   None
  *                   None
@@ -117,7 +117,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   None
  *                   None
  * Sub values:       None
- * 
+ *
  *                   None
  *                   None
  *                   None
@@ -128,7 +128,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   None
  *                   None
  * Default value:    None
- * 
+ *
  *                   None
  *                   None
  *                   None

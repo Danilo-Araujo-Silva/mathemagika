@@ -1,10 +1,10 @@
-package com.daniloaraujosilva.mathemagika.library.jvm.common.generated
+package com.daniloaraujosilva.mathemagika.library.jvm.common.functions
 
 import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
 
 /**
  *````
- * 
+ *
  *                   InputForm
  *                   OutputForm
  *                   TextForm
@@ -32,7 +32,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   TeXForm
  *                   StandardForm
  * Name:             TraditionalForm
- * 
+ *
  *                   System`InputForm
  *                   System`OutputForm
  *                   System`TextForm
@@ -60,7 +60,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   System`TeXForm
  *                   System`StandardForm
  * Full name:        System`TraditionalForm
- * 
+ *
  *                   {InputForm[expr] prints as a version of expr suitable for input to the Wolfram Language. }
  *                   {OutputForm[expr] prints as a two-dimensional representation of expr using only keyboard characters. }
  *                   {System`TextForm}
@@ -88,7 +88,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   {TeXForm[expr] prints as a TeX version of expr. }
  *                   {StandardForm[expr] prints as the standard Wolfram Language two-dimensional representation of expr. }
  * Usage:            {TraditionalForm[expr] prints as an approximation to the traditional mathematical notation for expr. }
- * 
+ *
  *                   NumberMarks :> $NumberMarks
  *                   None
  *                   None
@@ -116,7 +116,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   None
  *                   None
  * Options:          ParameterVariables -> {}
- * 
+ *
  *                   Protected
  *                   Protected
  *                   Protected
@@ -144,10 +144,10 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Protected
  *                   Protected                          ReadProtected
  * Attributes:       Protected                          ReadProtected
- * 
+ *
  *                   local: <>{<|Local -> paclet:ref/InputForm, Web -> http://reference.wolfram.com/language/ref/InputForm.html|>, <|Local -> paclet:ref/OutputForm, Web -> http://reference.wolfram.com/language/ref/OutputForm.html|>, None, <|Local -> paclet:ref/CForm, Web -> http://reference.wolfram.com/language/ref/CForm.html|>, <|Local -> paclet:ref/Short, Web -> http://reference.wolfram.com/language/ref/Short.html|>, <|Local -> paclet:ref/Shallow, Web -> http://reference.wolfram.com/language/ref/Shallow.html|>, <|Local -> paclet:ref/MatrixForm, Web -> http://reference.wolfram.com/language/ref/MatrixForm.html|>, <|Local -> paclet:ref/TableForm, Web -> http://reference.wolfram.com/language/ref/TableForm.html|>, <|Local -> paclet:ref/TreeForm, Web -> http://reference.wolfram.com/language/ref/TreeForm.html|>, <|Local -> paclet:ref/FullForm, Web -> http://reference.wolfram.com/language/ref/FullForm.html|>, <|Local -> paclet:ref/NumberForm, Web -> http://reference.wolfram.com/language/ref/NumberForm.html|>, <|Local -> paclet:ref/EngineeringForm, Web -> http://reference.wolfram.com/language/ref/EngineeringForm.html|>, <|Local -> paclet:ref/ScientificForm, Web -> http://reference.wolfram.com/language/ref/ScientificForm.html|>, <|Local -> paclet:ref/QuantityForm, Web -> http://reference.wolfram.com/language/ref/QuantityForm.html|>, <|Local -> paclet:ref/DecimalForm, Web -> http://reference.wolfram.com/language/ref/DecimalForm.html|>, <|Local -> paclet:ref/PercentForm, Web -> http://reference.wolfram.com/language/ref/PercentForm.html|>, <|Local -> paclet:ref/PaddedForm, Web -> http://reference.wolfram.com/language/ref/PaddedForm.html|>, <|Local -> paclet:ref/AccountingForm, Web -> http://reference.wolfram.com/language/ref/AccountingForm.html|>, <|Local -> paclet:ref/BaseForm, Web -> http://reference.wolfram.com/language/ref/BaseForm.html|>, <|Local -> paclet:ref/DisplayForm, Web -> http://reference.wolfram.com/language/ref/DisplayForm.html|>, <|Local -> paclet:ref/StyleForm, Web -> http://reference.wolfram.com/language/ref/StyleForm.html|>, <|Local -> paclet:ref/FortranForm, Web -> http://reference.wolfram.com/language/ref/FortranForm.html|>, None, <|Local -> paclet:ref/MathMLForm, Web -> http://reference.wolfram.com/language/ref/MathMLForm.html|>, <|Local -> paclet:ref/TeXForm, Web -> http://reference.wolfram.com/language/ref/TeXForm.html|>, <|Local -> paclet:ref/StandardForm, Web -> http://reference.wolfram.com/language/ref/StandardForm.html|>, <|Local -> paclet:ref/TraditionalForm, Web -> http://reference.wolfram.com/language/ref/TraditionalForm.html|>}[Local]
  * Documentation:    web: <>{<|Local -> paclet:ref/InputForm, Web -> http://reference.wolfram.com/language/ref/InputForm.html|>, <|Local -> paclet:ref/OutputForm, Web -> http://reference.wolfram.com/language/ref/OutputForm.html|>, None, <|Local -> paclet:ref/CForm, Web -> http://reference.wolfram.com/language/ref/CForm.html|>, <|Local -> paclet:ref/Short, Web -> http://reference.wolfram.com/language/ref/Short.html|>, <|Local -> paclet:ref/Shallow, Web -> http://reference.wolfram.com/language/ref/Shallow.html|>, <|Local -> paclet:ref/MatrixForm, Web -> http://reference.wolfram.com/language/ref/MatrixForm.html|>, <|Local -> paclet:ref/TableForm, Web -> http://reference.wolfram.com/language/ref/TableForm.html|>, <|Local -> paclet:ref/TreeForm, Web -> http://reference.wolfram.com/language/ref/TreeForm.html|>, <|Local -> paclet:ref/FullForm, Web -> http://reference.wolfram.com/language/ref/FullForm.html|>, <|Local -> paclet:ref/NumberForm, Web -> http://reference.wolfram.com/language/ref/NumberForm.html|>, <|Local -> paclet:ref/EngineeringForm, Web -> http://reference.wolfram.com/language/ref/EngineeringForm.html|>, <|Local -> paclet:ref/ScientificForm, Web -> http://reference.wolfram.com/language/ref/ScientificForm.html|>, <|Local -> paclet:ref/QuantityForm, Web -> http://reference.wolfram.com/language/ref/QuantityForm.html|>, <|Local -> paclet:ref/DecimalForm, Web -> http://reference.wolfram.com/language/ref/DecimalForm.html|>, <|Local -> paclet:ref/PercentForm, Web -> http://reference.wolfram.com/language/ref/PercentForm.html|>, <|Local -> paclet:ref/PaddedForm, Web -> http://reference.wolfram.com/language/ref/PaddedForm.html|>, <|Local -> paclet:ref/AccountingForm, Web -> http://reference.wolfram.com/language/ref/AccountingForm.html|>, <|Local -> paclet:ref/BaseForm, Web -> http://reference.wolfram.com/language/ref/BaseForm.html|>, <|Local -> paclet:ref/DisplayForm, Web -> http://reference.wolfram.com/language/ref/DisplayForm.html|>, <|Local -> paclet:ref/StyleForm, Web -> http://reference.wolfram.com/language/ref/StyleForm.html|>, <|Local -> paclet:ref/FortranForm, Web -> http://reference.wolfram.com/language/ref/FortranForm.html|>, None, <|Local -> paclet:ref/MathMLForm, Web -> http://reference.wolfram.com/language/ref/MathMLForm.html|>, <|Local -> paclet:ref/TeXForm, Web -> http://reference.wolfram.com/language/ref/TeXForm.html|>, <|Local -> paclet:ref/StandardForm, Web -> http://reference.wolfram.com/language/ref/StandardForm.html|>, <|Local -> paclet:ref/TraditionalForm, Web -> http://reference.wolfram.com/language/ref/TraditionalForm.html|>}[Web]
- * 
+ *
  *                   None
  *                   None
  *                   None
@@ -175,7 +175,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   None
  *                   None
  * Definitions:      None
- * 
+ *
  *                   None
  *                   None
  *                   None
@@ -203,7 +203,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   None
  *                   None
  * Own values:       None
- * 
+ *
  *                   None
  *                   None
  *                   None
@@ -231,7 +231,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   None
  *                   None
  * Down values:      None
- * 
+ *
  *                   None
  *                   None
  *                   None
@@ -259,7 +259,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   None
  *                   None
  * Up values:        None
- * 
+ *
  *                   None
  *                   None
  *                   None
@@ -287,7 +287,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   None
  *                   None
  * Sub values:       None
- * 
+ *
  *                   None
  *                   None
  *                   None
@@ -315,7 +315,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   None
  *                   None
  * Default value:    None
- * 
+ *
  *                   None
  *                   None
  *                   None

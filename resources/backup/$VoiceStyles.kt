@@ -1,10 +1,10 @@
-package com.daniloaraujosilva.mathemagika.library.jvm.common.generated
+package com.daniloaraujosilva.mathemagika.library.jvm.common.functions
 
 import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
 
 /**
  *````
- * 
+ *
  *                   AlanWBlack
  *                   Alex
  *                   Alice
@@ -58,7 +58,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Yuri
  *                   Zosia
  * Name:             Zuzana
- * 
+ *
  *                   Missing[UnknownSymbol, AlanWBlack][FullName]
  *                   Missing[UnknownSymbol, Alex][FullName]
  *                   Missing[UnknownSymbol, Alice][FullName]
@@ -112,9 +112,9 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Missing[UnknownSymbol, Yuri][FullName]
  *                   Missing[UnknownSymbol, Zosia][FullName]
  * Full name:        Missing[UnknownSymbol, Zuzana][FullName]
- * 
+ *
  * Usage:            {Missing[UnknownSymbol, AlanWBlack][Usage], Missing[UnknownSymbol, Alex][Usage], Missing[UnknownSymbol, Alice][Usage], Missing[UnknownSymbol, Alva][Usage], Missing[UnknownSymbol, Amelie][Usage], Missing[UnknownSymbol, Anna][Usage], Missing[UnknownSymbol, Carmit][Usage], Missing[UnknownSymbol, Damayanti][Usage], Missing[UnknownSymbol, Daniel][Usage], Missing[UnknownSymbol, Diego][Usage], Missing[UnknownSymbol, Ellen][Usage], Missing[UnknownSymbol, Fiona][Usage], Missing[UnknownSymbol, Fred][Usage], Missing[UnknownSymbol, Ioana][Usage], Missing[UnknownSymbol, Joana][Usage], Missing[UnknownSymbol, Jorge][Usage], Missing[UnknownSymbol, Juan][Usage], Missing[UnknownSymbol, Kanya][Usage], Missing[UnknownSymbol, Karen][Usage], Missing[UnknownSymbol, KevinLenzo][Usage], Missing[UnknownSymbol, KevinLenzo16][Usage], Missing[UnknownSymbol, Kyoko][Usage], Missing[UnknownSymbol, Laura][Usage], Missing[UnknownSymbol, Lekha][Usage], Missing[UnknownSymbol, Luca][Usage], Missing[UnknownSymbol, Luciana][Usage], Missing[UnknownSymbol, Maged][Usage], Missing[UnknownSymbol, Mariska][Usage], Missing[UnknownSymbol, Mei-Jia][Usage], Missing[UnknownSymbol, Melina][Usage], Missing[UnknownSymbol, Milena][Usage], Missing[UnknownSymbol, Moira][Usage], Missing[UnknownSymbol, Monica][Usage], Missing[UnknownSymbol, Nora][Usage], Missing[UnknownSymbol, Paulina][Usage], Missing[UnknownSymbol, Rishi][Usage], Missing[UnknownSymbol, RMS][Usage], Missing[UnknownSymbol, Samantha][Usage], Missing[UnknownSymbol, Sara][Usage], Missing[UnknownSymbol, Satu][Usage], Missing[UnknownSymbol, Sin-ji][Usage], Missing[UnknownSymbol, SLT][Usage], Missing[UnknownSymbol, Tessa][Usage], Missing[UnknownSymbol, Thomas][Usage], Missing[UnknownSymbol, Ting-Ting][Usage], Missing[UnknownSymbol, Veena][Usage], Missing[UnknownSymbol, Victoria][Usage], Missing[UnknownSymbol, Xander][Usage], Missing[UnknownSymbol, Yelda][Usage], Missing[UnknownSymbol, Yuna][Usage], Missing[UnknownSymbol, Yuri][Usage], Missing[UnknownSymbol, Zosia][Usage], Missing[UnknownSymbol, Zuzana][Usage]}
- * 
+ *
  *                   Missing[UnknownSymbol, AlanWBlack][Options]
  *                   Missing[UnknownSymbol, Alex][Options]
  *                   Missing[UnknownSymbol, Alice][Options]
@@ -168,7 +168,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Missing[UnknownSymbol, Yuri][Options]
  *                   Missing[UnknownSymbol, Zosia][Options]
  * Options:          Missing[UnknownSymbol, Zuzana][Options]
- * 
+ *
  *                   Missing[UnknownSymbol, AlanWBlack][Attributes]
  *                   Missing[UnknownSymbol, Alex][Attributes]
  *                   Missing[UnknownSymbol, Alice][Attributes]
@@ -222,10 +222,10 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Missing[UnknownSymbol, Yuri][Attributes]
  *                   Missing[UnknownSymbol, Zosia][Attributes]
  * Attributes:       Missing[UnknownSymbol, Zuzana][Attributes]
- * 
+ *
  *                   local: <>{Missing[UnknownSymbol, AlanWBlack][Documentation], Missing[UnknownSymbol, Alex][Documentation], Missing[UnknownSymbol, Alice][Documentation], Missing[UnknownSymbol, Alva][Documentation], Missing[UnknownSymbol, Amelie][Documentation], Missing[UnknownSymbol, Anna][Documentation], Missing[UnknownSymbol, Carmit][Documentation], Missing[UnknownSymbol, Damayanti][Documentation], Missing[UnknownSymbol, Daniel][Documentation], Missing[UnknownSymbol, Diego][Documentation], Missing[UnknownSymbol, Ellen][Documentation], Missing[UnknownSymbol, Fiona][Documentation], Missing[UnknownSymbol, Fred][Documentation], Missing[UnknownSymbol, Ioana][Documentation], Missing[UnknownSymbol, Joana][Documentation], Missing[UnknownSymbol, Jorge][Documentation], Missing[UnknownSymbol, Juan][Documentation], Missing[UnknownSymbol, Kanya][Documentation], Missing[UnknownSymbol, Karen][Documentation], Missing[UnknownSymbol, KevinLenzo][Documentation], Missing[UnknownSymbol, KevinLenzo16][Documentation], Missing[UnknownSymbol, Kyoko][Documentation], Missing[UnknownSymbol, Laura][Documentation], Missing[UnknownSymbol, Lekha][Documentation], Missing[UnknownSymbol, Luca][Documentation], Missing[UnknownSymbol, Luciana][Documentation], Missing[UnknownSymbol, Maged][Documentation], Missing[UnknownSymbol, Mariska][Documentation], Missing[UnknownSymbol, Mei-Jia][Documentation], Missing[UnknownSymbol, Melina][Documentation], Missing[UnknownSymbol, Milena][Documentation], Missing[UnknownSymbol, Moira][Documentation], Missing[UnknownSymbol, Monica][Documentation], Missing[UnknownSymbol, Nora][Documentation], Missing[UnknownSymbol, Paulina][Documentation], Missing[UnknownSymbol, Rishi][Documentation], Missing[UnknownSymbol, RMS][Documentation], Missing[UnknownSymbol, Samantha][Documentation], Missing[UnknownSymbol, Sara][Documentation], Missing[UnknownSymbol, Satu][Documentation], Missing[UnknownSymbol, Sin-ji][Documentation], Missing[UnknownSymbol, SLT][Documentation], Missing[UnknownSymbol, Tessa][Documentation], Missing[UnknownSymbol, Thomas][Documentation], Missing[UnknownSymbol, Ting-Ting][Documentation], Missing[UnknownSymbol, Veena][Documentation], Missing[UnknownSymbol, Victoria][Documentation], Missing[UnknownSymbol, Xander][Documentation], Missing[UnknownSymbol, Yelda][Documentation], Missing[UnknownSymbol, Yuna][Documentation], Missing[UnknownSymbol, Yuri][Documentation], Missing[UnknownSymbol, Zosia][Documentation], Missing[UnknownSymbol, Zuzana][Documentation]}[Local]
  * Documentation:    web: <>{Missing[UnknownSymbol, AlanWBlack][Documentation], Missing[UnknownSymbol, Alex][Documentation], Missing[UnknownSymbol, Alice][Documentation], Missing[UnknownSymbol, Alva][Documentation], Missing[UnknownSymbol, Amelie][Documentation], Missing[UnknownSymbol, Anna][Documentation], Missing[UnknownSymbol, Carmit][Documentation], Missing[UnknownSymbol, Damayanti][Documentation], Missing[UnknownSymbol, Daniel][Documentation], Missing[UnknownSymbol, Diego][Documentation], Missing[UnknownSymbol, Ellen][Documentation], Missing[UnknownSymbol, Fiona][Documentation], Missing[UnknownSymbol, Fred][Documentation], Missing[UnknownSymbol, Ioana][Documentation], Missing[UnknownSymbol, Joana][Documentation], Missing[UnknownSymbol, Jorge][Documentation], Missing[UnknownSymbol, Juan][Documentation], Missing[UnknownSymbol, Kanya][Documentation], Missing[UnknownSymbol, Karen][Documentation], Missing[UnknownSymbol, KevinLenzo][Documentation], Missing[UnknownSymbol, KevinLenzo16][Documentation], Missing[UnknownSymbol, Kyoko][Documentation], Missing[UnknownSymbol, Laura][Documentation], Missing[UnknownSymbol, Lekha][Documentation], Missing[UnknownSymbol, Luca][Documentation], Missing[UnknownSymbol, Luciana][Documentation], Missing[UnknownSymbol, Maged][Documentation], Missing[UnknownSymbol, Mariska][Documentation], Missing[UnknownSymbol, Mei-Jia][Documentation], Missing[UnknownSymbol, Melina][Documentation], Missing[UnknownSymbol, Milena][Documentation], Missing[UnknownSymbol, Moira][Documentation], Missing[UnknownSymbol, Monica][Documentation], Missing[UnknownSymbol, Nora][Documentation], Missing[UnknownSymbol, Paulina][Documentation], Missing[UnknownSymbol, Rishi][Documentation], Missing[UnknownSymbol, RMS][Documentation], Missing[UnknownSymbol, Samantha][Documentation], Missing[UnknownSymbol, Sara][Documentation], Missing[UnknownSymbol, Satu][Documentation], Missing[UnknownSymbol, Sin-ji][Documentation], Missing[UnknownSymbol, SLT][Documentation], Missing[UnknownSymbol, Tessa][Documentation], Missing[UnknownSymbol, Thomas][Documentation], Missing[UnknownSymbol, Ting-Ting][Documentation], Missing[UnknownSymbol, Veena][Documentation], Missing[UnknownSymbol, Victoria][Documentation], Missing[UnknownSymbol, Xander][Documentation], Missing[UnknownSymbol, Yelda][Documentation], Missing[UnknownSymbol, Yuna][Documentation], Missing[UnknownSymbol, Yuri][Documentation], Missing[UnknownSymbol, Zosia][Documentation], Missing[UnknownSymbol, Zuzana][Documentation]}[Web]
- * 
+ *
  *                   Missing[UnknownSymbol, AlanWBlack][Definitions]
  *                   Missing[UnknownSymbol, Alex][Definitions]
  *                   Missing[UnknownSymbol, Alice][Definitions]
@@ -279,7 +279,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Missing[UnknownSymbol, Yuri][Definitions]
  *                   Missing[UnknownSymbol, Zosia][Definitions]
  * Definitions:      Missing[UnknownSymbol, Zuzana][Definitions]
- * 
+ *
  *                   Missing[UnknownSymbol, AlanWBlack][OwnValues]
  *                   Missing[UnknownSymbol, Alex][OwnValues]
  *                   Missing[UnknownSymbol, Alice][OwnValues]
@@ -333,7 +333,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Missing[UnknownSymbol, Yuri][OwnValues]
  *                   Missing[UnknownSymbol, Zosia][OwnValues]
  * Own values:       Missing[UnknownSymbol, Zuzana][OwnValues]
- * 
+ *
  *                   Missing[UnknownSymbol, AlanWBlack][DownValues]
  *                   Missing[UnknownSymbol, Alex][DownValues]
  *                   Missing[UnknownSymbol, Alice][DownValues]
@@ -387,7 +387,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Missing[UnknownSymbol, Yuri][DownValues]
  *                   Missing[UnknownSymbol, Zosia][DownValues]
  * Down values:      Missing[UnknownSymbol, Zuzana][DownValues]
- * 
+ *
  *                   Missing[UnknownSymbol, AlanWBlack][UpValues]
  *                   Missing[UnknownSymbol, Alex][UpValues]
  *                   Missing[UnknownSymbol, Alice][UpValues]
@@ -441,7 +441,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Missing[UnknownSymbol, Yuri][UpValues]
  *                   Missing[UnknownSymbol, Zosia][UpValues]
  * Up values:        Missing[UnknownSymbol, Zuzana][UpValues]
- * 
+ *
  *                   Missing[UnknownSymbol, AlanWBlack][SubValues]
  *                   Missing[UnknownSymbol, Alex][SubValues]
  *                   Missing[UnknownSymbol, Alice][SubValues]
@@ -495,7 +495,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Missing[UnknownSymbol, Yuri][SubValues]
  *                   Missing[UnknownSymbol, Zosia][SubValues]
  * Sub values:       Missing[UnknownSymbol, Zuzana][SubValues]
- * 
+ *
  *                   Missing[UnknownSymbol, AlanWBlack][DefaultValues]
  *                   Missing[UnknownSymbol, Alex][DefaultValues]
  *                   Missing[UnknownSymbol, Alice][DefaultValues]
@@ -549,7 +549,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Missing[UnknownSymbol, Yuri][DefaultValues]
  *                   Missing[UnknownSymbol, Zosia][DefaultValues]
  * Default value:    Missing[UnknownSymbol, Zuzana][DefaultValues]
- * 
+ *
  *                   Missing[UnknownSymbol, AlanWBlack][NValues]
  *                   Missing[UnknownSymbol, Alex][NValues]
  *                   Missing[UnknownSymbol, Alice][NValues]

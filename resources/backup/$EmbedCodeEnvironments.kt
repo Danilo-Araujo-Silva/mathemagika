@@ -1,10 +1,10 @@
-package com.daniloaraujosilva.mathemagika.library.jvm.common.generated
+package com.daniloaraujosilva.mathemagika.library.jvm.common.functions
 
 import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
 
 /**
  *````
- * 
+ *
  *                   Android
  *                   C#
  *                   C++-VisualStudio
@@ -22,7 +22,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Scala
  *                   Swift
  * Name:             VisualBasic
- * 
+ *
  *                   Missing[UnknownSymbol, Android][FullName]
  *                   Missing[UnknownSymbol, C#][FullName]
  *                   Missing[UnknownSymbol, C++-VisualStudio][FullName]
@@ -40,9 +40,9 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Missing[UnknownSymbol, Scala][FullName]
  *                   Missing[UnknownSymbol, Swift][FullName]
  * Full name:        Missing[UnknownSymbol, VisualBasic][FullName]
- * 
+ *
  * Usage:            {Missing[UnknownSymbol, Android][Usage], Missing[UnknownSymbol, C#][Usage], Missing[UnknownSymbol, C++-VisualStudio][Usage], Missing[UnknownSymbol, GoogleDocs][Usage], Missing[UnknownSymbol, HTML][Usage], Missing[UnknownSymbol, Java][Usage], Missing[UnknownSymbol, Java-Jersey][Usage], Missing[UnknownSymbol, JavaScript][Usage], Missing[UnknownSymbol, Perl][Usage], Missing[UnknownSymbol, PHP][Usage], Missing[UnknownSymbol, Python][Usage], Missing[UnknownSymbol, Python2][Usage], Missing[UnknownSymbol, R][Usage], Missing[UnknownSymbol, Ruby][Usage], Missing[UnknownSymbol, Scala][Usage], Missing[UnknownSymbol, Swift][Usage], Missing[UnknownSymbol, VisualBasic][Usage]}
- * 
+ *
  *                   Missing[UnknownSymbol, Android][Options]
  *                   Missing[UnknownSymbol, C#][Options]
  *                   Missing[UnknownSymbol, C++-VisualStudio][Options]
@@ -60,7 +60,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Missing[UnknownSymbol, Scala][Options]
  *                   Missing[UnknownSymbol, Swift][Options]
  * Options:          Missing[UnknownSymbol, VisualBasic][Options]
- * 
+ *
  *                   Missing[UnknownSymbol, Android][Attributes]
  *                   Missing[UnknownSymbol, C#][Attributes]
  *                   Missing[UnknownSymbol, C++-VisualStudio][Attributes]
@@ -78,10 +78,10 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Missing[UnknownSymbol, Scala][Attributes]
  *                   Missing[UnknownSymbol, Swift][Attributes]
  * Attributes:       Missing[UnknownSymbol, VisualBasic][Attributes]
- * 
+ *
  *                   local: <>{Missing[UnknownSymbol, Android][Documentation], Missing[UnknownSymbol, C#][Documentation], Missing[UnknownSymbol, C++-VisualStudio][Documentation], Missing[UnknownSymbol, GoogleDocs][Documentation], Missing[UnknownSymbol, HTML][Documentation], Missing[UnknownSymbol, Java][Documentation], Missing[UnknownSymbol, Java-Jersey][Documentation], Missing[UnknownSymbol, JavaScript][Documentation], Missing[UnknownSymbol, Perl][Documentation], Missing[UnknownSymbol, PHP][Documentation], Missing[UnknownSymbol, Python][Documentation], Missing[UnknownSymbol, Python2][Documentation], Missing[UnknownSymbol, R][Documentation], Missing[UnknownSymbol, Ruby][Documentation], Missing[UnknownSymbol, Scala][Documentation], Missing[UnknownSymbol, Swift][Documentation], Missing[UnknownSymbol, VisualBasic][Documentation]}[Local]
  * Documentation:    web: <>{Missing[UnknownSymbol, Android][Documentation], Missing[UnknownSymbol, C#][Documentation], Missing[UnknownSymbol, C++-VisualStudio][Documentation], Missing[UnknownSymbol, GoogleDocs][Documentation], Missing[UnknownSymbol, HTML][Documentation], Missing[UnknownSymbol, Java][Documentation], Missing[UnknownSymbol, Java-Jersey][Documentation], Missing[UnknownSymbol, JavaScript][Documentation], Missing[UnknownSymbol, Perl][Documentation], Missing[UnknownSymbol, PHP][Documentation], Missing[UnknownSymbol, Python][Documentation], Missing[UnknownSymbol, Python2][Documentation], Missing[UnknownSymbol, R][Documentation], Missing[UnknownSymbol, Ruby][Documentation], Missing[UnknownSymbol, Scala][Documentation], Missing[UnknownSymbol, Swift][Documentation], Missing[UnknownSymbol, VisualBasic][Documentation]}[Web]
- * 
+ *
  *                   Missing[UnknownSymbol, Android][Definitions]
  *                   Missing[UnknownSymbol, C#][Definitions]
  *                   Missing[UnknownSymbol, C++-VisualStudio][Definitions]
@@ -99,7 +99,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Missing[UnknownSymbol, Scala][Definitions]
  *                   Missing[UnknownSymbol, Swift][Definitions]
  * Definitions:      Missing[UnknownSymbol, VisualBasic][Definitions]
- * 
+ *
  *                   Missing[UnknownSymbol, Android][OwnValues]
  *                   Missing[UnknownSymbol, C#][OwnValues]
  *                   Missing[UnknownSymbol, C++-VisualStudio][OwnValues]
@@ -117,7 +117,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Missing[UnknownSymbol, Scala][OwnValues]
  *                   Missing[UnknownSymbol, Swift][OwnValues]
  * Own values:       Missing[UnknownSymbol, VisualBasic][OwnValues]
- * 
+ *
  *                   Missing[UnknownSymbol, Android][DownValues]
  *                   Missing[UnknownSymbol, C#][DownValues]
  *                   Missing[UnknownSymbol, C++-VisualStudio][DownValues]
@@ -135,7 +135,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Missing[UnknownSymbol, Scala][DownValues]
  *                   Missing[UnknownSymbol, Swift][DownValues]
  * Down values:      Missing[UnknownSymbol, VisualBasic][DownValues]
- * 
+ *
  *                   Missing[UnknownSymbol, Android][UpValues]
  *                   Missing[UnknownSymbol, C#][UpValues]
  *                   Missing[UnknownSymbol, C++-VisualStudio][UpValues]
@@ -153,7 +153,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Missing[UnknownSymbol, Scala][UpValues]
  *                   Missing[UnknownSymbol, Swift][UpValues]
  * Up values:        Missing[UnknownSymbol, VisualBasic][UpValues]
- * 
+ *
  *                   Missing[UnknownSymbol, Android][SubValues]
  *                   Missing[UnknownSymbol, C#][SubValues]
  *                   Missing[UnknownSymbol, C++-VisualStudio][SubValues]
@@ -171,7 +171,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Missing[UnknownSymbol, Scala][SubValues]
  *                   Missing[UnknownSymbol, Swift][SubValues]
  * Sub values:       Missing[UnknownSymbol, VisualBasic][SubValues]
- * 
+ *
  *                   Missing[UnknownSymbol, Android][DefaultValues]
  *                   Missing[UnknownSymbol, C#][DefaultValues]
  *                   Missing[UnknownSymbol, C++-VisualStudio][DefaultValues]
@@ -189,7 +189,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Missing[UnknownSymbol, Scala][DefaultValues]
  *                   Missing[UnknownSymbol, Swift][DefaultValues]
  * Default value:    Missing[UnknownSymbol, VisualBasic][DefaultValues]
- * 
+ *
  *                   Missing[UnknownSymbol, Android][NValues]
  *                   Missing[UnknownSymbol, C#][NValues]
  *                   Missing[UnknownSymbol, C++-VisualStudio][NValues]

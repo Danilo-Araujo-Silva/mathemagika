@@ -1,10 +1,10 @@
-package com.daniloaraujosilva.mathemagika.library.jvm.common.generated
+package com.daniloaraujosilva.mathemagika.library.jvm.common.functions
 
 import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
 
 /**
  *````
- * 
+ *
  *                   AVLTree
  *                   BinaryTree
  *                   BitVector
@@ -26,7 +26,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   RingBuffer
  *                   Stack
  * Name:             Value
- * 
+ *
  *                   Missing[UnknownSymbol, AVLTree][FullName]
  *                   Missing[UnknownSymbol, BinaryTree][FullName]
  *                   Missing[UnknownSymbol, BitVector][FullName]
@@ -48,10 +48,10 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Missing[UnknownSymbol, RingBuffer][FullName]
  *                   System`Stack
  * Full name:        System`Value
- * 
+ *
  *                   {Missing[UnknownSymbol, AVLTree][Usage], Missing[UnknownSymbol, BinaryTree][Usage], Missing[UnknownSymbol, BitVector][Usage], Missing[UnknownSymbol, BloomFilter][Usage], Missing[UnknownSymbol, Counter][Usage], Missing[UnknownSymbol, Deque][Usage], Missing[UnknownSymbol, DisjointSet][Usage], Missing[UnknownSymbol, DoublyLinkedList][Usage], Missing[UnknownSymbol, DynamicArray][Usage], Missing[UnknownSymbol, FixedArray][Usage], Missing[UnknownSymbol, HashSet][Usage], HashTable is a part of the object which is returned by Dispatch., Missing[UnknownSymbol, LeastRecentlyUsedCache][Usage], Missing[UnknownSymbol, LinkedList][Usage], Missing[UnknownSymbol, OrderedHashSet][Usage], Missing[UnknownSymbol, OrderedHashTable][Usage], Missing[UnknownSymbol, PriorityQueue][Usage], Missing[UnknownSymbol, Queue][Usage], Missing[UnknownSymbol, RingBuffer][Usage], Stack[] shows the current evaluation stack, giving a list of the tags associated with evaluations that are currently being done. Stack[pattern] gives a list of expressions currently being evaluated which match the pattern. , System`Value}
  * Usage:
- * 
+ *
  *                   Missing[UnknownSymbol, AVLTree][Options]
  *                   Missing[UnknownSymbol, BinaryTree][Options]
  *                   Missing[UnknownSymbol, BitVector][Options]
@@ -73,7 +73,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Missing[UnknownSymbol, RingBuffer][Options]
  *                   None
  * Options:          None
- * 
+ *
  *                   Missing[UnknownSymbol, AVLTree][Attributes]
  *                   Missing[UnknownSymbol, BinaryTree][Attributes]
  *                   Missing[UnknownSymbol, BitVector][Attributes]
@@ -94,10 +94,10 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Missing[UnknownSymbol, RingBuffer][Attributes]
  *                   HoldFirst Protected
  * Attributes:       Protected
- * 
+ *
  *                   local: <>{Missing[UnknownSymbol, AVLTree][Documentation], Missing[UnknownSymbol, BinaryTree][Documentation], Missing[UnknownSymbol, BitVector][Documentation], Missing[UnknownSymbol, BloomFilter][Documentation], Missing[UnknownSymbol, Counter][Documentation], Missing[UnknownSymbol, Deque][Documentation], Missing[UnknownSymbol, DisjointSet][Documentation], Missing[UnknownSymbol, DoublyLinkedList][Documentation], Missing[UnknownSymbol, DynamicArray][Documentation], Missing[UnknownSymbol, FixedArray][Documentation], Missing[UnknownSymbol, HashSet][Documentation], None, Missing[UnknownSymbol, LeastRecentlyUsedCache][Documentation], Missing[UnknownSymbol, LinkedList][Documentation], Missing[UnknownSymbol, OrderedHashSet][Documentation], Missing[UnknownSymbol, OrderedHashTable][Documentation], Missing[UnknownSymbol, PriorityQueue][Documentation], Missing[UnknownSymbol, Queue][Documentation], Missing[UnknownSymbol, RingBuffer][Documentation], <|Local -> paclet:ref/Stack, Web -> http://reference.wolfram.com/language/ref/Stack.html|>, None}[Local]
  * Documentation:    web: <>{Missing[UnknownSymbol, AVLTree][Documentation], Missing[UnknownSymbol, BinaryTree][Documentation], Missing[UnknownSymbol, BitVector][Documentation], Missing[UnknownSymbol, BloomFilter][Documentation], Missing[UnknownSymbol, Counter][Documentation], Missing[UnknownSymbol, Deque][Documentation], Missing[UnknownSymbol, DisjointSet][Documentation], Missing[UnknownSymbol, DoublyLinkedList][Documentation], Missing[UnknownSymbol, DynamicArray][Documentation], Missing[UnknownSymbol, FixedArray][Documentation], Missing[UnknownSymbol, HashSet][Documentation], None, Missing[UnknownSymbol, LeastRecentlyUsedCache][Documentation], Missing[UnknownSymbol, LinkedList][Documentation], Missing[UnknownSymbol, OrderedHashSet][Documentation], Missing[UnknownSymbol, OrderedHashTable][Documentation], Missing[UnknownSymbol, PriorityQueue][Documentation], Missing[UnknownSymbol, Queue][Documentation], Missing[UnknownSymbol, RingBuffer][Documentation], <|Local -> paclet:ref/Stack, Web -> http://reference.wolfram.com/language/ref/Stack.html|>, None}[Web]
- * 
+ *
  *                   Missing[UnknownSymbol, AVLTree][Definitions]
  *                   Missing[UnknownSymbol, BinaryTree][Definitions]
  *                   Missing[UnknownSymbol, BitVector][Definitions]
@@ -119,7 +119,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Missing[UnknownSymbol, RingBuffer][Definitions]
  *                   None
  * Definitions:      None
- * 
+ *
  *                   Missing[UnknownSymbol, AVLTree][OwnValues]
  *                   Missing[UnknownSymbol, BinaryTree][OwnValues]
  *                   Missing[UnknownSymbol, BitVector][OwnValues]
@@ -141,7 +141,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Missing[UnknownSymbol, RingBuffer][OwnValues]
  *                   None
  * Own values:       None
- * 
+ *
  *                   Missing[UnknownSymbol, AVLTree][DownValues]
  *                   Missing[UnknownSymbol, BinaryTree][DownValues]
  *                   Missing[UnknownSymbol, BitVector][DownValues]
@@ -163,7 +163,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Missing[UnknownSymbol, RingBuffer][DownValues]
  *                   None
  * Down values:      None
- * 
+ *
  *                   Missing[UnknownSymbol, AVLTree][UpValues]
  *                   Missing[UnknownSymbol, BinaryTree][UpValues]
  *                   Missing[UnknownSymbol, BitVector][UpValues]
@@ -185,7 +185,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Missing[UnknownSymbol, RingBuffer][UpValues]
  *                   None
  * Up values:        None
- * 
+ *
  *                   Missing[UnknownSymbol, AVLTree][SubValues]
  *                   Missing[UnknownSymbol, BinaryTree][SubValues]
  *                   Missing[UnknownSymbol, BitVector][SubValues]
@@ -207,7 +207,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Missing[UnknownSymbol, RingBuffer][SubValues]
  *                   None
  * Sub values:       None
- * 
+ *
  *                   Missing[UnknownSymbol, AVLTree][DefaultValues]
  *                   Missing[UnknownSymbol, BinaryTree][DefaultValues]
  *                   Missing[UnknownSymbol, BitVector][DefaultValues]
@@ -229,7 +229,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
  *                   Missing[UnknownSymbol, RingBuffer][DefaultValues]
  *                   None
  * Default value:    None
- * 
+ *
  *                   Missing[UnknownSymbol, AVLTree][NValues]
  *                   Missing[UnknownSymbol, BinaryTree][NValues]
  *                   Missing[UnknownSymbol, BitVector][NValues]

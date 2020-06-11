@@ -7,9 +7,18 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.functions.*
 fun main() {
 	var r: String?
 	val x = "x"
+	val y = "y"
+	val f = "#^2 &"
 
 	r =
-	!n(
+		map(
+			f, range(5)
+		)()
+
+	println(r)
+
+	r =
+	n(
 		d(
 			normal(
 				series(
@@ -21,23 +30,22 @@ fun main() {
 				)
 			),
 			l(x, 2)
-		)
-			+ " /.$x -> $GoldenRatio",
-		10
-	)
+		) + " /.$x -> $GoldenRatio",
+		y
+	)()
 
 	println(r)
 
-	r = !fullSimplify(
+	r = fullSimplify(
 		with(
 			l("$x = $EulerGamma"),
 			sin("$Pi $x")
 		)
-	)
+	)()
 
 	println(r)
 
-	r = !table(prime(x), l(x, 1, 10))()
+	r = table(prime(x), l(x, 1, 10))()
 
 	println(r)
 

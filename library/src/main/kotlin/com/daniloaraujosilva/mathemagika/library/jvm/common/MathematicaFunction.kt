@@ -32,8 +32,8 @@ data class MathematicaFunction(
 	/**
 	 *
 	 */
-	operator fun invoke(): String {
-		return evaluate()
+	operator fun invoke(options: Map<String, Any?> = mutableMapOf()): String {
+		return run(options)
 	}
 
 	/**

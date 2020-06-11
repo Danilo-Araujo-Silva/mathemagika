@@ -57,33 +57,16 @@ fun String.runToTypeSet(
  *
  */
 @ExperimentalUnsignedTypes
-operator fun String.not(): String? {
-	return run<String>()
-}
-
-/**
- *
- */
-@ExperimentalUnsignedTypes
-operator fun MathematicaFunction.not(): String? {
-	return run<String>()
-}
-
-/**
- *
- */
-@ExperimentalUnsignedTypes
-operator fun MathematicaFunction.plus(other: String): String {
-	return """${this.evaluate()}$other"""
-}
-
-/**
- *
- */
-@ExperimentalUnsignedTypes
 inline fun <reified Return> String.run(
 	@Suppress("UNUSED_PARAMETER") vararg arguments: Any? = arrayOf(),
 	options: Map<String, Any?> = mutableMapOf()
 ): Return? {
 	return convertFromMathematicaToOrNull(executeOnMathematica(this, arguments, options = options).extract())
+}
+
+/**
+ *
+ */
+operator fun MathematicaFunction.plus(other: Any): String {
+	return "$this$other"
 }

@@ -1,7 +1,6 @@
 package com.daniloaraujosilva.mathemagika.library.jvm.common
 
 import com.daniloaraujosilva.mathemagika.common.common.OperatingSystem
-import com.daniloaraujosilva.mathemagika.common.jvm.common.isSuperclassOf
 import com.daniloaraujosilva.mathemagika.common.jvm.common.kotlinClass
 import com.daniloaraujosilva.mathemagika.library.common.jvm.EvaluationTypeEnum
 import com.daniloaraujosilva.mathemagika.library.common.jvm.EvaluationTypeEnum.UNIT
@@ -30,6 +29,7 @@ import kotlin.collections.toList
 import kotlin.collections.toMutableList
 import kotlin.collections.toMutableSet
 import kotlin.collections.toSet
+import kotlin.reflect.KClass
 
 
 /**
@@ -60,83 +60,83 @@ inline fun <reified Return> convertFromMathematicaToOrNull(any: Any?, @Suppress(
 	}
 
 	return when {
-		returnClass.isSuperclassOf(String::class) -> {
+		isSuperClassOf(String::class, returnClass) -> {
 			anyAsString
 		}
-		returnClass.isSuperclassOf(Boolean::class) -> {
+		isSuperClassOf(Boolean::class, returnClass) -> {
 			anyAsString.toBoolean()
 		}
-		returnClass.isSuperclassOf(Byte::class) -> {
+		isSuperClassOf(Byte::class, returnClass) -> {
 			anyAsString.toByteOrNull()
 		}
-		returnClass.isSuperclassOf(Short::class) -> {
+		isSuperClassOf(Short::class, returnClass) -> {
 			anyAsString.toShortOrNull()
 		}
-		returnClass.isSuperclassOf(Int::class) -> {
+		isSuperClassOf(Int::class, returnClass) -> {
 			anyAsString.toIntOrNull()
 		}
-		returnClass.isSuperclassOf(Long::class) -> {
+		isSuperClassOf(Long::class, returnClass) -> {
 			anyAsString.toLongOrNull()
 		}
-		returnClass.isSuperclassOf(Float::class) -> {
+		isSuperClassOf(Float::class, returnClass) -> {
 			anyAsString.toFloatOrNull()
 		}
-		returnClass.isSuperclassOf(Double::class) -> {
+		isSuperClassOf(Double::class, returnClass) -> {
 			anyAsString.toDoubleOrNull()
 		}
-		returnClass.isSuperclassOf(BigInteger::class) -> {
+		isSuperClassOf(BigInteger::class, returnClass) -> {
 			anyAsString.toBigIntegerOrNull()
 		}
-		returnClass.isSuperclassOf(BigDecimal::class) -> {
+		isSuperClassOf(BigDecimal::class, returnClass) -> {
 			anyAsString.toBigDecimalOrNull()
 		}
-		returnClass.isSuperclassOf(ByteArray::class) -> {
+		isSuperClassOf(ByteArray::class, returnClass) -> {
 			anyAsString.toByteArray()
 		}
-		returnClass.isSuperclassOf(CharArray::class) -> {
+		isSuperClassOf(CharArray::class, returnClass) -> {
 			anyAsString.toCharArray()
 		}
-		returnClass.isSuperclassOf(Regex::class) -> {
+		isSuperClassOf(Regex::class, returnClass) -> {
 			anyAsString.toRegex()
 		}
-		returnClass.isSuperclassOf(Pattern::class) -> {
+		isSuperClassOf(Pattern::class, returnClass) -> {
 			anyAsString.toPattern()
 		}
-		returnClass.isSuperclassOf(UByte::class) -> {
+		isSuperClassOf(UByte::class, returnClass) -> {
 			anyAsString.toUByteOrNull()
 		}
-		returnClass.isSuperclassOf(UInt::class) -> {
+		isSuperClassOf(UInt::class, returnClass) -> {
 			anyAsString.toUIntOrNull()
 		}
-		returnClass.isSuperclassOf(ULong::class) -> {
+		isSuperClassOf(ULong::class, returnClass) -> {
 			anyAsString.toULongOrNull()
 		}
-		returnClass.isSuperclassOf(UShort::class) -> {
+		isSuperClassOf(UShort::class, returnClass) -> {
 			anyAsString.toUShortOrNull()
 		}
-		returnClass.isSuperclassOf(List::class) -> {
+		isSuperClassOf(List::class, returnClass) -> {
 			fromMathematicaList(anyAsString).toList()
 		}
-		returnClass.isSuperclassOf(ArrayList::class) -> {
+		isSuperClassOf(ArrayList::class, returnClass) -> {
 			ArrayList(fromMathematicaList(anyAsString))
 		}
-		returnClass.isSuperclassOf(MutableList::class) -> {
+		isSuperClassOf(MutableList::class, returnClass) -> {
 			fromMathematicaList(anyAsString)
 		}
-		returnClass.isSuperclassOf(Set::class) -> {
+		isSuperClassOf(Set::class, returnClass) -> {
 			fromMathematicaList(anyAsString).toSet()
 		}
-		returnClass.isSuperclassOf(HashSet::class) -> {
+		isSuperClassOf(HashSet::class, returnClass) -> {
 			fromMathematicaList(anyAsString).toHashSet()
 		}
-		returnClass.isSuperclassOf(MutableSet::class) -> {
+		isSuperClassOf(MutableSet::class, returnClass) -> {
 			fromMathematicaList(anyAsString).toMutableSet()
 		}
-		returnClass.isSuperclassOf(Map::class) -> {
+		isSuperClassOf(Map::class, returnClass) -> {
 		}
-		returnClass.isSuperclassOf(HashMap::class) -> {
+		isSuperClassOf(HashMap::class, returnClass) -> {
 		}
-		returnClass.isSuperclassOf(MutableMap::class) -> {
+		isSuperClassOf(MutableMap::class, returnClass) -> {
 		}
 		else -> {
 			throw IllegalArgumentException("Unrecognized class $returnClass.")
@@ -209,4 +209,8 @@ fun detectOperatingSystem(): OperatingSystem {
 	} else {
 		OperatingSystem.OTHER
 	}
+}
+
+fun <A : Any, B: Any> isSuperClassOf(possibleSuperClass: KClass<A>, targetClass: KClass<B>): Boolean {
+	return targetClass.java.isAssignableFrom(possibleSuperClass.java)
 }

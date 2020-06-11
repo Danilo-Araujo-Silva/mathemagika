@@ -9,10 +9,13 @@ plugins {
 dependencies {
 	implementation(project(":common"))
 	implementation(project(":library"))
+//	implementation("com.daniloaraujosilva.mathemagika:library-jvm:0.0.1")
 
 	implementation(kotlin("stdlib-jdk8"))
 
-	implementation(mapOf("name" to "JLink"))
+	implementation(
+		mapOf("name" to "JLink")
+	)
 
 	testImplementation(kotlin("test"))
 	testImplementation(kotlin("test-junit"))

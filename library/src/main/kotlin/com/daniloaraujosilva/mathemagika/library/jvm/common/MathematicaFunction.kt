@@ -1,5 +1,6 @@
 package com.daniloaraujosilva.mathemagika.library.jvm.common
 
+import com.daniloaraujosilva.mathemagika.library.common.jvm.EvaluationTypeEnum.*
 import com.daniloaraujosilva.mathemagika.library.common.jvm.Result
 
 /**
@@ -31,7 +32,58 @@ data class MathematicaFunction(
 	/**
 	 *
 	 */
-	inline fun <reified Return> run(): Return {
+	operator fun invoke() {
+		evaluate()
+	}
+
+	/**
+	 *
+	 */
+	fun run(): String {
+		return runToInputForm()
+	}
+
+	/**
+	 *
+	 */
+	fun runToUnit() {
+		return run(options = mapOf(type to UNIT))
+	}
+
+	/**
+	 *
+	 */
+	fun runToInputForm(): String {
+		return run(options = mapOf(type to INPUT_FORM))
+	}
+
+	/**
+	 *
+	 */
+	fun runToOutputForm(): String {
+		return run(options = mapOf(type to OUTPUT_FORM))
+	}
+
+	/**
+	 *
+	 */
+	fun runToImage(): String {
+		return run(options = mapOf(type to IMAGE))
+	}
+
+	/**
+	 *
+	 */
+	fun runToTypeSet(): String {
+		return run(options = mapOf(type to TYPE_SET))
+	}
+
+	/**
+	 *
+	 */
+	inline fun <reified Return> run(options: Map<String, Any?> = mutableMapOf()): Return {
+		this.options.putAll(options)
+
 		evaluate()
 		execute()
 
@@ -45,6 +97,7 @@ data class MathematicaFunction(
 		val finalArguments =  arguments.joinToString(separator = ", ") {
 			when(it) {
 				is MathematicaFunction -> it.evaluate()
+				is Iterable<Any?> -> it.joinToString(prefix = "{", postfix = "}")
 				else -> it.toString()
 			}
 		}

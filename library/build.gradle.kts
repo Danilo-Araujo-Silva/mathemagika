@@ -185,6 +185,7 @@ kotlin {
 
 			dependencies {
 				implementation(kotlin("stdlib-jdk8"))
+				implementation(kotlin("reflect"))
 				implementation(mapOf("name" to "JLink"))
 			}
 		}

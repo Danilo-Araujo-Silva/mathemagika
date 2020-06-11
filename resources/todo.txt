@@ -1,0 +1,8 @@
+// Generate functions with receiver
+// Override the operator not (!)
+// Create function with receiver run, runToInputForm, runToOutputForm, runToImage, runToTypeSet
+// Generate uppercase functions
+// Improve JavaDoc
+// Create type-safe builders: https://kotlinlang.org/docs/reference/type-safe-builders.html
+// Improving implicit conversions
+// Create test cases

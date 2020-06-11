@@ -7,22 +7,30 @@ plugins {
 }
 
 dependencies {
-	implementation(project(":common"))
-	implementation(project(":library"))
-//	implementation("com.daniloaraujosilva.mathemagika:library-jvm:0.0.1")
-
 	implementation(kotlin("stdlib-jdk8"))
+
+	implementation("com.daniloaraujosilva.mathemagika:jvm:0.0.1")
 
 	implementation(
 		mapOf("name" to "JLink")
+
 	)
 
 	testImplementation(kotlin("test"))
 	testImplementation(kotlin("test-junit"))
 }
 
+repositories {
+	mavenCentral()
+	mavenLocal()
+	maven( url = "https://dl.bintray.com/kotlin/kotlin-eap" )
+	flatDir { dirs(
+		"/Applications/Mathematica.app/Contents/SystemFiles/Links/JLink"
+	) }
+}
+
 tasks.withType<ShadowJar> {
 	manifest {
-		attributes.put("Main-Class", "com.daniloaraujosilva.mathemagika.application.ExampleKt")
+		attributes.put("Main-Class", "com.daniloaraujosilva.mathemagika.application.playground.MainKt")
 	}
 }

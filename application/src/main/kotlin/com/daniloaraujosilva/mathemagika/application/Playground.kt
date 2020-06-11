@@ -1,32 +1,14 @@
 package com.daniloaraujosilva.mathemagika.application
 
-import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
+import com.daniloaraujosilva.mathemagika.library.jvm.common.*
 import com.daniloaraujosilva.mathemagika.library.jvm.common.generated.*
-
-class Expression {
-	val children = mutableListOf<Any>()
-
-	operator fun String.unaryPlus() {
-		children.add(this)
-	}
-
-	operator fun MathematicaFunction.unaryPlus() {
-		children.add(this)
-	}
-}
-
-fun expression(init: Expression.() -> Unit): Expression {
-	val expression = Expression()
-	expression.init()
-
-	return expression
-}
 
 @ExperimentalUnsignedTypes
 fun test() {
+	var r: String? = null
 	val x = "x"
 
-	n(
+	r = !n(
 		d(
 			normal(
 				series(
@@ -34,35 +16,70 @@ fun test() {
 						zeta(x),
 						x
 					),
-					listOf(x, 0, 6)
+					l(x, 0, 6)
 				)
 			),
-			listOf(x, 2)
-		),
+			l(x, 2)
+		)
+		+ " /.$x -> $GoldenRatio"
+		+ " //FullSimplify",
 		10
 	)
 
-	val e = expression {
-		+n(
-			d(
-				normal(
-					series(
-						integrate(
-							zeta(x),
-							x
-						),
-						listOf(x, 0, 6)
-					)
-				),
-				listOf(x, 2)
-			),
-			10
-		)
-		+"/.$x -> 10"
-		+"// FullSimplify // Timing // TableForm // ToString"
-	}
+	print(r)
 
-	e.children.map {println(it)}
+	r = !fullSimplify(
+		with(
+			l("$x = $EulerGamma"),
+			sin("$Pi $x")
+		)
+	)
+
+	print(r)
+
+//	println(runToInputForm {
+//		zeta(2)
+//	})
+
+//	val x = "x"
+//
+//	n(
+//		d(
+//			normal(
+//				series(
+//					integrate(
+//						zeta(x),
+//						x
+//					),
+//					listOf(x, 0, 6)
+//				)
+//			),
+//			listOf(x, 2)
+//		),
+//		10
+//	)
+//
+//	val e = expression {
+//		+n(
+//			d(
+//				normal(
+//					series(
+//						integrate(
+//							zeta(x),
+//							x
+//						),
+//						listOf(x, 0, 6)
+//					)
+//				),
+//				listOf(x, 2)
+//			),
+//			10
+//		)
+//		+"/.$x -> 10"
+//		+"// FullSimplify // Timing // TableForm // ToString"
+//	}
+//
+//	e.children.map {println(it)}
 
 //	n(
 //		d(
@@ -257,3 +274,47 @@ fun test() {
 //		""".trimIndent().run<String>(options = mutableMapOf(type to OUTPUT_FORM))
 //	)
 }
+
+//infix fun Any.`{`(other: Any): String = "{ ${this.toString()}, $other"
+//
+//val a = 1 `{` 2
+//
+//class ListHolder {
+//	val children = mutableListOf<Any>()
+//
+//	operator fun String.unaryPlus() {
+//		children.add(this)
+//	}
+//}
+//
+//fun l(init: ListHolder.() -> Unit): ListHolder {
+//	val expression = ListHolder()
+//	expression.init()
+//
+//	return expression
+//}
+//
+//val t1 = l {
+//	"x"
+//	+ "y"
+//	+ "z"
+//}
+
+//class Expression {
+//	val children = mutableListOf<Any>()
+//
+//	operator fun String.unaryPlus() {
+//		children.add(this)
+//	}
+//
+//	operator fun MathematicaFunction.unaryPlus() {
+//		children.add(this)
+//	}
+//}
+//
+//fun expression(init: Expression.() -> Unit): Expression {
+//	val expression = Expression()
+//	expression.init()
+//
+//	return expression
+//}

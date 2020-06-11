@@ -60,8 +60,17 @@ inline fun <reified Return> convertFromMathematicaToOrNull(any: Any?, @Suppress(
 	}
 
 	return when {
-		isSuperClassOf(String::class, returnClass) -> {
-			anyAsString
+		isSuperClassOf(ArrayList::class, returnClass) -> {
+			ArrayList(fromMathematicaList(anyAsString))
+		}
+		isSuperClassOf(BigDecimal::class, returnClass) -> {
+			anyAsString.toBigDecimalOrNull()
+		}
+		isSuperClassOf(BigInteger::class, returnClass) -> {
+			anyAsString.toBigIntegerOrNull()
+		}
+		isSuperClassOf(ByteArray::class, returnClass) -> {
+			anyAsString.toByteArray()
 		}
 		isSuperClassOf(Boolean::class, returnClass) -> {
 			anyAsString.toBoolean()
@@ -69,38 +78,53 @@ inline fun <reified Return> convertFromMathematicaToOrNull(any: Any?, @Suppress(
 		isSuperClassOf(Byte::class, returnClass) -> {
 			anyAsString.toByteOrNull()
 		}
-		isSuperClassOf(Short::class, returnClass) -> {
-			anyAsString.toShortOrNull()
-		}
-		isSuperClassOf(Int::class, returnClass) -> {
-			anyAsString.toIntOrNull()
-		}
-		isSuperClassOf(Long::class, returnClass) -> {
-			anyAsString.toLongOrNull()
-		}
-		isSuperClassOf(Float::class, returnClass) -> {
-			anyAsString.toFloatOrNull()
+		isSuperClassOf(CharArray::class, returnClass) -> {
+			anyAsString.toCharArray()
 		}
 		isSuperClassOf(Double::class, returnClass) -> {
 			anyAsString.toDoubleOrNull()
 		}
-		isSuperClassOf(BigInteger::class, returnClass) -> {
-			anyAsString.toBigIntegerOrNull()
+		isSuperClassOf(Float::class, returnClass) -> {
+			anyAsString.toFloatOrNull()
 		}
-		isSuperClassOf(BigDecimal::class, returnClass) -> {
-			anyAsString.toBigDecimalOrNull()
+		isSuperClassOf(HashMap::class, returnClass) -> {
 		}
-		isSuperClassOf(ByteArray::class, returnClass) -> {
-			anyAsString.toByteArray()
+		isSuperClassOf(HashSet::class, returnClass) -> {
+			fromMathematicaList(anyAsString).toHashSet()
 		}
-		isSuperClassOf(CharArray::class, returnClass) -> {
-			anyAsString.toCharArray()
+		isSuperClassOf(Int::class, returnClass) -> {
+			anyAsString.toIntOrNull()
+		}
+		isSuperClassOf(List::class, returnClass) -> {
+			fromMathematicaList(anyAsString).toList()
+		}
+		isSuperClassOf(Long::class, returnClass) -> {
+			anyAsString.toLongOrNull()
+		}
+		isSuperClassOf(Map::class, returnClass) -> {
+		}
+		isSuperClassOf(MutableList::class, returnClass) -> {
+			fromMathematicaList(anyAsString)
+		}
+		isSuperClassOf(MutableMap::class, returnClass) -> {
+		}
+		isSuperClassOf(MutableSet::class, returnClass) -> {
+			fromMathematicaList(anyAsString).toMutableSet()
+		}
+		isSuperClassOf(Pattern::class, returnClass) -> {
+			anyAsString.toPattern()
 		}
 		isSuperClassOf(Regex::class, returnClass) -> {
 			anyAsString.toRegex()
 		}
-		isSuperClassOf(Pattern::class, returnClass) -> {
-			anyAsString.toPattern()
+		isSuperClassOf(Set::class, returnClass) -> {
+			fromMathematicaList(anyAsString).toSet()
+		}
+		isSuperClassOf(Short::class, returnClass) -> {
+			anyAsString.toShortOrNull()
+		}
+		isSuperClassOf(String::class, returnClass) -> {
+			anyAsString
 		}
 		isSuperClassOf(UByte::class, returnClass) -> {
 			anyAsString.toUByteOrNull()
@@ -114,37 +138,13 @@ inline fun <reified Return> convertFromMathematicaToOrNull(any: Any?, @Suppress(
 		isSuperClassOf(UShort::class, returnClass) -> {
 			anyAsString.toUShortOrNull()
 		}
-		isSuperClassOf(List::class, returnClass) -> {
-			fromMathematicaList(anyAsString).toList()
-		}
-		isSuperClassOf(ArrayList::class, returnClass) -> {
-			ArrayList(fromMathematicaList(anyAsString))
-		}
-		isSuperClassOf(MutableList::class, returnClass) -> {
-			fromMathematicaList(anyAsString)
-		}
-		isSuperClassOf(Set::class, returnClass) -> {
-			fromMathematicaList(anyAsString).toSet()
-		}
-		isSuperClassOf(HashSet::class, returnClass) -> {
-			fromMathematicaList(anyAsString).toHashSet()
-		}
-		isSuperClassOf(MutableSet::class, returnClass) -> {
-			fromMathematicaList(anyAsString).toMutableSet()
-		}
-		isSuperClassOf(Map::class, returnClass) -> {
-		}
-		isSuperClassOf(HashMap::class, returnClass) -> {
-		}
-		isSuperClassOf(MutableMap::class, returnClass) -> {
-		}
 		else -> {
 			throw IllegalArgumentException("Unrecognized class $returnClass.")
 		}
 	} as Return
 }
 
-fun executeOnMathematica(command: String, @Suppress("UNUSED_PARAMETER") vararg arguments: Any?, options: Map<String, Any?> = mutableMapOf()): Result {
+fun executeOnMathematica(command: String, @Suppress("UNUSED_PARAMETER") vararg arguments: Any? = arrayOf(), options: Map<String, Any?> = mutableMapOf()): Result {
 	val mathematica by lazy { Mathematica() }
 
 	try {
@@ -211,6 +211,61 @@ fun detectOperatingSystem(): OperatingSystem {
 	}
 }
 
+/**
+ *
+ */
 fun <A : Any, B: Any> isSuperClassOf(possibleSuperClass: KClass<A>, targetClass: KClass<B>): Boolean {
-	return targetClass.java.isAssignableFrom(possibleSuperClass.java)
+	return if (possibleSuperClass == targetClass)
+		true
+	else
+		targetClass.java.isAssignableFrom(possibleSuperClass.java)
+}
+
+/**
+ *
+ */
+fun l(vararg arguments: Any?): MutableList<Any?> = arguments.toMutableList()
+
+/**
+ *
+ */
+fun runToInputForm(command: String, @Suppress("UNUSED_PARAMETER") vararg arguments: Any? = arrayOf(), options: Map<String, Any?> = mutableMapOf()): String {
+	val finalOptions = mutableMapOf<String, Any?>()
+	finalOptions.putAll(options)
+	finalOptions.put(type, INPUT_FORM)
+
+	return executeOnMathematica(command, arguments, finalOptions).extract()
+}
+
+/**
+ *
+ */
+fun runToOutputForm(command: String, @Suppress("UNUSED_PARAMETER") vararg arguments: Any? = arrayOf(), options: Map<String, Any?> = mutableMapOf()): String {
+	val finalOptions = mutableMapOf<String, Any?>()
+	finalOptions.putAll(options)
+	finalOptions.put(type, OUTPUT_FORM)
+
+	return executeOnMathematica(command, arguments, finalOptions).extract()
+}
+
+/**
+ *
+ */
+fun runToImage(command: String, @Suppress("UNUSED_PARAMETER") vararg arguments: Any? = arrayOf(), options: Map<String, Any?> = mutableMapOf()): ByteArray {
+	val finalOptions = mutableMapOf<String, Any?>()
+	finalOptions.putAll(options)
+	finalOptions.put(type, IMAGE)
+
+	return executeOnMathematica(command, arguments, finalOptions).extract()
+}
+
+/**
+ *
+ */
+fun runToTypeSet(command: String, @Suppress("UNUSED_PARAMETER") vararg arguments: Any? = arrayOf(), options: Map<String, Any?> = mutableMapOf()): ByteArray {
+	val finalOptions = mutableMapOf<String, Any?>()
+	finalOptions.putAll(options)
+	finalOptions.put(type, TYPE_SET)
+
+	return executeOnMathematica(command, arguments, finalOptions).extract()
 }

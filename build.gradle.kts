@@ -40,6 +40,7 @@ buildscript {
 		// TODO See if we can move this only for the module that needs it.
 		// This classpath dependency is needed for JVM modules generate fat jars.
 		classpath(getDependency("build.gradle.kts", "com.github.jengelman.gradle.plugins:shadow"))
+		classpath(getDependency("build.gradle.kts", "org.jetbrains.dokka:dokka-gradle-plugin"))
 	}
 }
 

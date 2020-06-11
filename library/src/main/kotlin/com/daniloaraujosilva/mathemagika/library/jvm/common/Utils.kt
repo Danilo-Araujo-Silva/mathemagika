@@ -39,8 +39,6 @@ import kotlin.reflect.KClass
 inline fun <reified Return> convertFromMathematicaTo(any: Any?, vararg arguments: Any? = arrayOf()): Return {
 	val returnClass = kotlinClass<Return>()
 
-//	if (any == null) throw IllegalArgumentException("Cannot convert null to ${returnClass.qualifiedName}.")
-
 	val result: Return? = convertFromMathematicaToOrNull<Return>(any, arguments)
 		?: throw IllegalArgumentException("The conversion returned null, hence is not  possible to convert ${returnClass.qualifiedName}. Use convertToOrNull if necessary.")
 
@@ -162,7 +160,7 @@ fun executeOnMathematica(command: String, @Suppress("UNUSED_PARAMETER") vararg a
 					INPUT_FORM
 				)
 				OUTPUT_FORM == evaluationTypeEnum -> {
-					val pageWidth = options.getAndCastOrDefault("pageWidth", 0)
+					val pageWidth = options.getAndCastOrDefault<Int>("pageWidth", 0)
 
 					Result(
 						evaluateToOutputForm(command, pageWidth),
@@ -224,48 +222,39 @@ fun <A : Any, B: Any> isSuperClassOf(possibleSuperClass: KClass<A>, targetClass:
 /**
  *
  */
-fun l(vararg arguments: Any?): MutableList<Any?> = arguments.toMutableList()
+inline fun <reified Return> run(command: String, @Suppress("UNUSED_PARAMETER") vararg arguments: Any? = arrayOf(), options: Map<String, Any?> = mutableMapOf()): Return {
+	return executeOnMathematica(command, arguments, options.merge(mapOf(type to INPUT_FORM))).extract()
+}
 
 /**
  *
  */
 fun runToInputForm(command: String, @Suppress("UNUSED_PARAMETER") vararg arguments: Any? = arrayOf(), options: Map<String, Any?> = mutableMapOf()): String {
-	val finalOptions = mutableMapOf<String, Any?>()
-	finalOptions.putAll(options)
-	finalOptions.put(type, INPUT_FORM)
-
-	return executeOnMathematica(command, arguments, finalOptions).extract()
+	return executeOnMathematica(command, arguments, options.merge(mapOf(type to INPUT_FORM))).extract()
 }
 
 /**
  *
  */
 fun runToOutputForm(command: String, @Suppress("UNUSED_PARAMETER") vararg arguments: Any? = arrayOf(), options: Map<String, Any?> = mutableMapOf()): String {
-	val finalOptions = mutableMapOf<String, Any?>()
-	finalOptions.putAll(options)
-	finalOptions.put(type, OUTPUT_FORM)
-
-	return executeOnMathematica(command, arguments, finalOptions).extract()
+	return executeOnMathematica(command, arguments, options.merge(mapOf(type to OUTPUT_FORM))).extract()
 }
 
 /**
  *
  */
 fun runToImage(command: String, @Suppress("UNUSED_PARAMETER") vararg arguments: Any? = arrayOf(), options: Map<String, Any?> = mutableMapOf()): ByteArray {
-	val finalOptions = mutableMapOf<String, Any?>()
-	finalOptions.putAll(options)
-	finalOptions.put(type, IMAGE)
-
-	return executeOnMathematica(command, arguments, finalOptions).extract()
+	return executeOnMathematica(command, arguments, options.merge(mapOf(type to IMAGE))).extract()
 }
 
 /**
  *
  */
 fun runToTypeSet(command: String, @Suppress("UNUSED_PARAMETER") vararg arguments: Any? = arrayOf(), options: Map<String, Any?> = mutableMapOf()): ByteArray {
-	val finalOptions = mutableMapOf<String, Any?>()
-	finalOptions.putAll(options)
-	finalOptions.put(type, TYPE_SET)
-
-	return executeOnMathematica(command, arguments, finalOptions).extract()
+	return executeOnMathematica(command, arguments, options.merge(mapOf(type to TYPE_SET))).extract()
 }
+
+/**
+ *
+ */
+fun l(vararg arguments: Any?): MutableList<Any?> = arguments.toMutableList()

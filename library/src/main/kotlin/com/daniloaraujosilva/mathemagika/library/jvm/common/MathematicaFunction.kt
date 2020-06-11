@@ -32,6 +32,7 @@ data class MathematicaFunction(
 	/**
 	 *
 	 */
+	@ExperimentalUnsignedTypes
 	operator fun invoke(options: Map<String, Any?> = mutableMapOf()): String {
 		return run(options)
 	}
@@ -39,55 +40,70 @@ data class MathematicaFunction(
 	/**
 	 *
 	 */
-	fun run(): String {
-		return runToInputForm()
+	@ExperimentalUnsignedTypes
+	inline operator fun <reified Return> invoke(options: Map<String, Any?> = mutableMapOf()): Return {
+		return run<Return>(options)
 	}
 
 	/**
 	 *
 	 */
-	fun runToUnit() {
-		return run(options = mapOf(type to UNIT))
+	@ExperimentalUnsignedTypes
+	fun run(options: Map<String, Any?> = mutableMapOf()): String {
+		return runToInputForm(options)
 	}
 
 	/**
 	 *
 	 */
-	fun runToInputForm(): String {
-		return run(options = mapOf(type to INPUT_FORM))
+	@ExperimentalUnsignedTypes
+	fun runToUnit(options: Map<String, Any?> = mutableMapOf()) {
+		return run<Unit>(options = options.merge(mapOf(type to UNIT)))
 	}
 
 	/**
 	 *
 	 */
-	fun runToOutputForm(): String {
-		return run(options = mapOf(type to OUTPUT_FORM))
+	@ExperimentalUnsignedTypes
+	fun runToInputForm(options: Map<String, Any?> = mutableMapOf()): String {
+		return run(options = options.merge(mapOf(type to INPUT_FORM)))
 	}
 
 	/**
 	 *
 	 */
-	fun runToImage(): String {
-		return run(options = mapOf(type to IMAGE))
+	@ExperimentalUnsignedTypes
+	fun runToOutputForm(options: Map<String, Any?> = mutableMapOf()): String {
+		return run(options = options.merge(mapOf(type to OUTPUT_FORM)))
 	}
 
 	/**
 	 *
 	 */
-	fun runToTypeSet(): String {
-		return run(options = mapOf(type to TYPE_SET))
+	@ExperimentalUnsignedTypes
+	fun runToImage(options: Map<String, Any?> = mutableMapOf()): String {
+		return run(options = options.merge(mapOf(type to IMAGE)))
 	}
 
 	/**
 	 *
 	 */
+	@ExperimentalUnsignedTypes
+	fun runToTypeSet(options: Map<String, Any?> = mutableMapOf()): String {
+		return run(options = options.merge(mapOf(type to TYPE_SET)))
+	}
+
+	/**
+	 *
+	 */
+	@ExperimentalUnsignedTypes
 	inline fun <reified Return> run(options: Map<String, Any?> = mutableMapOf()): Return {
 		this.options.putAll(options)
 
 		evaluate()
 		execute()
 
-		return extract()
+		return convertFromMathematicaTo(extract())
 	}
 
 	/**

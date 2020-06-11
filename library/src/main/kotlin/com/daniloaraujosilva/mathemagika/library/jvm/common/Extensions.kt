@@ -3,6 +3,18 @@ package com.daniloaraujosilva.mathemagika.library.jvm.common
 /**
  *
  */
+fun <A, B> Map<A, B>.merge(vararg maps: Map<A, B>): Map<A, B> {
+	val mutableMap = mutableMapOf<A, B>()
+	mutableMap.putAll(this)
+
+	maps.toList().forEach { mutableMap.putAll(it) }
+
+	return mutableMap
+}
+
+/**
+ *
+ */
 inline fun <reified Return> Map<String, Any?>.getAndCastOrDefault(key: String?, default: Return): Return {
 	if (key == null || !containsKey(key)) return default
 
@@ -17,7 +29,7 @@ fun String.runToInputForm(
 	@Suppress("UNUSED_PARAMETER") vararg arguments: Any? = arrayOf(),
 	options: Map<String, Any?> = mutableMapOf()
 ): String? {
-	return runToInputForm(this, arguments, options)
+	return com.daniloaraujosilva.mathemagika.library.jvm.common.runToInputForm(this, arguments, options)
 }
 
 /**
@@ -28,7 +40,7 @@ fun String.runToOutputForm(
 	@Suppress("UNUSED_PARAMETER") vararg arguments: Any? = arrayOf(),
 	options: Map<String, Any?> = mutableMapOf()
 ): String? {
-	return runToOutputForm(this, arguments, options)
+	return com.daniloaraujosilva.mathemagika.library.jvm.common.runToOutputForm(this, arguments, options)
 }
 
 /**
@@ -39,7 +51,7 @@ fun String.runToImage(
 	@Suppress("UNUSED_PARAMETER") vararg arguments: Any? = arrayOf(),
 	options: Map<String, Any?> = mutableMapOf()
 ): ByteArray? {
-	return runToImage(this, arguments, options)
+	return com.daniloaraujosilva.mathemagika.library.jvm.common.runToImage(this, arguments, options)
 }
 
 /**
@@ -50,7 +62,7 @@ fun String.runToTypeSet(
 	@Suppress("UNUSED_PARAMETER") vararg arguments: Any? = arrayOf(),
 	options: Map<String, Any?> = mutableMapOf()
 ): ByteArray? {
-	return runToTypeSet(this, arguments, options)
+	return com.daniloaraujosilva.mathemagika.library.jvm.common.runToTypeSet(this, arguments, options)
 }
 
 /**
@@ -61,7 +73,7 @@ inline fun <reified Return> String.run(
 	@Suppress("UNUSED_PARAMETER") vararg arguments: Any? = arrayOf(),
 	options: Map<String, Any?> = mutableMapOf()
 ): Return? {
-	return convertFromMathematicaToOrNull(executeOnMathematica(this, arguments, options = options).extract())
+	return com.daniloaraujosilva.mathemagika.library.jvm.common.run<Return>(this, arguments, options)
 }
 
 /**

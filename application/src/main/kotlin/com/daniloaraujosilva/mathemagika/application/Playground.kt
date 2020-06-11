@@ -26,16 +26,20 @@ fun test() {
 		10
 	)
 
-	print(r)
+	println(r)
 
-	r = !fullSimplify(
-		with(
-			l("$x = $EulerGamma"),
-			sin("$Pi $x")
+	r =
+		!n(
+			fullSimplify(
+				with(
+					l("$x = $EulerGamma"),
+					sin("$Pi $x")
+				)
+			),
+			10
 		)
-	)
 
-	print(r)
+	println(r)
 
 //	println(runToInputForm {
 //		zeta(2)

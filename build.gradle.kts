@@ -51,7 +51,12 @@ val getProperty = uncheckedCast<(keys: List<String>) -> String>(extra["getProper
 val getPropertyOrNull = uncheckedCast<(keys: List<String>) -> String?>(extra["getPropertyOrNull"])
 val getPropertyOrDefault = uncheckedCast<(keys: List<String>, default: String) -> String>(extra["getPropertyOrDefault"])
 
+val projectGroup = getProperty(listOf("project.group"))
+val projectVersion = getProperty(listOf("project.version"))
+
 allprojects {
+	group = projectGroup
+	version = projectVersion
 	repositories {
 		flatDir {
 			dirs(

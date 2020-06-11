@@ -73,7 +73,7 @@ kotlin {
 			resources.setSrcDirs(listOf(getPath("main", "resources", "common")))
 
 			dependencies {
-				implementation(project(":common"))
+//				implementation(project(":common"))
 				implementation(kotlin("stdlib-common"))
 			}
 		}
@@ -188,7 +188,6 @@ kotlin {
 			resources.setSrcDirs(listOf(getPath("main", "resources", "jvm")))
 
 			dependencies {
-				implementation(project(":common"))
 				implementation(kotlin("stdlib-jdk8"))
 				implementation(kotlin("reflect"))
 				implementation(mapOf("name" to "JLink"))

@@ -258,3 +258,9 @@ fun runToTypeSet(command: String, @Suppress("UNUSED_PARAMETER") vararg arguments
  *
  */
 fun l(vararg arguments: Any?): MutableList<Any?> = arguments.toMutableList()
+
+/**
+ *
+ */
+@Suppress("UNCHECKED_CAST")
+inline fun <reified Type> kotlinClass(): KClass<Any> = (Type::class as KClass<Any>)

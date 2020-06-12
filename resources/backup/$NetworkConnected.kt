@@ -1,4 +1,4 @@
-package com.daniloaraujosilva.mathemagika.library.jvm.common.functions
+package com.daniloaraujosilva.mathemagika.library.jvm.functions
 
 import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
 

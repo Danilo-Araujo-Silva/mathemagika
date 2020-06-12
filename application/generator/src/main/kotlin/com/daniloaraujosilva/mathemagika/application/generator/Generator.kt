@@ -64,7 +64,7 @@ fun generateAndExportMathematicaFunctionsTogether() {
 fun generateFunctionsFileContent(): String {
 	var content =
 		"""
-			|package com.daniloaraujosilva.mathemagika.library.jvm.common.functions
+			|package com.daniloaraujosilva.mathemagika.library.jvm.functions
 			|
 			|import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
 			|${generateAllFunctions()}
@@ -99,7 +99,7 @@ fun generateAndExportFunction(functionName: String) {
 
 	val content =
 		"""
-			|package com.daniloaraujosilva.mathemagika.library.jvm.common.functions
+			|package com.daniloaraujosilva.mathemagika.library.jvm.functions
 			|
 			|import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
 			|

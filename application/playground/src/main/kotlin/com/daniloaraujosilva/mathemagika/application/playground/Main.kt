@@ -7,16 +7,16 @@ import com.daniloaraujosilva.mathemagika.library.jvm.common.functions.*
 fun main() {
 	var r: String?
 	val x = "x"
-	val y = "y"
+	val y = 10
 	val f = "#^2 &"
 
-	val range = map(
-		f, range(5)
-	)<List<Int>>()
-
-	for (i in range) {
-		println(i)
-	}
+//	val range = map(
+//		f, range(5)
+//	)<List<Int>>()
+//
+//	for (i in range) {
+//		println(i)
+//	}
 
 //	r =
 //		map(
@@ -25,24 +25,24 @@ fun main() {
 //
 //	println(r)
 //
-//	r =
-//	n(
-//		d(
-//			normal(
-//				series(
-//					integrate(
-//						zeta(x),
-//						x
-//					),
-//					l(x, 0, 6)
-//				)
-//			),
-//			l(x, 2)
-//		) + " /.$x -> $GoldenRatio",
-//		y
-//	)()
-//
-//	println(r)
+	r =
+	n(
+		d(
+			normal(
+				series(
+					integrate(
+						zeta(x),
+						x
+					),
+					l(x, 0, 6)
+				)
+			),
+			l(x, 2)
+		) + " /.$x -> $GoldenRatio",
+		y
+	)()
+
+	println(r)
 //
 //	r = fullSimplify(
 //		with(

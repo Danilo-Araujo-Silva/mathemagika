@@ -1,14 +1,12 @@
 import groovy.util.Node
 import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
-import com.github.jengelman.gradle.plugins.shadow.ShadowExtension
-import org.jetbrains.kotlin.javac.resolve.classId
 
 plugins {
 	kotlin("multiplatform")
 	id("com.github.johnrengelman.shadow")
 	id("maven-publish")
 	id("java")
-//	id("signing")
+	id("signing")
 }
 
 kotlin {
@@ -74,7 +72,7 @@ kotlin {
 			resources.setSrcDirs(listOf(getPath("main", "resources", "common")))
 
 			dependencies {
-//				implementation(project(":common"))
+				implementation(project(":common"))
 				implementation(kotlin("stdlib-common"))
 			}
 		}
@@ -310,51 +308,60 @@ fun getPath(compilation: String, type: String, name: String): String {
 		"src/$compilation/$type/$name"
 }
 
+java {
+	sourceCompatibility = JavaVersion.VERSION_1_8
+	targetCompatibility = JavaVersion.VERSION_1_8
+	withSourcesJar()
+	withJavadocJar()
+}
+
 publishing {
 	repositories {
 		mavenLocal()
 	}
 }
 
-// Add a Javadoc JAR to each publication as required by Maven Central
+val sourcesJarFile = file("$buildDir/libs/library-jvm-0.0.1-sources.jar")
+val sourcesJarArtifact = artifacts.add("archives", sourcesJarFile) {
+	type = "jar"
+	builtBy("sourcesJar")
+}
 
-//// Must be BELOW subprojects{}
-//task alljavadoc(type: Javadoc) {
-//	source subprojects.collect { it.sourceSets.main.allJava }
-//	classpath = files(subprojects.collect { it.sourceSets.main.compileClasspath })
-//	destinationDir = file("${buildDir}/docs/javadoc")
-//}
-//
-//task javadocJar(type: Jar, dependsOn: alljavadoc) {
-//	classifier = 'javadoc'
-//	from alljavadoc.destinationDir
-//}
+val shadowJar = tasks.withType<ShadowJar> {
+	archiveClassifier.set("")
 
-//val alljavadoc by tasks.creating(Javadoc::class) {
-//	source(project.sourceSets.getByName("main").allJava)
-//	classpath = files(project.sourceSets.getByName("main").compileClasspath)
-//	setDestinationDir(file("${buildDir}/docs/javadoc"))
-//}
-//
-//val javadocJar by tasks.creating(Jar::class) {
-//	archiveClassifier.value("javadoc")
-//	from(alljavadoc.destinationDir)
-//}
+	// Assuming just one target.
+	val target = kotlin.targets.iterator().next()
+	from(target.compilations["main"].output)
+	val runtimeClasspath = target.compilations["main"].compileDependencyFiles as Configuration
+	configurations = mutableListOf(runtimeClasspath)
 
-//// The root publication also needs a sources JAR as it does not have one by default
+	dependencies {
+		include(dependency(":common"))
+	}
+}
 
-//val sourcesJar by tasks.creating(Jar::class) {
-//	archiveClassifier.value("sources")
-////	val collection: List<SourceDirectorySet> = subprojects.fold(ArrayList(), { accumulator, item ->
-////		accumulator.add(item.sourceSets.getByName("main").allSource); accumulator})
-////
-////	println(collection)
-//
-//	from(project.sourceSets.getByName("main").allJava)
-//}
+publishing {
+	publications {
+		create<MavenPublication>("mavenLocal") {
+			group = "com.daniloaraujosilva"
+			artifactId = "mathemagika"
 
-//// Customize the POMs adding the content required by Maven Central
+			artifact(sourcesJarArtifact)
 
+			shadow.component(this)
+		}
+		publications.withType<MavenPublication>().all {
+			customizeForMavenCentral(pom)
+
+//			signing.sign(this@all)
+		}
+	}
+}
+
+/**
+ * Customize the POMs adding the content required by Maven Central
+ */
 fun customizeForMavenCentral(pom: org.gradle.api.publish.maven.MavenPom) = pom.withXml {
 	fun Node.add(key: String, value: String) {
 		appendNode(key).setValue(value)
@@ -395,91 +402,3 @@ fun customizeForMavenCentral(pom: org.gradle.api.publish.maven.MavenPom) = pom.w
 		}
 	}
 }
-
-//// Sign the publications:
-
-////// Also requires that signing.keyId, signing.password, and signing.secretKeyRingFile are provided as Gradle
-////// properties.
-
-////// No complex signing configuration is required here, as the signing plugin interoperates with maven-publish
-////// and can simply add the signature files directly to the publications:
-
-// publishing {
-//     publications.withType<MavenPublication>().all {
-//         signing.sign(this@all)
-//     }
-// }
-
-val sourcesJar by tasks.creating(Jar::class) {
-	archiveClassifier.value("sources")
-	from(project.sourceSets.getByName("main").allJava)
-}
-
-//val sourcesJar by tasks.creating(Jar::class) {
-//	dependsOn("classes")
-//	group = "build"
-//	archiveClassifier.value("sources")
-//	from(collectSourceSetsIncludingSubmodules(project))
-//}
-//
-//fun collectSourceSetsIncludingSubmodules(project: Project): MutableSet<SourceDirectorySet> {
-//	val result: MutableSet<SourceDirectorySet> = mutableSetOf()
-//	recursiveCollectSourceSets(project, mutableSetOf(), result)
-//	return result
-//}
-//
-//fun recursiveCollectSourceSets(
-//	visitingProject: Project,
-//	visitedProjects: MutableSet<Project>,
-//	collectedSourceSets: MutableSet<SourceDirectorySet>
-//) {
-//	if (!visitedProjects.contains(visitingProject)) {
-//		visitedProjects.add(visitingProject)
-//		collectedSourceSets.add(visitingProject.sourceSets.getByName("main").allJava)
-//		visitingProject.configurations.implementation.get().allDependencies.withType<ProjectDependency>().forEach {
-//				pd: ProjectDependency ->
-//			recursiveCollectSourceSets(pd.getDependencyProject(), visitedProjects, collectedSourceSets)
-//		}
-//	}
-//}
-//
-//artifacts {
-//	archives(sourcesJar)
-//}
-
-val rpmFile = file("$buildDir/libs/library-jvm-0.0.1-sources.jar")
-val rpmArtifact = artifacts.add("archives", rpmFile) {
-	type = "jar"
-	builtBy("sourcesJar")
-}
-
-val shadowJar = tasks.withType<ShadowJar> {
-	archiveClassifier.set("")
-
-	// Assuming just one target.
-	val target = kotlin.targets.iterator().next()
-	from(target.compilations["main"].output)
-	val runtimeClasspath = target.compilations["main"].compileDependencyFiles as Configuration
-	configurations = mutableListOf(runtimeClasspath)
-
-	dependencies {
-		include(dependency(":common"))
-	}
-}
-
-publishing {
-	publications {
-		create<MavenPublication>("mavenLocal") {
-			artifactId = "jvm"
-
-			artifact(rpmArtifact)
-
-			shadow.component(this)
-		}
-		publications.withType<MavenPublication>().all {
-			customizeForMavenCentral(pom)
-		}
-	}
-}
-
-//publishing.publications.withType<MavenPublication>().getByName("kotlinMultiplatform").artifact(sourcesJar)

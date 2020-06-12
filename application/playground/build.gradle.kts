@@ -9,7 +9,7 @@ plugins {
 dependencies {
 	implementation(kotlin("stdlib-jdk8"))
 
-	implementation("com.daniloaraujosilva.mathemagika:jvm:0.0.1")
+	implementation("com.daniloaraujosilva.mathemagika:library:0.0.1")
 
 	implementation(
 		mapOf("name" to "JLink")

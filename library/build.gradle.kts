@@ -308,23 +308,33 @@ fun getPath(compilation: String, type: String, name: String): String {
 		"src/$compilation/$type/$name"
 }
 
-java {
-	sourceCompatibility = JavaVersion.VERSION_1_8
-	targetCompatibility = JavaVersion.VERSION_1_8
-	withSourcesJar()
-	withJavadocJar()
-}
-
 publishing {
 	repositories {
 		mavenLocal()
 	}
 }
 
-val sourcesJarFile = file("$buildDir/libs/library-jvm-0.0.1-sources.jar")
-val sourcesJarArtifact = artifacts.add("archives", sourcesJarFile) {
-	type = "jar"
-	builtBy("sourcesJar")
+val sourcesJar = task("sourcesJar", type = Jar::class) {
+	archiveClassifier.set("sources")
+
+	manifest {
+		attributes["Implementation-Title"] = "Mathemagika Sources"
+		attributes["Implementation-Version"] = archiveVersion
+	}
+
+	from(
+		file("$projectDir/src/main/kotlin")
+	)
+
+	with(tasks.jar.get() as CopySpec)
+}
+
+val javadocJar = task("javadocJar", type = Javadoc::class) {
+	// TODO Implement
+}
+
+val build by tasks.getting {
+	finalizedBy(sourcesJar, javadocJar)
 }
 
 val shadowJar = tasks.withType<ShadowJar> {
@@ -347,9 +357,10 @@ publishing {
 			group = "com.daniloaraujosilva"
 			artifactId = "mathemagika"
 
-			artifact(sourcesJarArtifact)
-
 			shadow.component(this)
+
+			addSourceJar(this)
+			addJavadocJar(this)
 		}
 		publications.withType<MavenPublication>().all {
 			customizeForMavenCentral(pom)
@@ -399,6 +410,39 @@ fun customizeForMavenCentral(pom: org.gradle.api.publish.maven.MavenPom) = pom.w
 			node("developer") {
 				add("name", "Danilo Araújo Silva")
 			}
+		}
+	}
+}
+
+/**
+ *
+ */
+fun addJavadocJar(target: MavenPublication) {
+	File("$buildDir/libs/").walkTopDown().forEach {
+		if (it.name == "${project.name}-${project.version}-javadoc.jar") {
+			// TODO Is "archives" the correct name?
+			val artifact = artifacts.add("archives", it) {
+				type = "jar"
+				builtBy(javadocJar)
+			}
+
+			target.artifact(artifact)
+		}
+	}
+}
+
+/**
+ *
+ */
+fun addSourceJar(target: MavenPublication) {
+	File("$buildDir/libs/").walkTopDown().forEach {
+		if (it.name == "${project.name}-${project.version}-sources.jar") {
+			val artifact = artifacts.add("archives", it) {
+				type = "jar"
+				builtBy(sourcesJar)
+			}
+
+			target.artifact(artifact)
 		}
 	}
 }

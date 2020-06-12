@@ -4,13 +4,13 @@ package com.daniloaraujosilva.mathemagika.application.generator
  *
  */
 fun main() {
-	println(exampleValue)
+//	println(exampleValue)
 }
 
 /**
  *
  */
-val exampleValue = com.daniloaraujosilva.mathemagika.common.common.formatOuput(exampleFunction(), true)
+//val exampleValue = com.daniloaraujosilva.mathemagika.common.common.formatOuput(exampleFunction(), true)
 
 /**
  *
@@ -34,7 +34,7 @@ object ExampleObject {
 	 */
 	fun exampleMethod(): List<String> {
 		val output = mutableListOf<String>()
-		output.addAll(com.daniloaraujosilva.mathemagika.common.jvm.common.exampleFunction())
+//		output.addAll(com.daniloaraujosilva.mathemagika.common.jvm.common.exampleFunction())
 		output.addAll(com.daniloaraujosilva.mathemagika.library.jvm.common.exampleFunction())
 		output.add(exampleProperty)
 

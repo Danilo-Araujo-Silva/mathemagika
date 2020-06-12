@@ -1,9 +1,8 @@
 package com.daniloaraujosilva.mathemagika.library.common.jvm
 
-import com.daniloaraujosilva.mathemagika.common.common.OperatingSystem
+import com.daniloaraujosilva.mathemagika.library.common.OperatingSystem
 import com.daniloaraujosilva.mathemagika.library.jvm.common.detectOperatingSystem
 import com.wolfram.jlink.*
-import java.lang.IllegalArgumentException
 
 fun getLinkName(): String {
 	var linkName = System.getProperty("MATH_KERNEL_HOME")

@@ -1,13 +1,8 @@
 package com.daniloaraujosilva.mathemagika.library.jvm.common
 
-import com.daniloaraujosilva.mathemagika.common.common.OperatingSystem
-import com.daniloaraujosilva.mathemagika.common.jvm.common.kotlinClass
+import com.daniloaraujosilva.mathemagika.library.common.OperatingSystem
 import com.daniloaraujosilva.mathemagika.library.common.jvm.EvaluationTypeEnum
-import com.daniloaraujosilva.mathemagika.library.common.jvm.EvaluationTypeEnum.UNIT
-import com.daniloaraujosilva.mathemagika.library.common.jvm.EvaluationTypeEnum.INPUT_FORM
-import com.daniloaraujosilva.mathemagika.library.common.jvm.EvaluationTypeEnum.OUTPUT_FORM
-import com.daniloaraujosilva.mathemagika.library.common.jvm.EvaluationTypeEnum.IMAGE
-import com.daniloaraujosilva.mathemagika.library.common.jvm.EvaluationTypeEnum.TYPE_SET
+import com.daniloaraujosilva.mathemagika.library.common.jvm.EvaluationTypeEnum.*
 import com.daniloaraujosilva.mathemagika.library.common.jvm.Mathematica
 import com.daniloaraujosilva.mathemagika.library.common.jvm.Result
 import java.math.BigDecimal
@@ -17,18 +12,6 @@ import java.util.regex.Pattern
 import kotlin.collections.ArrayList
 import kotlin.collections.HashMap
 import kotlin.collections.HashSet
-import kotlin.collections.List
-import kotlin.collections.Map
-import kotlin.collections.MutableList
-import kotlin.collections.MutableMap
-import kotlin.collections.MutableSet
-import kotlin.collections.Set
-import kotlin.collections.mutableMapOf
-import kotlin.collections.toHashSet
-import kotlin.collections.toList
-import kotlin.collections.toMutableList
-import kotlin.collections.toMutableSet
-import kotlin.collections.toSet
 import kotlin.reflect.KClass
 
 

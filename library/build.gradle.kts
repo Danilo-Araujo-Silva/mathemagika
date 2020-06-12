@@ -1,6 +1,7 @@
 import groovy.util.Node
 import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
 import com.github.jengelman.gradle.plugins.shadow.ShadowExtension
+import org.jetbrains.kotlin.javac.resolve.classId
 
 plugins {
 	kotlin("multiplatform")
@@ -317,24 +318,40 @@ publishing {
 
 // Add a Javadoc JAR to each publication as required by Maven Central
 
-val javadocJar by tasks.creating(Jar::class) {
-	archiveClassifier.value("javadoc")
-	// TODO: instead of a single empty Javadoc JAR, generate real documentation
-}
+//// Must be BELOW subprojects{}
+//task alljavadoc(type: Javadoc) {
+//	source subprojects.collect { it.sourceSets.main.allJava }
+//	classpath = files(subprojects.collect { it.sourceSets.main.compileClasspath })
+//	destinationDir = file("${buildDir}/docs/javadoc")
+//}
+//
+//task javadocJar(type: Jar, dependsOn: alljavadoc) {
+//	classifier = 'javadoc'
+//	from alljavadoc.destinationDir
+//}
 
-publishing {
-	publications.withType<MavenPublication>().all {
-		artifact(javadocJar)
-	}
-}
+//val alljavadoc by tasks.creating(Javadoc::class) {
+//	source(project.sourceSets.getByName("main").allJava)
+//	classpath = files(project.sourceSets.getByName("main").compileClasspath)
+//	setDestinationDir(file("${buildDir}/docs/javadoc"))
+//}
+//
+//val javadocJar by tasks.creating(Jar::class) {
+//	archiveClassifier.value("javadoc")
+//	from(alljavadoc.destinationDir)
+//}
 
 //// The root publication also needs a sources JAR as it does not have one by default
 
-val sourcesJar by tasks.creating(Jar::class) {
-	archiveClassifier.value("sources")
-}
-
-publishing.publications.withType<MavenPublication>().getByName("kotlinMultiplatform").artifact(sourcesJar)
+//val sourcesJar by tasks.creating(Jar::class) {
+//	archiveClassifier.value("sources")
+////	val collection: List<SourceDirectorySet> = subprojects.fold(ArrayList(), { accumulator, item ->
+////		accumulator.add(item.sourceSets.getByName("main").allSource); accumulator})
+////
+////	println(collection)
+//
+//	from(project.sourceSets.getByName("main").allJava)
+//}
 
 //// Customize the POMs adding the content required by Maven Central
 
@@ -393,11 +410,43 @@ fun customizeForMavenCentral(pom: org.gradle.api.publish.maven.MavenPom) = pom.w
 //     }
 // }
 
-//tasks.withType<Jar> {
-//	from ({
-//		configurations.runtimeClasspath.get().filter { it.name.endsWith("jar") }.map { zipTree(it) }
-//	})
-//}
+val sourcesJar by tasks.creating(Jar::class) {
+	dependsOn("classes")
+	group = "build"
+	archiveClassifier.value("sources")
+	from(collectSourceSetsIncludingSubmodules(project))
+}
+
+fun collectSourceSetsIncludingSubmodules(project: Project): MutableSet<SourceDirectorySet> {
+	val result: MutableSet<SourceDirectorySet> = mutableSetOf()
+	recursiveCollectSourceSets(project, mutableSetOf(), result)
+	return result
+}
+
+fun recursiveCollectSourceSets(
+	visitingProject: Project,
+	visitedProjects: MutableSet<Project>,
+	collectedSourceSets: MutableSet<SourceDirectorySet>
+) {
+	if (!visitedProjects.contains(visitingProject)) {
+		visitedProjects.add(visitingProject)
+		collectedSourceSets.add(visitingProject.sourceSets.getByName("main").allJava)
+		visitingProject.configurations.implementation.get().allDependencies.withType<ProjectDependency>().forEach {
+				pd: ProjectDependency ->
+			recursiveCollectSourceSets(pd.getDependencyProject(), visitedProjects, collectedSourceSets)
+		}
+	}
+}
+
+artifacts {
+	archives(sourcesJar)
+}
+
+val rpmFile = file("$buildDir/libs/library-jvm-0.0.1-sources.jar")
+val rpmArtifact = artifacts.add("archives", rpmFile) {
+	type = "jar"
+	builtBy("sourcesJar")
+}
 
 val shadowJar = tasks.withType<ShadowJar> {
 	archiveClassifier.set("")
@@ -416,7 +465,9 @@ val shadowJar = tasks.withType<ShadowJar> {
 publishing {
 	publications {
 		create<MavenPublication>("mavenLocal") {
-			artifactId = "jvm"
+//			artifactId = "jvm"
+
+			artifact(rpmArtifact)
 
 			shadow.component(this)
 		}
@@ -425,3 +476,5 @@ publishing {
 		}
 	}
 }
+
+publishing.publications.withType<MavenPublication>().getByName("kotlinMultiplatform").artifact(sourcesJar)

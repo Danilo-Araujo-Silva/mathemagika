@@ -411,36 +411,41 @@ fun customizeForMavenCentral(pom: org.gradle.api.publish.maven.MavenPom) = pom.w
 // }
 
 val sourcesJar by tasks.creating(Jar::class) {
-	dependsOn("classes")
-	group = "build"
 	archiveClassifier.value("sources")
-	from(collectSourceSetsIncludingSubmodules(project))
+	from(project.sourceSets.getByName("main").allJava)
 }
 
-fun collectSourceSetsIncludingSubmodules(project: Project): MutableSet<SourceDirectorySet> {
-	val result: MutableSet<SourceDirectorySet> = mutableSetOf()
-	recursiveCollectSourceSets(project, mutableSetOf(), result)
-	return result
-}
-
-fun recursiveCollectSourceSets(
-	visitingProject: Project,
-	visitedProjects: MutableSet<Project>,
-	collectedSourceSets: MutableSet<SourceDirectorySet>
-) {
-	if (!visitedProjects.contains(visitingProject)) {
-		visitedProjects.add(visitingProject)
-		collectedSourceSets.add(visitingProject.sourceSets.getByName("main").allJava)
-		visitingProject.configurations.implementation.get().allDependencies.withType<ProjectDependency>().forEach {
-				pd: ProjectDependency ->
-			recursiveCollectSourceSets(pd.getDependencyProject(), visitedProjects, collectedSourceSets)
-		}
-	}
-}
-
-artifacts {
-	archives(sourcesJar)
-}
+//val sourcesJar by tasks.creating(Jar::class) {
+//	dependsOn("classes")
+//	group = "build"
+//	archiveClassifier.value("sources")
+//	from(collectSourceSetsIncludingSubmodules(project))
+//}
+//
+//fun collectSourceSetsIncludingSubmodules(project: Project): MutableSet<SourceDirectorySet> {
+//	val result: MutableSet<SourceDirectorySet> = mutableSetOf()
+//	recursiveCollectSourceSets(project, mutableSetOf(), result)
+//	return result
+//}
+//
+//fun recursiveCollectSourceSets(
+//	visitingProject: Project,
+//	visitedProjects: MutableSet<Project>,
+//	collectedSourceSets: MutableSet<SourceDirectorySet>
+//) {
+//	if (!visitedProjects.contains(visitingProject)) {
+//		visitedProjects.add(visitingProject)
+//		collectedSourceSets.add(visitingProject.sourceSets.getByName("main").allJava)
+//		visitingProject.configurations.implementation.get().allDependencies.withType<ProjectDependency>().forEach {
+//				pd: ProjectDependency ->
+//			recursiveCollectSourceSets(pd.getDependencyProject(), visitedProjects, collectedSourceSets)
+//		}
+//	}
+//}
+//
+//artifacts {
+//	archives(sourcesJar)
+//}
 
 val rpmFile = file("$buildDir/libs/library-jvm-0.0.1-sources.jar")
 val rpmArtifact = artifacts.add("archives", rpmFile) {
@@ -465,7 +470,7 @@ val shadowJar = tasks.withType<ShadowJar> {
 publishing {
 	publications {
 		create<MavenPublication>("mavenLocal") {
-//			artifactId = "jvm"
+			artifactId = "jvm"
 
 			artifact(rpmArtifact)
 
@@ -477,4 +482,4 @@ publishing {
 	}
 }
 
-publishing.publications.withType<MavenPublication>().getByName("kotlinMultiplatform").artifact(sourcesJar)
+//publishing.publications.withType<MavenPublication>().getByName("kotlinMultiplatform").artifact(sourcesJar)

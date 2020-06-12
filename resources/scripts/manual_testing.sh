@@ -8,7 +8,7 @@ rm -rf ~/.m2/repository/com/daniloaraujosilva \
 && rm -rf library/build/libs \
 && tree ~/.m2/repository/com/daniloaraujosilva \
 && tree library/build/libs \
-&& ./gradlew clean build --console=plain #\
+&& ./gradlew --console=plain clean build publishToMavenLocal \
 # && ./gradlew publishToMavenLocal \
-# && tree library/build/libs \
-# && tree ~/.m2/repository/com/daniloaraujosilva
+&& tree library/build/libs \
+&& tree ~/.m2/repository/com/daniloaraujosilva

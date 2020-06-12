@@ -305,13 +305,9 @@ val sourcesJar = task("sourcesJar", type = Jar::class) {
 	with(tasks.jar.get() as CopySpec)
 }
 
-val javadocJar = task("javadocJar", type = Javadoc::class) {
-	// TODO Implement
-}
-
-val build by tasks.getting {
-	finalizedBy(sourcesJar, javadocJar)
-}
+//val javadocJar = task("javadocJar", type = Javadoc::class) {
+//	// TODO Implement
+//}
 
 val shadowJar = tasks.withType<ShadowJar> {
 	archiveClassifier.set("")
@@ -335,8 +331,8 @@ publishing {
 
 			shadow.component(this)
 
-			addSourceJar(this)
-			addJavadocJar(this)
+			artifact(sourcesJar)
+//			artifact(javadocJar)
 		}
 		publications.withType<MavenPublication>().all {
 			customizeForMavenCentral(pom)
@@ -386,39 +382,6 @@ fun customizeForMavenCentral(pom: org.gradle.api.publish.maven.MavenPom) = pom.w
 			node("developer") {
 				add("name", "Danilo Araújo Silva")
 			}
-		}
-	}
-}
-
-/**
- *
- */
-fun addJavadocJar(target: MavenPublication) {
-	File("$buildDir/libs/").walkTopDown().forEach {
-		if (it.name == "${project.name}-${project.version}-javadoc.jar") {
-			// TODO Is "archives" the correct name?
-			val artifact = artifacts.add("archives", it) {
-				type = "jar"
-				builtBy(javadocJar)
-			}
-
-			target.artifact(artifact)
-		}
-	}
-}
-
-/**
- *
- */
-fun addSourceJar(target: MavenPublication) {
-	File("$buildDir/libs/").walkTopDown().forEach {
-		if (it.name == "${project.name}-${project.version}-sources.jar") {
-			val artifact = artifacts.add("archives", it) {
-				type = "jar"
-				builtBy(sourcesJar)
-			}
-
-			target.artifact(artifact)
 		}
 	}
 }

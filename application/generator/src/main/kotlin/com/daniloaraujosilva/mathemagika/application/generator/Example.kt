@@ -4,13 +4,13 @@ package com.daniloaraujosilva.mathemagika.application.generator
  *
  */
 fun main() {
-//	println(exampleValue)
+	println(exampleValue)
 }
 
 /**
  *
  */
-//val exampleValue = com.daniloaraujosilva.mathemagika.common.common.formatOuput(exampleFunction(), true)
+val exampleValue = com.daniloaraujosilva.mathemagika.common.common.formatOuput(exampleFunction(), true)
 
 /**
  *

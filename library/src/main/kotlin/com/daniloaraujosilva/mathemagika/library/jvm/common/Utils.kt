@@ -3,7 +3,6 @@ package com.daniloaraujosilva.mathemagika.library.jvm.common
 import com.daniloaraujosilva.mathemagika.library.common.OperatingSystem
 import com.daniloaraujosilva.mathemagika.library.common.jvm.EvaluationTypeEnum
 import com.daniloaraujosilva.mathemagika.library.common.jvm.EvaluationTypeEnum.*
-import com.daniloaraujosilva.mathemagika.library.common.jvm.Mathematica
 import com.daniloaraujosilva.mathemagika.library.common.jvm.Result
 import java.math.BigDecimal
 import java.math.BigInteger

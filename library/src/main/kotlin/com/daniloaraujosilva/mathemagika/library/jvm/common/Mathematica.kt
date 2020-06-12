@@ -1,7 +1,6 @@
-package com.daniloaraujosilva.mathemagika.library.common.jvm
+package com.daniloaraujosilva.mathemagika.library.jvm.common
 
 import com.daniloaraujosilva.mathemagika.library.common.OperatingSystem
-import com.daniloaraujosilva.mathemagika.library.jvm.common.detectOperatingSystem
 import com.wolfram.jlink.*
 
 fun getLinkName(): String {

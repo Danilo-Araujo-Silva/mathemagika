@@ -1,6 +1,6 @@
 package com.daniloaraujosilva.mathemagika.application.generator
 
-import com.daniloaraujosilva.mathemagika.library.common.jvm.Mathematica
+import com.daniloaraujosilva.mathemagika.library.jvm.common.Mathematica
 import com.daniloaraujosilva.mathemagika.library.common.kotlinKeywordsAndSymbols
 import com.daniloaraujosilva.mathemagika.library.jvm.common.convertFromMathematicaTo
 import java.nio.file.Path

@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.gradle.plugin.KotlinSourceSet
+
 plugins {
 	kotlin("multiplatform")
 	id("maven-publish")
@@ -62,8 +64,7 @@ kotlin {
 
 	sourceSets {
 		val commonMain by getting {
-			kotlin.setSrcDirs(listOf(getPath("main", "kotlin", "common")))
-			resources.setSrcDirs(listOf(getPath("main", "resources", "common")))
+			configureSourceSet((this))
 
 			dependencies {
 				implementation(kotlin("stdlib-common"))
@@ -71,8 +72,7 @@ kotlin {
 		}
 
 		val commonTest by getting {
-			kotlin.setSrcDirs(listOf(getPath("test", "kotlin", "common")))
-			resources.setSrcDirs(listOf(getPath("test", "resources", "common")))
+			configureSourceSet((this))
 
 			dependencies {
 				implementation(kotlin("test-common"))
@@ -81,94 +81,80 @@ kotlin {
 		}
 
 //		val nativeMain by creating {
-//			kotlin.setSrcDirs(listOf(getPath("main", "kotlin", "native")))
-//			resources.setSrcDirs(listOf(getPath("main", "resources", "native")))
+//			configureSourceSet((this))
 //
 //			dependsOn(commonMain)
 //		}
 //		val nativeTest by creating {
-//			kotlin.setSrcDirs(listOf(getPath("test", "kotlin", "native")))
-//			resources.setSrcDirs(listOf(getPath("test", "resources", "native")))
+//			configureSourceSet((this))
 //
 //			dependsOn(commonTest)
 //		}
 //
 //		val androidNativeArm32Main by getting {
-//			kotlin.setSrcDirs(listOf(getPath("main", "kotlin", "android_native_arm32")))
-//			resources.setSrcDirs(listOf(getPath("main", "resources", "android_native_arm32")))
+//			configureSourceSet((this))
 //
 //			dependsOn(nativeMain)
 //		}
 //		val androidNativeArm32Test by getting {
-//			kotlin.setSrcDirs(listOf(getPath("test", "kotlin", "android_native_arm32")))
-//			resources.setSrcDirs(listOf(getPath("test", "resources", "android_native_arm32")))
+//			configureSourceSet((this))
 //
 //			dependsOn(nativeTest)
 //		}
 //
 //		val androidNativeArm64Main by getting {
-//			kotlin.setSrcDirs(listOf(getPath("main", "kotlin", "android_native_arm64")))
-//			resources.setSrcDirs(listOf(getPath("main", "resources", "android_native_arm64")))
+//			configureSourceSet((this))
 //
 //			dependsOn(nativeMain)
 //		}
 //		val androidNativeArm64Test by getting {
-//			kotlin.setSrcDirs(listOf(getPath("test", "kotlin", "android_native_arm64")))
-//			resources.setSrcDirs(listOf(getPath("test", "resources", "android_native_arm64")))
+//			configureSourceSet((this))
 //
 //			dependsOn(nativeTest)
 //		}
 //
 //		val iosArm32Main by getting {
-//			kotlin.setSrcDirs(listOf(getPath("main", "kotlin", "ios_arm32")))
-//			resources.setSrcDirs(listOf(getPath("main", "resources", "ios_arm32")))
+//			configureSourceSet((this))
 //
 //			dependsOn(nativeMain)
 //		}
 //		val iosArm32Test by getting {
-//			kotlin.setSrcDirs(listOf(getPath("test", "kotlin", "ios_arm32")))
-//			resources.setSrcDirs(listOf(getPath("test", "resources", "ios_arm32")))
+//			configureSourceSet((this))
 //
 //			dependsOn(nativeTest)
 //		}
 //
 //		val iosArm64Main by getting {
-//			kotlin.setSrcDirs(listOf(getPath("main", "kotlin", "ios_arm64")))
-//			resources.setSrcDirs(listOf(getPath("main", "resources", "ios_arm64")))
+//			configureSourceSet((this))
 //
 //			dependsOn(nativeMain)
 //		}
 //		val iosArm64Test by getting {
-//			kotlin.setSrcDirs(listOf(getPath("test", "kotlin", "ios_arm64")))
-//			resources.setSrcDirs(listOf(getPath("test", "resources", "ios_arm64")))
+//			configureSourceSet((this))
 //
 //			dependsOn(nativeTest)
 //		}
 //
 //		val iosX64Main by getting {
-//			kotlin.setSrcDirs(listOf(getPath("main", "kotlin", "ios_x64")))
-//			resources.setSrcDirs(listOf(getPath("main", "resources", "ios_x64")))
+//			configureSourceSet((this))
 //
 //			dependsOn(nativeMain)
 //		}
 //		val iosX64Test by getting {
-//			kotlin.setSrcDirs(listOf(getPath("test", "kotlin", "ios_x64")))
-//			resources.setSrcDirs(listOf(getPath("test", "resources", "ios_x64")))
+//			configureSourceSet((this))
 //
 //			dependsOn(nativeTest)
 //		}
 //
 //		val jsMain by getting {
-//			kotlin.setSrcDirs(listOf(getPath("main", "kotlin", "js")))
-//			resources.setSrcDirs(listOf(getPath("main", "resources", "js")))
+//			configureSourceSet((this))
 //
 //			dependencies {
 //				implementation(kotlin("stdlib-js"))
 //			}
 //		}
 //		val jsTest by getting {
-//			kotlin.setSrcDirs(listOf(getPath("test", "kotlin", "js")))
-//			resources.setSrcDirs(listOf(getPath("test", "resources", "js")))
+//			configureSourceSet((this))
 //
 //			dependencies {
 //				implementation(kotlin("test-js"))
@@ -176,16 +162,14 @@ kotlin {
 //		}
 
 		val jvmMain by getting {
-			kotlin.setSrcDirs(listOf(getPath("main", "kotlin", "jvm")))
-			resources.setSrcDirs(listOf(getPath("main", "resources", "jvm")))
+			configureSourceSet((this))
 
 			dependencies {
 				implementation(kotlin("stdlib-jdk8"))
 			}
 		}
 		val jvmTest by getting {
-			kotlin.setSrcDirs(listOf(getPath("test", "kotlin", "jvm")))
-			resources.setSrcDirs(listOf(getPath("test", "resources", "jvm")))
+			configureSourceSet((this))
 
 			dependencies {
 				implementation(kotlin("test"))
@@ -194,92 +178,78 @@ kotlin {
 		}
 
 //		val linuxArm32HfpMain by getting {
-//			kotlin.setSrcDirs(listOf(getPath("main", "kotlin", "linux_arm32_hfp")))
-//			resources.setSrcDirs(listOf(getPath("main", "resources", "linux_arm32_hfp")))
+//			configureSourceSet((this))
 //
 //			dependsOn(nativeMain)
 //		}
 //		val linuxArm32HfpTest by getting {
-//			kotlin.setSrcDirs(listOf(getPath("test", "kotlin", "linux_arm32_hfp")))
-//			resources.setSrcDirs(listOf(getPath("test", "resources", "linux_arm32_hfp")))
+//			configureSourceSet((this))
 //
 //			dependsOn(nativeTest)
 //		}
 //
 //		val linuxMips32Main by getting {
-//			kotlin.setSrcDirs(listOf(getPath("main", "kotlin", "linux_mips32")))
-//			resources.setSrcDirs(listOf(getPath("main", "resources", "linux_mips32")))
+//			configureSourceSet((this))
 //
 //			dependsOn(nativeMain)
 //		}
 //		val linuxMips32Test by getting {
-//			kotlin.setSrcDirs(listOf(getPath("test", "kotlin", "linux_mips32")))
-//			resources.setSrcDirs(listOf(getPath("test", "resources", "linux_mips32")))
+//			configureSourceSet((this))
 //
 //			dependsOn(nativeTest)
 //		}
 //
 //		val linuxMipsel32Main by getting {
-//			kotlin.setSrcDirs(listOf(getPath("main", "kotlin", "linux_mipsel32")))
-//			resources.setSrcDirs(listOf(getPath("main", "resources", "linux_mipsel32")))
+//			configureSourceSet((this))
 //
 //			dependsOn(nativeMain)
 //		}
 //		val linuxMipsel32Test by getting {
-//			kotlin.setSrcDirs(listOf(getPath("test", "kotlin", "linux_mipsel32")))
-//			resources.setSrcDirs(listOf(getPath("test", "resources", "linux_mipsel32")))
+//			configureSourceSet((this))
 //
 //			dependsOn(nativeTest)
 //		}
 //
 //		val linuxX64Main by getting {
-//			kotlin.setSrcDirs(listOf(getPath("main", "kotlin", "linux_x64")))
-//			resources.setSrcDirs(listOf(getPath("main", "resources", "linux_x64")))
+//			configureSourceSet((this))
 //
 //			dependsOn(nativeMain)
 //		}
 //		val linuxX64Test by getting {
-//			kotlin.setSrcDirs(listOf(getPath("test", "kotlin", "linux_x64")))
-//			resources.setSrcDirs(listOf(getPath("test", "resources", "linux_x64")))
+//			configureSourceSet((this))
 //
 //			dependsOn(nativeTest)
 //		}
 //
 //		val macosX64Main by getting {
-//			kotlin.setSrcDirs(listOf(getPath("main", "kotlin", "macos_x64")))
-//			resources.setSrcDirs(listOf(getPath("main", "resources", "macos_x64")))
+//			configureSourceSet((this))
 //
 //			dependsOn(nativeMain)
 //		}
 //		val macosX64Test by getting {
-//			kotlin.setSrcDirs(listOf(getPath("test", "kotlin", "macos_x64")))
-//			resources.setSrcDirs(listOf(getPath("test", "resources", "macos_x64")))
+//			configureSourceSet((this))
 //
 //			dependsOn(nativeTest)
 //		}
 //
 //		val mingwX64Main by getting {
-//			kotlin.setSrcDirs(listOf(getPath("main", "kotlin", "mingw_x64")))
-//			resources.setSrcDirs(listOf(getPath("main", "resources", "mingw_x64")))
+//			configureSourceSet((this))
 //
 //			dependsOn(nativeMain)
 //		}
 //		val mingwX64Test by getting {
-//			kotlin.setSrcDirs(listOf(getPath("test", "kotlin", "mingw_x64")))
-//			resources.setSrcDirs(listOf(getPath("test", "resources", "mingw_x64")))
+//			configureSourceSet((this))
 //
 //			dependsOn(nativeTest)
 //		}
 //
 //		val wasm32Main by getting {
-//			kotlin.setSrcDirs(listOf(getPath("main", "kotlin", "wasm32")))
-//			resources.setSrcDirs(listOf(getPath("main", "resources", "wasm32")))
+//			configureSourceSet((this))
 //
 //			dependsOn(nativeMain)
 //		}
 //		val wasm32Test by getting {
-//			kotlin.setSrcDirs(listOf(getPath("test", "kotlin", "wasm32")))
-//			resources.setSrcDirs(listOf(getPath("test", "resources", "wasm32")))
+//			configureSourceSet((this))
 //
 //			dependsOn(nativeTest)
 //		}
@@ -289,12 +259,18 @@ kotlin {
 /**
  *
  */
-fun getPath(compilation: String, type: String, name: String): String {
-	return if (type == "kotlin")
-		if (name == "common")
-			"src/$compilation/$type/com/daniloaraujosilva/mathemagika/common/$name"
-		else
-			"src/$compilation/$type/com/daniloaraujosilva/mathemagika/common/$name/common"
-	else
-		"src/$compilation/$type/$name"
+fun configureSourceSet(sourceSet: KotlinSourceSet) {
+	val compilation = if (sourceSet.name.endsWith("Main")) "main" else "test"
+	val name = sourceSet.name.replace(compilation.capitalize(), "")
+	val srcDir = "src/$compilation/kotlin"
+	val base = "$projectDir/$srcDir/com/daniloaraujosilva/mathemagika/common/$name"
+
+	sourceSet.kotlin.setSrcDirs(listOf(srcDir))
+	sourceSet.kotlin.exclude {
+		val absolutePath = it.file.absolutePath
+
+		if (base.startsWith(absolutePath)) false else !absolutePath.startsWith(base)
+	}
+
+	sourceSet.resources.setSrcDirs(listOf("src/$compilation/resources/$name"))
 }

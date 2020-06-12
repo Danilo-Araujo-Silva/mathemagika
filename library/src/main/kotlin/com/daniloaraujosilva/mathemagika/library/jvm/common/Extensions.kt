@@ -4,8 +4,7 @@ package com.daniloaraujosilva.mathemagika.library.jvm.common
  *
  */
 fun <A, B> Map<A, B>.merge(vararg maps: Map<A, B>): Map<A, B> {
-	val mutableMap = mutableMapOf<A, B>()
-	mutableMap.putAll(this)
+	val mutableMap = this.toMutableMap()
 
 	maps.toList().forEach { mutableMap.putAll(it) }
 

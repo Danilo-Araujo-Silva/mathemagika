@@ -66,7 +66,7 @@ data class MathematicaFunction(
 	 */
 	@ExperimentalUnsignedTypes
 	fun runToInputForm(options: Map<String, Any?> = mutableMapOf()): String {
-		return run(options = options.merge(mapOf(type to INPUT_FORM)))
+		return run<String>(options = options.merge(mapOf(type to INPUT_FORM)))
 	}
 
 	/**
@@ -74,23 +74,23 @@ data class MathematicaFunction(
 	 */
 	@ExperimentalUnsignedTypes
 	fun runToOutputForm(options: Map<String, Any?> = mutableMapOf()): String {
-		return run(options = options.merge(mapOf(type to OUTPUT_FORM)))
+		return run<String>(options = options.merge(mapOf(type to OUTPUT_FORM)))
 	}
 
 	/**
 	 *
 	 */
 	@ExperimentalUnsignedTypes
-	fun runToImage(options: Map<String, Any?> = mutableMapOf()): String {
-		return run(options = options.merge(mapOf(type to IMAGE)))
+	fun runToImage(options: Map<String, Any?> = mutableMapOf()): ByteArray {
+		return run<ByteArray>(options = options.merge(mapOf(type to IMAGE)))
 	}
 
 	/**
 	 *
 	 */
 	@ExperimentalUnsignedTypes
-	fun runToTypeSet(options: Map<String, Any?> = mutableMapOf()): String {
-		return run(options = options.merge(mapOf(type to TYPE_SET)))
+	fun runToTypeSet(options: Map<String, Any?> = mutableMapOf()): ByteArray {
+		return run<ByteArray>(options = options.merge(mapOf(type to TYPE_SET)))
 	}
 
 	/**

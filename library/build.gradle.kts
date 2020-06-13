@@ -35,14 +35,14 @@ kotlin {
 //			framework {}
 //		}
 //	}
-//
-//	js {
+
+	js {
 //		browser {
 //		}
-//
-//		nodejs {
-//		}
-//	}
+
+		nodejs {
+		}
+	}
 
 	jvm {
 	}
@@ -58,10 +58,10 @@ kotlin {
 //
 //	linuxX64 {
 //	}
-//
-//	macosX64 {
-//	}
-//
+
+	macosX64 {
+	}
+
 //	mingwX64 {
 //	}
 //
@@ -70,7 +70,7 @@ kotlin {
 
 	sourceSets {
 		val commonMain by getting {
-			configureSourceSet((this))
+			configureSourceSet(this)
 
 			dependencies {
 				implementation(project(":common"))
@@ -79,94 +79,94 @@ kotlin {
 		}
 
 		val commonTest by getting {
-			configureSourceSet((this))
+			configureSourceSet(this)
 
 			dependencies {
 				implementation(kotlin("test-common"))
 				implementation(kotlin("test-annotations-common"))
 			}
 		}
-//
-//		val nativeMain by creating {
-//			configureSourceSet((this))
-//
-//			dependsOn(commonMain)
-//		}
-//		val nativeTest by creating {
-//			configureSourceSet((this))
-//
-//			dependsOn(commonTest)
-//		}
-//
+
+		val nativeMain by creating {
+			configureSourceSet(this)
+
+			dependsOn(commonMain)
+		}
+		val nativeTest by creating {
+			configureSourceSet(this)
+
+			dependsOn(commonTest)
+		}
+
 //		val androidNativeArm32Main by getting {
-//			configureSourceSet((this))
+//			configureSourceSet(this)
 //
 //			dependsOn(nativeMain)
 //		}
 //		val androidNativeArm32Test by getting {
-//			configureSourceSet((this))
+//			configureSourceSet(this)
 //
 //			dependsOn(nativeTest)
 //		}
 //
 //		val androidNativeArm64Main by getting {
-//			configureSourceSet((this))
+//			configureSourceSet(this)
 //
 //			dependsOn(nativeMain)
 //		}
 //		val androidNativeArm64Test by getting {
-//			configureSourceSet((this))
+//			configureSourceSet(this)
 //
 //			dependsOn(nativeTest)
 //		}
 //
 //		val iosArm32Main by getting {
-//			configureSourceSet((this))
+//			configureSourceSet(this)
 //
 //			dependsOn(nativeMain)
 //		}
 //		val iosArm32Test by getting {
-//			configureSourceSet((this))
+//			configureSourceSet(this)
 //
 //			dependsOn(nativeTest)
 //		}
 //
 //		val iosArm64Main by getting {
-//			configureSourceSet((this))
+//			configureSourceSet(this)
 //
 //			dependsOn(nativeMain)
 //		}
 //		val iosArm64Test by getting {
-//			configureSourceSet((this))
+//			configureSourceSet(this)
 //
 //			dependsOn(nativeTest)
 //		}
 //
 //		val iosX64Main by getting {
-//			configureSourceSet((this))
+//			configureSourceSet(this)
 //
 //			dependsOn(nativeMain)
 //		}
 //		val iosX64Test by getting {
-//			configureSourceSet((this))
+//			configureSourceSet(this)
 //
 //			dependsOn(nativeTest)
 //		}
-//
-//		val jsMain by getting {
-//			configureSourceSet((this))
-//
-//			dependencies {
-//				implementation(kotlin("stdlib-js"))
-//			}
-//		}
-//		val jsTest by getting {
-//			configureSourceSet((this))
-//
-//			dependencies {
-//				implementation(kotlin("test-js"))
-//			}
-//		}
+
+		val jsMain by getting {
+			configureSourceSet(this)
+
+			dependencies {
+				implementation(kotlin("stdlib-js"))
+			}
+		}
+		val jsTest by getting {
+			configureSourceSet(this)
+
+			dependencies {
+				implementation(kotlin("test-js"))
+			}
+		}
 
 		val jvmMain by getting {
 			configureSourceSet(this)
@@ -178,7 +178,7 @@ kotlin {
 			}
 		}
 		val jvmTest by getting {
-			configureSourceSet((this))
+			configureSourceSet(this)
 
 			dependencies {
 				implementation(kotlin("test"))
@@ -187,78 +187,78 @@ kotlin {
 		}
 
 //		val linuxArm32HfpMain by getting {
-//			configureSourceSet((this))
+//			configureSourceSet(this)
 //
 //			dependsOn(nativeMain)
 //		}
 //		val linuxArm32HfpTest by getting {
-//			configureSourceSet((this))
+//			configureSourceSet(this)
 //
 //			dependsOn(nativeTest)
 //		}
 //
 //		val linuxMips32Main by getting {
-//			configureSourceSet((this))
+//			configureSourceSet(this)
 //
 //			dependsOn(nativeMain)
 //		}
 //		val linuxMips32Test by getting {
-//			configureSourceSet((this))
+//			configureSourceSet(this)
 //
 //			dependsOn(nativeTest)
 //		}
 //
 //		val linuxMipsel32Main by getting {
-//			configureSourceSet((this))
+//			configureSourceSet(this)
 //
 //			dependsOn(nativeMain)
 //		}
 //		val linuxMipsel32Test by getting {
-//			configureSourceSet((this))
+//			configureSourceSet(this)
 //
 //			dependsOn(nativeTest)
 //		}
 //
 //		val linuxX64Main by getting {
-//			configureSourceSet((this))
+//			configureSourceSet(this)
 //
 //			dependsOn(nativeMain)
 //		}
 //		val linuxX64Test by getting {
-//			configureSourceSet((this))
+//			configureSourceSet(this)
 //
 //			dependsOn(nativeTest)
 //		}
-//
-//		val macosX64Main by getting {
-//			configureSourceSet((this))
-//
-//			dependsOn(nativeMain)
-//		}
-//		val macosX64Test by getting {
-//			configureSourceSet((this))
-//
-//			dependsOn(nativeTest)
-//		}
-//
+
+		val macosX64Main by getting {
+			configureSourceSet(this)
+
+			dependsOn(nativeMain)
+		}
+		val macosX64Test by getting {
+			configureSourceSet(this)
+
+			dependsOn(nativeTest)
+		}
+
 //		val mingwX64Main by getting {
-//			configureSourceSet((this))
+//			configureSourceSet(this)
 //
 //			dependsOn(nativeMain)
 //		}
 //		val mingwX64Test by getting {
-//			configureSourceSet((this))
+//			configureSourceSet(this)
 //
 //			dependsOn(nativeTest)
 //		}
 //
 //		val wasm32Main by getting {
-//			configureSourceSet((this))
+//			configureSourceSet(this)
 //
 //			dependsOn(nativeMain)
 //		}
 //		val wasm32Test by getting {
-//			configureSourceSet((this))
+//			configureSourceSet(this)
 //
 //			dependsOn(nativeTest)
 //		}

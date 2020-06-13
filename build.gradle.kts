@@ -37,8 +37,8 @@ buildscript {
 	}
 
 	dependencies {
-		// This is important for force Kotlin/Native use the latest Kotlin version.
-		classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion")
+		// This is important for force Kotlin/Native use the latest Kotlin version. Unfortunately this is breaking Kotlin/JS.
+//		classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion")
 
 		// TODO See if we can move this only for the module that needs it.
 		// This classpath dependency is needed for JVM modules generate fat jars.

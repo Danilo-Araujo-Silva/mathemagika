@@ -1,6 +1,6 @@
 package com.daniloaraujosilva.mathemagika.library.jvm.functions
 
-import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
+import com.daniloaraujosilva.mathemagika.library.jvm.MathematicaFunction
 
 /**                                                                                                          \!SubscriptBox[                          " in StringExpression.
  *````                                                                                                        *                                  1     2 *                   DatePattern[{"e ", "e ", …}, sep] allows separators that match the string expression sep.

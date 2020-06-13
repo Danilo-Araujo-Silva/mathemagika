@@ -1,6 +1,6 @@
 @file:Suppress("unused")
 
-package com.daniloaraujosilva.mathemagika.library.jvm.common
+package com.daniloaraujosilva.mathemagika.library.jvm
 
 const val type = "type"
 

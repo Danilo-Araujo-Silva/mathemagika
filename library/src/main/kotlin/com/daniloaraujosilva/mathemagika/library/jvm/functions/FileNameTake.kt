@@ -1,6 +1,6 @@
 package com.daniloaraujosilva.mathemagika.library.jvm.functions
 
-import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
+import com.daniloaraujosilva.mathemagika.library.jvm.MathematicaFunction
 
 /**                                                                                     \!                                        ".                                                                                             \!                                        ".                                                                                             \!                                        ".                                                                                             \!                                        ".
  *````                                                                                   *                   StyleBox["name", "TI"] *                   FileNameTake["name", n] gives the first n path elements in the file name " *                   StyleBox["name", "TI"] *                   FileNameTake["name", -n] gives the last n path elements in the file name " *                   StyleBox["name", "TI"] *                   FileNameTake["name", {m, n}] gives elements m through n in the file name " * Usage:            StyleBox["name", "TI"] *

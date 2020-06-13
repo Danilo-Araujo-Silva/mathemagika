@@ -1,4 +1,4 @@
-package com.daniloaraujosilva.mathemagika.library.jvm.common
+package com.daniloaraujosilva.mathemagika.library.jvm
 
 /**
  *
@@ -28,7 +28,7 @@ fun String.runToInputForm(
 	@Suppress("UNUSED_PARAMETER") vararg arguments: Any? = arrayOf(),
 	options: Map<String, Any?> = mutableMapOf()
 ): String? {
-	return com.daniloaraujosilva.mathemagika.library.jvm.common.runToInputForm(this, arguments, options)
+	return com.daniloaraujosilva.mathemagika.library.jvm.runToInputForm(this, arguments, options)
 }
 
 /**
@@ -39,7 +39,7 @@ fun String.runToOutputForm(
 	@Suppress("UNUSED_PARAMETER") vararg arguments: Any? = arrayOf(),
 	options: Map<String, Any?> = mutableMapOf()
 ): String? {
-	return com.daniloaraujosilva.mathemagika.library.jvm.common.runToOutputForm(this, arguments, options)
+	return com.daniloaraujosilva.mathemagika.library.jvm.runToOutputForm(this, arguments, options)
 }
 
 /**
@@ -50,7 +50,7 @@ fun String.runToImage(
 	@Suppress("UNUSED_PARAMETER") vararg arguments: Any? = arrayOf(),
 	options: Map<String, Any?> = mutableMapOf()
 ): ByteArray? {
-	return com.daniloaraujosilva.mathemagika.library.jvm.common.runToImage(this, arguments, options)
+	return com.daniloaraujosilva.mathemagika.library.jvm.runToImage(this, arguments, options)
 }
 
 /**
@@ -61,7 +61,7 @@ fun String.runToTypeSet(
 	@Suppress("UNUSED_PARAMETER") vararg arguments: Any? = arrayOf(),
 	options: Map<String, Any?> = mutableMapOf()
 ): ByteArray? {
-	return com.daniloaraujosilva.mathemagika.library.jvm.common.runToTypeSet(this, arguments, options)
+	return com.daniloaraujosilva.mathemagika.library.jvm.runToTypeSet(this, arguments, options)
 }
 
 /**
@@ -72,7 +72,7 @@ inline fun <reified Return> String.run(
 	@Suppress("UNUSED_PARAMETER") vararg arguments: Any? = arrayOf(),
 	options: Map<String, Any?> = mutableMapOf()
 ): Return? {
-	return com.daniloaraujosilva.mathemagika.library.jvm.common.run<Return>(this, arguments, options)
+	return com.daniloaraujosilva.mathemagika.library.jvm.run<Return>(this, arguments, options)
 }
 
 /**

@@ -1,6 +1,6 @@
 package com.daniloaraujosilva.mathemagika.library.jvm.functions
 
-import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
+import com.daniloaraujosilva.mathemagika.library.jvm.MathematicaFunction
 
 /**                                                                                     \!                                        " for n instances.
  *````                                                                                   *                   StyleBox["noun", "TI"] *                   Pluralize[{"singular", "plural"}, n] inflects using the specified forms.

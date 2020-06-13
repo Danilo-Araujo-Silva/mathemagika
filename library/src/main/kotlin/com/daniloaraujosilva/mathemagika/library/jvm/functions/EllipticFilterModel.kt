@@ -1,6 +1,6 @@
 package com.daniloaraujosilva.mathemagika.library.jvm.functions
 
-import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
+import com.daniloaraujosilva.mathemagika.library.jvm.MathematicaFunction
 
 /**                                                                                                        \!                                        ", using the spec.
  *````                                                                                                      *                   StyleBox["type", "TI"] * Usage:            EllipticFilterModel[{"type", spec}, var] expresses the model in terms of the variable var.

@@ -1,6 +1,6 @@
 package com.daniloaraujosilva.mathemagika.library.jvm.functions
 
-import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
+import com.daniloaraujosilva.mathemagika.library.jvm.MathematicaFunction
 
 /**                                                                                                                     \!                                         ".
  *````                                                                                                                   *                   StyleBox["query", "TI"] * Usage:            FormulaLookup["query", n] returns at most n results.

@@ -1,10 +1,10 @@
-package com.daniloaraujosilva.mathemagika.library.jvm.common
+package com.daniloaraujosilva.mathemagika.library.jvm
 
 import com.daniloaraujosilva.mathemagika.library.common.OperatingSystem
 import com.wolfram.jlink.*
 
 fun getLinkName(): String {
-	var linkName = System.getProperty("MATH_KERNEL_HOME")
+	var linkName = System.getProperty("MATH_KERNEL")
 	if (linkName == null) linkName = System.getProperty("math_kernel.home")
 	if (linkName == null) linkName = System.getProperty("mathKernelHome")
 	if (linkName == null) {
@@ -18,7 +18,7 @@ fun getLinkName(): String {
 	}
 
 	if (linkName == null) throw IllegalArgumentException(
-		"It was not possible to automatically identify the path to the MathKernel. Try to set the environment variable MATH_KERNEL_HOME."
+		"It was not possible to automatically identify the path to the MathKernel. Try to set the environment variable MATH_KERNEL."
 	)
 
 	return linkName

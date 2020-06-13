@@ -1,6 +1,6 @@
 package com.daniloaraujosilva.mathemagika.library.jvm
 
-import com.daniloaraujosilva.mathemagika.library.jvm.common.convertFromMathematicaTo
+import com.daniloaraujosilva.mathemagika.library.jvm.convertFromMathematicaTo
 import kotlin.test.Ignore
 import kotlin.test.Test
 import kotlin.test.assertEquals

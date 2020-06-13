@@ -1,8 +1,8 @@
 package com.daniloaraujosilva.mathemagika.library.common.jvm
 
 import com.daniloaraujosilva.mathemagika.library.common.jvm.EvaluationTypeEnum.*
-import com.daniloaraujosilva.mathemagika.library.jvm.common.isSuperClassOf
-import com.daniloaraujosilva.mathemagika.library.jvm.common.kotlinClass
+import com.daniloaraujosilva.mathemagika.library.jvm.isSuperClassOf
+import com.daniloaraujosilva.mathemagika.library.jvm.kotlinClass
 
 /**
  *

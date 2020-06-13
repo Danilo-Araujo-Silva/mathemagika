@@ -1,6 +1,6 @@
 package com.daniloaraujosilva.mathemagika.library.jvm.functions
 
-import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
+import com.daniloaraujosilva.mathemagika.library.jvm.MathematicaFunction
 
 /**                                                                                                                          \!RowBox[{"FindChannels", "[",                                                                                            gives a list of channels whose names match the string pattern "/abspath".\!RowBox[{"FindChannels", "[", StyleBox[                                                                             gives a list of channels whose names match the specified pattern representing a URL.
  *````                                                                                                                        *                   StyleBox[                                                                                              *                                                                         * Usage:            RowBox[{RowBox[{"\"mqtts", ":"}], "//", StyleBox["…", "TR"],"\""}], AutoSpacing -> False], "]"}] *

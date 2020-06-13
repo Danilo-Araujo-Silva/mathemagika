@@ -1,6 +1,6 @@
 package com.daniloaraujosilva.mathemagika.library.jvm.functions
 
-import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
+import com.daniloaraujosilva.mathemagika.library.jvm.MathematicaFunction
 
 /**                                                                                         \!                                       " in the operating system environment.
  *````                                                                                       *                   StyleBox["var", "TI"] *                   GetEnvironment[{var , var , …}] gives a list of rules, corresponding to specified environment variables.

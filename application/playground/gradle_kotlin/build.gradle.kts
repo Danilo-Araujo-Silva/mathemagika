@@ -11,9 +11,7 @@ dependencies {
 
 	implementation("com.daniloaraujosilva:mathemagika:0.0.1")
 
-	implementation(
-		mapOf("name" to "JLink")
-	)
+	implementation(mapOf("name" to "JLink"))
 
 	testImplementation(kotlin("test"))
 	testImplementation(kotlin("test-junit"))
@@ -24,9 +22,7 @@ repositories {
 	mavenCentral()
 	jcenter()
 	maven( url = "https://dl.bintray.com/kotlin/kotlin-eap" )
-	flatDir { dirs(
-		"/Applications/Mathematica.app/Contents/SystemFiles/Links/JLink"
-	) }
+	flatDir { dirs(System.getenv("JLINK_HOME")) }
 }
 
 //tasks.withType<ShadowJar> {

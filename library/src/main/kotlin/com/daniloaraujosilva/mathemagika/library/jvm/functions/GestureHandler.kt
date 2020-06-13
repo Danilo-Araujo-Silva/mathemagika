@@ -1,6 +1,6 @@
 package com.daniloaraujosilva.mathemagika.library.jvm.functions
 
-import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
+import com.daniloaraujosilva.mathemagika.library.jvm.MathematicaFunction
 
 /**                                                                                                                                          \!SubscriptBox[                                                                                                " occurs within the screen space occupied by expr.                                                                   \!                                                               ", followed by fun   [value, velocity] when the gesture ends.                                                                    \!                                                                                                     " begins.
  *````                                                                                                                                        *                                                1      1         2      2                                     i *                   GestureHandler[expr, {"gesture"  {fun, fun   }, …}] evaluates fun as updates are received for " *                                                              end *                                                               end                                                              *                                                         start          end                       start *

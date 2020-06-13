@@ -1,6 +1,6 @@
 package com.daniloaraujosilva.mathemagika.library.jvm.functions
 
-import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
+import com.daniloaraujosilva.mathemagika.library.jvm.MathematicaFunction
 
 /**                                                                \!SubscriptBox[                                    " appears before "\!SubscriptBox[                              " in alphabetical order, -1 if it is after, and 0 if it is identical.                                         \!SubscriptBox[                              ", "\!SubscriptBox[                              ".
  *````                                                              *                                         1        2                   *                   StyleBox["string", "TI"],  *                   AlphabeticOrder[string , string , lang] uses an ordering suitable for the language lang.  *                   StyleBox["string", "TI"],      *                   StyleBox["string", "TI"],  *

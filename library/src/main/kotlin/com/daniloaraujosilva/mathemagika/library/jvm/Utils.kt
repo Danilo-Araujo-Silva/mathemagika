@@ -1,4 +1,4 @@
-package com.daniloaraujosilva.mathemagika.library.jvm.common
+package com.daniloaraujosilva.mathemagika.library.jvm
 
 import com.daniloaraujosilva.mathemagika.library.common.OperatingSystem
 import com.daniloaraujosilva.mathemagika.library.common.jvm.EvaluationTypeEnum

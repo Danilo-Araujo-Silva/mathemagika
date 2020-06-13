@@ -1,4 +1,4 @@
-rootProject.name = "playground"
+rootProject.name = "playground_gradle_kotlin"
 
 pluginManagement {
 	repositories {

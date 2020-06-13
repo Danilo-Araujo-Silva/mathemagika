@@ -35,7 +35,7 @@ object ExampleObject {
 	fun exampleMethod(): List<String> {
 		val output = mutableListOf<String>()
 //		output.addAll(com.daniloaraujosilva.mathemagika.common.jvm.common.exampleFunction())
-		output.addAll(com.daniloaraujosilva.mathemagika.library.jvm.common.exampleFunction())
+		output.addAll(com.daniloaraujosilva.mathemagika.library.jvm.exampleFunction())
 		output.add(exampleProperty)
 
 		return output

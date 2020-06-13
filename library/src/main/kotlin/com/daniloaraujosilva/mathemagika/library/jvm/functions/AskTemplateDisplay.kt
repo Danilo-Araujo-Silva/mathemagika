@@ -1,6 +1,6 @@
 package com.daniloaraujosilva.mathemagika.library.jvm.functions
 
-import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
+import com.daniloaraujosilva.mathemagika.library.jvm.MathematicaFunction
 
 /**                                                                                                                                                                                                                                  \!                                       " as a string template to the association of values.
  *````                                                                                                                                                                                                                                * Usage:            StyleBox["str", "TI"] *

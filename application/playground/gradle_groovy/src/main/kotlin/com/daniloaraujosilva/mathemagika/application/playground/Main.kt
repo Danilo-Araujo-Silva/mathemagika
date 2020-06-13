@@ -7,7 +7,7 @@ import com.daniloaraujosilva.mathemagika.library.jvm.functions.*
 fun main() {
 	var r: String?
 	val x = "x"
-	val y = 10
+	val y = 100
 	val f = "#^2 &"
 
 //	val range = map(
@@ -18,13 +18,13 @@ fun main() {
 //		println(i)
 //	}
 
-//	r =
-//		map(
-//			f, range(5)
-//		)()
-//
-//	println(r)
-//
+	r =
+		map(
+			f, range(5)
+		)()
+
+	println(r)
+
 	r =
 	n(
 		d(
@@ -43,19 +43,17 @@ fun main() {
 	)()
 
 	println(r)
-//
-//	r = fullSimplify(
-//		with(
-//			l("$x = $EulerGamma"),
-//			sin("$Pi $x")
-//		)
-//	)()
-//
-//	println(r)
-//
-//	r = table(prime(x), l(x, 1, 10))()
-//
-//	println(r)
-//
-//	zeta(2).runToImage()
+
+	r = fullSimplify(
+		with(
+			l("$x = $EulerGamma"),
+			sin("$Pi $x")
+		)
+	)()
+
+	println(r)
+
+	r = table(prime(x), l(x, 1, 10))()
+
+	println(r)
 }

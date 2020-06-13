@@ -1,6 +1,6 @@
 package com.daniloaraujosilva.mathemagika.library.jvm.functions
 
-import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
+import com.daniloaraujosilva.mathemagika.library.jvm.MathematicaFunction
 
 /**                                                                                            \!                                        ".                                                                                             \!                                        ".                                                                                             \!                                        ".                                                                                      \!                                        ".
  *````                                                                                          *                   StyleBox["name", "TI"] *                   FileNameDrop["name", -n] drops the last n path elements in the file name " *                   StyleBox["name", "TI"] *                   FileNameDrop["name", {m, n}] drops elements m through n in the file name " *                   StyleBox["name", "TI"] *                   FileNameDrop["name"] drops the last path element in the file name " * Usage:            StyleBox["name", "TI"] *

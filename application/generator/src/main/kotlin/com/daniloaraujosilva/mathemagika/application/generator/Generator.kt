@@ -1,8 +1,8 @@
 package com.daniloaraujosilva.mathemagika.application.generator
 
-import com.daniloaraujosilva.mathemagika.library.jvm.common.Mathematica
+import com.daniloaraujosilva.mathemagika.library.jvm.Mathematica
 import com.daniloaraujosilva.mathemagika.library.common.kotlinKeywordsAndSymbols
-import com.daniloaraujosilva.mathemagika.library.jvm.common.convertFromMathematicaTo
+import com.daniloaraujosilva.mathemagika.library.jvm.convertFromMathematicaTo
 import java.nio.file.Path
 import java.nio.file.Paths
 import java.time.LocalDateTime
@@ -66,7 +66,7 @@ fun generateFunctionsFileContent(): String {
 		"""
 			|package com.daniloaraujosilva.mathemagika.library.jvm.functions
 			|
-			|import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
+			|import com.daniloaraujosilva.mathemagika.library.jvm.MathematicaFunction
 			|${generateAllFunctions()}
 			|
 		""".trimMargin()
@@ -101,7 +101,7 @@ fun generateAndExportFunction(functionName: String) {
 		"""
 			|package com.daniloaraujosilva.mathemagika.library.jvm.functions
 			|
-			|import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
+			|import com.daniloaraujosilva.mathemagika.library.jvm.MathematicaFunction
 			|
 			|${generateFunctionDocumentation(functionName)}
 			|${generateFunction(functionName)}

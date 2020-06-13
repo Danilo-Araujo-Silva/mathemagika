@@ -1,0 +1,35 @@
+//import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
+
+plugins {
+	id "org.jetbrains.kotlin.jvm" version "1.4-M2"
+//	id "com.github.johnrengelman.shadow" version "5.0.0"
+//	id "java"
+}
+
+repositories {
+	mavenCentral()
+	mavenLocal()
+	maven { url "https://dl.bintray.com/kotlin/kotlin-eap" }
+}
+
+dependencies {
+	implementation "org.jetbrains.kotlin:kotlin-stdlib"
+
+	implementation "com.daniloaraujosilva:mathemagika:0.0.1"
+
+	implementation name: "JLink"
+}
+
+repositories {
+	mavenLocal()
+	mavenCentral()
+	jcenter()
+	maven{ url "https://dl.bintray.com/kotlin/kotlin-eap" }
+	flatDir { dirs(System.env.JLINK_HOME) }
+}
+
+//tasks.withType<ShadowJar> {
+//	manifest {
+//		attributes.put("Main-Class", "com.daniloaraujosilva.mathemagika.application.playground.MainKt")
+//	}
+//}

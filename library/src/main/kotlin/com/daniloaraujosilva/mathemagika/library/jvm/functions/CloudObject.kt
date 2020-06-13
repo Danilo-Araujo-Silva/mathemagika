@@ -1,6 +1,6 @@
 package com.daniloaraujosilva.mathemagika.library.jvm.functions
 
-import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
+import com.daniloaraujosilva.mathemagika.library.jvm.MathematicaFunction
 
 /**                                                                                                               \!RowBox[{"CloudObject", "[",                                                                                                                represents a cloud object of a given user with a given path.                                                  \!RowBox[{"CloudObject", "[",                                                                                             represents a cloud object of the currently authenticated user at an absolute path.
  *````                                                                                                             *                   StyleBox[RowBox[{"\"user", ":", StyleBox["user", "TI"], "/", StyleBox["path", "TI"],"\""}], AutoSpacing -> False], "]"}] *                   CloudObject[uuid:StyleBox[uuid, TI]] represents a cloud object identified by a given UUID. *                   StyleBox[                                                                                              *                   CloudObject["relpath"] represents a cloud object of the currently authenticated user at a relative path.

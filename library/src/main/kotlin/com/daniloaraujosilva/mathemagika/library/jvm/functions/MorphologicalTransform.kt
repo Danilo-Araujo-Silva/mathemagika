@@ -1,6 +1,6 @@
 package com.daniloaraujosilva.mathemagika.library.jvm.functions
 
-import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
+import com.daniloaraujosilva.mathemagika.library.jvm.MathematicaFunction
 
 /**                                                                                                                                        \!                                        ".
  *````                                                                                                                                      *                   StyleBox["name", "TI"] * Usage:            MorphologicalTransform[image, transformation, n] applies n iterations of transformation on image.

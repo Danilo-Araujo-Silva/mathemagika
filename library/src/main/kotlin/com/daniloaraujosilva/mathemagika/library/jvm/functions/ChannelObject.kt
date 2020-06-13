@@ -1,6 +1,6 @@
 package com.daniloaraujosilva.mathemagika.library.jvm.functions
 
-import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
+import com.daniloaraujosilva.mathemagika.library.jvm.MathematicaFunction
 
 /**                                                                              \!RowBox[{"ChannelObject", "[", StyleBox[                                                                            represents a channel specified by a given URL.                                                                                   \!RowBox[{"ChannelObject", "[",                                                                                           represents a channel at an absolute path on the channel broker.
  *````                                                                            *                   RowBox[{RowBox[{"\"mqtts", ":"}], "//", StyleBox["…", "TR"],"\""}], AutoSpacing -> False], "]"}] *                   ChannelObject["relpath"] represents a channel for the currently authenticated user at a relative path.        *                   StyleBox[                                                                                              *

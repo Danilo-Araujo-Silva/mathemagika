@@ -1,6 +1,6 @@
 package com.daniloaraujosilva.mathemagika.library.jvm.functions
 
-import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
+import com.daniloaraujosilva.mathemagika.library.jvm.MathematicaFunction
 
 /**                                                                                                                                                                                                                     \!                                       " and the device-dependent color space "\!                                          ".
  *````                                                                                                                                                                                                                   *                   StyleBox["ics", "TI"]                                         * Usage:            StyleBox["device", "TI"] *

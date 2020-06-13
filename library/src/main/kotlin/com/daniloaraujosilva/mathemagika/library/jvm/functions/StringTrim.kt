@@ -1,6 +1,6 @@
 package com.daniloaraujosilva.mathemagika.library.jvm.functions
 
-import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
+import com.daniloaraujosilva.mathemagika.library.jvm.MathematicaFunction
 
 /**                                                                                       \!                                          ".
  *````                                                                                     *                   StyleBox["string", "TI"] * Usage:            StringTrim["string", patt] trims substrings matching patt from the beginning and end.

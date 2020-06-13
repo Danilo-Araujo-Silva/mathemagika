@@ -1,6 +1,6 @@
 package com.daniloaraujosilva.mathemagika.library.jvm.functions
 
-import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
+import com.daniloaraujosilva.mathemagika.library.jvm.MathematicaFunction
 
 /**                                                                                                                                                      \!                                        " over the daterange.
  *````                                                                                                                                                    *                   StyleBox["name", "TI"] *                   InteractiveTradingChart[{…}, {ind , ind , …}] makes a financial chart with indicators ind , ind , … .

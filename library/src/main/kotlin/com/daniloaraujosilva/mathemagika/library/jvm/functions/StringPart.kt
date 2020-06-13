@@ -1,6 +1,6 @@
 package com.daniloaraujosilva.mathemagika.library.jvm.functions
 
-import com.daniloaraujosilva.mathemagika.library.jvm.common.MathematicaFunction
+import com.daniloaraujosilva.mathemagika.library.jvm.MathematicaFunction
 
 /**                                                                       \!                                          ".                                                                                              \!                                                                         ".                                                                                    \!                                                                          " from the m   through the n   in steps of s.
  *````                                                                     *                   StyleBox["string", "TI"] *                                                                            th                 *                                          1   2                           i *                   StringPart["string", m;;n;;s] gives a list of the characters in " *                                                         th               th *                   StringPart[{s , s , …}, spec] gives the list of results for each of the s .

@@ -1,4 +1,4 @@
-package com.daniloaraujosilva.mathemagika.library.jvm.common
+package com.daniloaraujosilva.mathemagika.library.jvm
 
 /**
  *
@@ -20,7 +20,7 @@ object ExampleObject {
 	/**
 	 *
 	 */
-	private const val exampleProperty = "com.daniloaraujosilva.mathemagika.library.jvm.common"
+	private const val exampleProperty = "com.daniloaraujosilva.mathemagika.library.jvm"
 
 	/**
 	 *

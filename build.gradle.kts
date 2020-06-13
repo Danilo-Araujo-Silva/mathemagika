@@ -37,9 +37,13 @@ buildscript {
 	}
 
 	dependencies {
+		// This is important for force Kotlin/Native use the latest Kotlin version.
+		classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion")
+
 		// TODO See if we can move this only for the module that needs it.
 		// This classpath dependency is needed for JVM modules generate fat jars.
 		classpath(getDependency("build.gradle.kts", "com.github.jengelman.gradle.plugins:shadow"))
+
 		classpath(getDependency("build.gradle.kts", "org.jetbrains.dokka:dokka-gradle-plugin"))
 	}
 }

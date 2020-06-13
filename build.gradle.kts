@@ -87,7 +87,7 @@ tasks.withType<KotlinCompile> {
 }
 
 fun getMathematicaJLinkHome(): String {
-	var jlinkHome = getPropertyOrNull(listOf("JLINK_HOME", "jlink.home", "jLinkHome"))
+	var jlinkHome = getPropertyOrNull(listOf("JLINK_HOME"))
 	if (jlinkHome == null) {
 		val os = org.gradle.internal.os.OperatingSystem.current()
 		when {

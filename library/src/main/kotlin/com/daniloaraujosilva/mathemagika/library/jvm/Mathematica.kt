@@ -4,9 +4,7 @@ import com.daniloaraujosilva.mathemagika.library.common.OperatingSystem
 import com.wolfram.jlink.*
 
 fun getLinkName(): String {
-	var linkName = System.getProperty("MATH_KERNEL")
-	if (linkName == null) linkName = System.getProperty("math_kernel")
-	if (linkName == null) linkName = System.getProperty("mathKernel")
+	var linkName = System.getenv("MATH_KERNEL")
 	if (linkName == null) {
 		val os = detectOperatingSystem()
 		linkName = when {

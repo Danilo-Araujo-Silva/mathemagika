@@ -1,4 +1,4 @@
-package com.daniloaraujosilva.mathemagika.library.native.common
+package com.daniloaraujosilva.mathemagika.library.native
 
 /**
  *

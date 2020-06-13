@@ -5,14 +5,14 @@ import com.wolfram.jlink.*
 
 fun getLinkName(): String {
 	var linkName = System.getProperty("MATH_KERNEL")
-	if (linkName == null) linkName = System.getProperty("math_kernel.home")
-	if (linkName == null) linkName = System.getProperty("mathKernelHome")
+	if (linkName == null) linkName = System.getProperty("math_kernel")
+	if (linkName == null) linkName = System.getProperty("mathKernel")
 	if (linkName == null) {
 		val os = detectOperatingSystem()
 		linkName = when {
 			os == OperatingSystem.LINUX -> "math -mathlink"
 			os == OperatingSystem.MAC_OS_X -> "/Applications/Mathematica.app/Contents/MacOS/MathKernel -mathlink"
-			os == OperatingSystem.WINDOWS -> "c:\\program files\\wolfram research\\mathematica\\10.0\\mathkernel"
+			os == OperatingSystem.WINDOWS -> "C:\\Program Files\\Wolfram Research\\Mathematica\\10.0\\mathkernel"
 			else -> null
 		}
 	}

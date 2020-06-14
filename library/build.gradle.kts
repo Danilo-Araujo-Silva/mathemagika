@@ -73,7 +73,6 @@ kotlin {
 			configureSourceSet(this, "common")
 
 			dependencies {
-				implementation(project(":common"))
 				implementation(kotlin("stdlib-common"))
 			}
 		}
@@ -173,7 +172,6 @@ kotlin {
 
 			dependencies {
 				implementation(kotlin("stdlib-jdk8"))
-				implementation(kotlin("reflect"))
 				implementation(mapOf("name" to "JLink"))
 			}
 		}

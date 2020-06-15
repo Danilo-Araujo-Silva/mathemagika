@@ -48,17 +48,22 @@
 		</dependency>
 
 		<dependency>
-			<groupId>com.daniloaraujosilva</groupId>
-			<artifactId>mathemagika</artifactId>
+			<groupId>com.daniloaraujosilva.mathemagika</groupId>
+			<artifactId>library-jvm</artifactId>
 			<version>0.0.1</version>
 		</dependency>
-		<dependency>
-			<groupId>com.wolfram</groupId>
-			<artifactId>jlink</artifactId>
-			<scope>system</scope>
-			<!--suppress UnresolvedMavenProperty -->
-			<systemPath>${env.JLINK_HOME}/JLink.jar</systemPath>
-		</dependency>
+<!--		<dependency>-->
+<!--			<groupId>com.daniloaraujosilva</groupId>-->
+<!--			<artifactId>mathemagika</artifactId>-->
+<!--			<version>0.0.1</version>-->
+<!--		</dependency>-->
+<!--		<dependency>-->
+<!--			<groupId>com.wolfram</groupId>-->
+<!--			<artifactId>jlink</artifactId>-->
+<!--			<scope>system</scope>-->
+<!--			&lt;!&ndash;suppress UnresolvedMavenProperty &ndash;&gt;-->
+<!--			<systemPath>${env.JLINK_HOME}/JLink.jar</systemPath>-->
+<!--		</dependency>-->
 
 		<dependency>
 			<groupId>junit</groupId>

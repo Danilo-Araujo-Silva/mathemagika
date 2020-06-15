@@ -38,7 +38,10 @@ fun run(command: String, options: Map<String, Any?> = mutableMapOf()): String {
 @ExperimentalUnsignedTypes
 @ExperimentalStdlibApi
 inline fun <reified Return> run(command: String, @Suppress("UNUSED_PARAMETER") options: Map<String, Any?> = mutableMapOf()): Return {
-	return convertFromMathematica(executeSystemCommand(wolframScriptPath, wolframScriptArguments, command).trimEnd('\n'))
+	return convertFromMathematica(
+		executeSystemCommand(wolframScriptPath, wolframScriptArguments, command)
+			.trimEnd('\n')
+	)
 }
 
 /**

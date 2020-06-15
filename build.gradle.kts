@@ -44,7 +44,11 @@ buildscript {
 		// This classpath dependency is needed for JVM modules generate fat jars.
 		classpath(getDependency("build.gradle.kts", "com.github.jengelman.gradle.plugins:shadow"))
 
+		// For documentation
 		classpath(getDependency("build.gradle.kts", "org.jetbrains.dokka:dokka-gradle-plugin"))
+
+		// For Bintray
+		classpath(getDependency("build.gradle.kts", "com.jfrog.bintray.gradle:gradle-bintray-plugin"))
 	}
 }
 

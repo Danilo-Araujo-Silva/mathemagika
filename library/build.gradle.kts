@@ -1,6 +1,8 @@
 import groovy.util.Node
 import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
 import org.jetbrains.kotlin.gradle.plugin.KotlinSourceSet
+import com.jfrog.bintray.gradle.BintrayExtension
+import java.util.Date
 
 plugins {
 	kotlin("multiplatform")
@@ -8,7 +10,16 @@ plugins {
 	id("maven-publish")
 	id("java")
 	id("signing")
+	id("com.jfrog.bintray")
 }
+
+apply("../plugin/bundle.gradle.kts")
+
+@Suppress("unchecked_cast", "nothing_to_inline")
+fun <T> uncheckedCast(target: Any?): T = target as T
+val getProperty = uncheckedCast<(keys: List<String>) -> String>(extra["getProperty"])
+val getPropertyOrNull = uncheckedCast<(keys: List<String>) -> String?>(extra["getPropertyOrNull"])
+val getPropertyOrDefault = uncheckedCast<(keys: List<String>, default: String) -> String>(extra["getPropertyOrDefault"])
 
 kotlin {
 
@@ -319,18 +330,19 @@ val shadowJar = tasks.withType<ShadowJar> {
 	configurations = mutableListOf(runtimeClasspath)
 
 	dependencies {
-		include(dependency(":common"))
+//		include(dependency(":common"))
 	}
 }
 
 publishing {
 	publications {
-//		create<MavenPublication>("mavenLocal") {
-//			group = "com.daniloaraujosilva"
-//			artifactId = "mathemagika"
+//		create<MavenPublication>("library") {
+////			group = "com.daniloaraujosilva"
+////			artifactId = "mathemagika"
+////
+////			shadow.component(this)
 //
-//			shadow.component(this)
-//
+//			from(components["kotlin"])
 //			artifact(sourcesJar)
 ////			artifact(javadocJar)
 //		}
@@ -382,6 +394,37 @@ fun customizeForMavenCentral(pom: org.gradle.api.publish.maven.MavenPom) = pom.w
 			node("developer") {
 				add("name", "Danilo Araújo Silva")
 			}
+		}
+	}
+}
+
+tasks.named("bintrayUpload") {
+	dependsOn("publishToMavenLocal")
+}
+
+/**
+ *
+ */
+configure<BintrayExtension> {
+	user = getProperty(listOf("bintray.user"))
+	key = getProperty(listOf("bintray.key"))
+	setPublications("jvm")
+	publish = true
+	override = true
+	pkg.apply {
+		repo = "mathemagika"
+		name = "mathemagika"
+		desc = "Mathemagika is a Kotlin multiplatform library to communicate with Mathematica®. All over 6000+ bult-in Mathematica functions are supported out of the box."
+		userOrg = "danilo-araujo-silva"
+		websiteUrl = "https://github.com/Danilo-Araujo-Silva/mathemagika"
+		vcsUrl = "https://github.com/Danilo-Araujo-Silva/mathemagika"
+		issueTrackerUrl = "https://github.com/Danilo-Araujo-Silva/mathemagika/issues"
+		setLicenses("Apache-2.0")
+		setLabels("Mathemagika", "Mathematica", "Kotlin", "Multiplatform")
+		version.apply {
+			name = project.version.toString()
+			desc = project.version.toString()
+			released = Date().toString()
 		}
 	}
 }

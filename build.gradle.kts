@@ -91,26 +91,8 @@ tasks.withType<KotlinCompile> {
 }
 
 fun getMathematicaJLinkHome(): String {
-	var jlinkHome = getPropertyOrNull(listOf("JLINK_HOME"))
-	if (jlinkHome == null) {
-		val os = org.gradle.internal.os.OperatingSystem.current()
-		when {
-			os.isMacOsX() -> {
-				jlinkHome = "/Applications/Mathematica.app/Contents/SystemFiles/Links/JLink"
-			}
-			os.isLinux() -> {
-				// TODO Define a default path
-			}
-			os.isWindows() -> {
-				// TODO Define a default path
-			}
-		}
-	}
-
-	if (jlinkHome == null) throw IllegalArgumentException(
-		"It was not possible to automatically identify the path to the JLink.jar library. Try to set the environment variable JLINK_HOME."
-	)
-
-	return jlinkHome
+	return getPropertyOrNull(listOf("JLINK_HOME"))
+		?: throw IllegalArgumentException(
+			"It was not possible to automatically identify the path to the JLink.jar library. Try to set the environment variable JLINK_HOME."
+		)
 }
-

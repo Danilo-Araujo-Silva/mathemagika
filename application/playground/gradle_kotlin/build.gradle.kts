@@ -1,17 +1,29 @@
-//import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
+import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
 
 plugins {
 	kotlin("jvm") version "1.4-M2"
-//	id("com.github.johnrengelman.shadow") version "5.0.0"
-//	id("java")
 }
+
+buildscript {
+	repositories {
+		jcenter()
+	}
+	dependencies {
+		classpath("com.github.jengelman.gradle.plugins:shadow:5.2.0")
+	}
+}
+
+apply(plugin = "com.github.johnrengelman.shadow")
+apply(plugin = "java")
 
 dependencies {
 	implementation(kotlin("stdlib-jdk8"))
 
-	implementation("com.daniloaraujosilva:mathemagika:0.0.1")
+//	implementation("com.daniloaraujosilva:mathemagika:0.0.1")
 
-	implementation(mapOf("name" to "JLink"))
+	implementation("com.daniloaraujosilva.mathemagika:library-jvm:0.0.1")
+
+//	implementation(mapOf("name" to "JLink"))
 
 	testImplementation(kotlin("test"))
 	testImplementation(kotlin("test-junit"))
@@ -22,11 +34,11 @@ repositories {
 	mavenCentral()
 	jcenter()
 	maven( url = "https://dl.bintray.com/kotlin/kotlin-eap" )
-	flatDir { dirs(System.getenv("JLINK_HOME")) }
+//	flatDir { dirs(System.getenv("JLINK_HOME")) }
 }
 
-//tasks.withType<ShadowJar> {
-//	manifest {
-//		attributes.put("Main-Class", "com.daniloaraujosilva.mathemagika.application.playground.MainKt")
-//	}
-//}
+tasks.withType<ShadowJar> {
+	manifest {
+		attributes["Main-Class"] = "com.daniloaraujosilva.mathemagika.application.playground.MainKt"
+	}
+}

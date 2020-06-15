@@ -172,7 +172,7 @@ kotlin {
 
 			dependencies {
 				implementation(kotlin("stdlib-jdk8"))
-				implementation(mapOf("name" to "JLink"))
+//				implementation(mapOf("name" to "JLink"))
 			}
 		}
 		val jvmTest by getting {
@@ -325,15 +325,15 @@ val shadowJar = tasks.withType<ShadowJar> {
 
 publishing {
 	publications {
-		create<MavenPublication>("mavenLocal") {
-			group = "com.daniloaraujosilva"
-			artifactId = "mathemagika"
-
-			shadow.component(this)
-
-			artifact(sourcesJar)
-//			artifact(javadocJar)
-		}
+//		create<MavenPublication>("mavenLocal") {
+//			group = "com.daniloaraujosilva"
+//			artifactId = "mathemagika"
+//
+//			shadow.component(this)
+//
+//			artifact(sourcesJar)
+////			artifact(javadocJar)
+//		}
 		publications.withType<MavenPublication>().all {
 			customizeForMavenCentral(pom)
 

@@ -6,9 +6,15 @@ import java.time.LocalTime
 
 @ExperimentalStdlibApi
 @ExperimentalUnsignedTypes
-fun main() {
+fun main(vararg arguments: String) {
 	println(LocalTime.now())
+
 	println(zeta(2)())
+
+	arguments.forEach {
+		println(it.run<String>())
+	}
+
 //	println("Table[Prime[i], {i, 1000}]".run<String>())
 //	var r: String?
 //	val x = "x"

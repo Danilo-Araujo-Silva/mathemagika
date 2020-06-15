@@ -13,12 +13,30 @@ fun playground() {
 //	println(run("Prime[10]"))
 //	println(run<Double>(zeta(2) + "//N") + 2)
 //	println(zeta(2).run<Int?>())
+//	println(
+//		com.daniloaraujosilva.mathemagika.library.jvm.functions.zeta(2).runUsingJLink<String>(
+//			mapOf(
+//				type to EvaluationTypeEnum.OUTPUT_FORM,
+//				"pageWidth" to 100
+//			)
+//		)
+//	)
+
+//	println(convertFromMathematica<MutableList<Any>>("""{"Continue", "D", "Integral", "Integrate", "N", "Normal", "Series", "TravelDirectionsData", "Zeta", "ZetaZero"}"""))
+
 	println(
-		com.daniloaraujosilva.mathemagika.library.jvm.functions.zeta(2).runUsingJLink<String>(
-			mapOf(
-				type to EvaluationTypeEnum.OUTPUT_FORM,
-				"pageWidth" to 100
-			)
+		run(
+			"""
+			|Names[RegularExpression["Integra.*|Zeta.*|Series|D|Normal|Continue|TravelDirectionsData|N"]]//InputForm//ToString
+			""".trimMargin()
+		)
+	)
+
+	println(
+		run<MutableList<String>>(
+			"""
+			|Names[RegularExpression["Integra.*|Zeta.*|Series|D|Normal|Continue|TravelDirectionsData|N"]]//InputForm//ToString
+			""".trimMargin()
 		)
 	)
 }

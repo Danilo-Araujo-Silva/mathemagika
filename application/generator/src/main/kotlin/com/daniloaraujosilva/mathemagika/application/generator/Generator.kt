@@ -1,31 +1,30 @@
 package com.daniloaraujosilva.mathemagika.application.generator
 
-import com.daniloaraujosilva.mathemagika.library.jvm.Mathematica
 import com.daniloaraujosilva.mathemagika.library.common.kotlinKeywordsAndSymbols
-import com.daniloaraujosilva.mathemagika.library.jvm.convertFromMathematicaTo
+import com.daniloaraujosilva.mathemagika.library.common.mathematica.run
 import java.nio.file.Path
 import java.nio.file.Paths
 import java.time.LocalDateTime
 
+@ExperimentalStdlibApi
 @ExperimentalUnsignedTypes
 fun main() {
-//	generateAndExportMathematicaFunctionsIndividually()
+	generateAndExportMathematicaFunctionsIndividually()
 
 //	playground()
 }
 
-lateinit var mathematica: Mathematica
-
 lateinit var basePath: Path
 
+/**
+ *
+ */
+@ExperimentalStdlibApi
 @ExperimentalUnsignedTypes
 fun generateAndExportMathematicaFunctionsIndividually() {
-	try {
 		println("Start time: ${LocalDateTime.now()}")
 
-		basePath = Paths.get("library/src/main/kotlin/com/daniloaraujosilva/mathemagika/library/jvm.common.functions")
-
-		mathematica = Mathematica()
+		basePath = Paths.get("library/src/main/kotlin/com/daniloaraujosilva/mathemagika/library/common/mathematica/functions")
 
 		val functionNames = getAllFunctionsNames()
 
@@ -33,47 +32,47 @@ fun generateAndExportMathematicaFunctionsIndividually() {
 			"""
 			Functions to be generated:
 
-			${functionNames}
+			$functionNames
 		""".trimIndent()
 		)
 
 		for (functionName in functionNames) {
 			generateAndExportFunction(functionName)
 		}
-	} finally {
-		mathematica.closeKernelLink()
 
 		println("End time: ${LocalDateTime.now()}")
-	}
 }
 
+/**
+ *
+ */
+@ExperimentalStdlibApi
 @ExperimentalUnsignedTypes
 fun generateAndExportMathematicaFunctionsTogether() {
-	try {
-		mathematica = Mathematica()
+	basePath = Paths.get("library/src/main/kotlin/com/daniloaraujosilva/mathemagika/library/common/mathematica/functions/MathematicaFunctions.kt")
 
-		basePath = Paths.get("library/src/main/kotlin/com/daniloaraujosilva/mathemagika/library/jvm.common.functions/MathematicaFunctions.kt")
-
-		basePath.toFile().writeText(generateFunctionsFileContent())
-	} finally {
-		mathematica.closeKernelLink()
-	}
+	basePath.toFile().writeText(generateFunctionsFileContent())
 }
 
+/**
+ *
+ */
+@ExperimentalStdlibApi
 @ExperimentalUnsignedTypes
 fun generateFunctionsFileContent(): String {
-	var content =
-		"""
-			|package com.daniloaraujosilva.mathemagika.library.jvm.functions
-			|
-			|import com.daniloaraujosilva.mathemagika.library.jvm.MathematicaFunction
-			|${generateAllFunctions()}
-			|
-		""".trimMargin()
-
-	return content
+	return """
+		|package com.daniloaraujosilva.mathemagika.library.common.mathematica.functions
+		|
+		|import com.daniloaraujosilva.mathemagika.library.common.mathematica.MathematicaFunction
+		|${generateAllFunctions()}
+		|
+	""".trimMargin()
 }
 
+/**
+ *
+ */
+@ExperimentalStdlibApi
 @ExperimentalUnsignedTypes
 fun generateAllFunctions(): String {
 	var output = ""
@@ -94,17 +93,21 @@ fun generateAllFunctions(): String {
 	return output
 }
 
+/**
+ *
+ */
+@ExperimentalStdlibApi
+@ExperimentalUnsignedTypes
 fun generateAndExportFunction(functionName: String) {
 	println("Exporting function $functionName:")
 
 	val content =
 		"""
-			|package com.daniloaraujosilva.mathemagika.library.jvm.functions
+			|package com.daniloaraujosilva.mathemagika.library.common.mathematica.functions
 			|
-			|import com.daniloaraujosilva.mathemagika.library.jvm.MathematicaFunction
+			|import com.daniloaraujosilva.mathemagika.library.common.mathematica.MathematicaFunction
 			|
-			|${generateFunctionDocumentation(functionName)}
-			|${generateFunction(functionName)}
+			|${generateFunctionDocumentation(functionName)}${generateFunction(functionName)}
 			|
 		""".trimMargin()
 
@@ -113,6 +116,9 @@ fun generateAndExportFunction(functionName: String) {
 	println("Function $functionName exported.")
 }
 
+/**
+ *
+ */
 fun generateFunction(functionName: String): String {
 		lateinit var rawFunctionName: String
 		lateinit var methodName: String
@@ -140,26 +146,26 @@ fun generateFunction(functionName: String): String {
 	return result
 }
 
+@ExperimentalStdlibApi
 @ExperimentalUnsignedTypes
 fun getAllFunctionsNames(): MutableList<String> {
-	val result = mathematica.evaluateToOutputForm(
-//		"""
-//		|Names[RegularExpression["\\${'$'}VoiceStyles|Integra.*|Zeta.*|Series|D|Normal|Continue|TravelDirectionsData|N"]]
-//		""".trimMargin()
-//		"""
-//		|Names[RegularExpression["\${'$'}?[A-Za-z0-9].*"]]
-//		""".trimMargin()
+	return run<MutableList<String>>(
 		"""
-		|Names[RegularExpression[".*"]]
+		|Names[RegularExpression["Integra.*|Zeta.*|Series|D|Normal|Continue|TravelDirectionsData|N"]]//InputForm//ToString
 		""".trimMargin()
+//		"""
+//		|Names[RegularExpression["\${'$'}?[A-Za-z0-9].*"]]// InputForm
+//		""".trimMargin()
+//		"""
+//		|Names[RegularExpression[".*"]]// InputForm
+//		""".trimMargin()
 	)
-
-	return convertFromMathematicaTo(result)
 }
 
+@ExperimentalStdlibApi
 @ExperimentalUnsignedTypes
 fun generateFunctionDocumentation(functionName: String): String {
-	val result = mathematica.evaluateToOutputForm(
+	return run(
 		"""
 		|With[
 		|	{expression = $functionName},
@@ -205,9 +211,7 @@ fun generateFunctionDocumentation(functionName: String): String {
 		|	]
 		|	<>
 		|	"\n */"
-		|]//TableForm
+		|]
 		""".trimMargin()
 	)
-
-	return convertFromMathematicaTo(result)
 }

@@ -38,7 +38,7 @@ fun run(command: String, options: Map<String, Any?> = mutableMapOf()): String {
 @ExperimentalUnsignedTypes
 @ExperimentalStdlibApi
 inline fun <reified Return> run(command: String, options: Map<String, Any?> = mutableMapOf()): Return {
-	return convertFromMathematica(executeSystemCommand(wolframScriptPath, wolframScriptArguments, command))
+	return convertFromMathematica(executeSystemCommand(wolframScriptPath, wolframScriptArguments, command).trimEnd('\n'))
 }
 
 /**

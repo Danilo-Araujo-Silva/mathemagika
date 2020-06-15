@@ -13,7 +13,14 @@ inline fun <reified Return> convertFromMathematica(any: Any?, @Suppress("UNUSED_
 	val anyAsString = any.toString()
 
 	val fromMathematicaList = {
-		input: String -> input.drop(1).dropLast(1).split(", ").toMutableList()
+		input: String ->
+			val output: MutableList<Any> = mutableListOf()
+
+			input.trimStart('{').trimEnd('}').trim().split(", ").toMutableList().map {
+				output.add(it.trim('"'))
+			}
+
+			output
 	}
 
 	return when(returnClass) {

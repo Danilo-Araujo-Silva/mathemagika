@@ -33,5 +33,18 @@ actual fun getEnvironmentVariable(candidates: List<String>, default: String?): S
 		if (value != null) return value
 	}
 
-	return null
+	return default
+}
+
+/**
+ *
+ */
+actual fun getProperty(candidates: List<String>, default: String?): String? {
+	candidates.forEach {
+		val value = System.getProperty(it)
+
+		if (value != null) return value
+	}
+
+	return default
 }

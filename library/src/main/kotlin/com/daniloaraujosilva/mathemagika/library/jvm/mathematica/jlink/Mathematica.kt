@@ -1,29 +1,28 @@
-package com.daniloaraujosilva.mathemagika.library.jvm
+package com.daniloaraujosilva.mathemagika.library.jvm.mathematica.jlink
 
-import com.daniloaraujosilva.mathemagika.library.common.OperatingSystem
-import com.wolfram.jlink.*
+import com.daniloaraujosilva.mathemagika.library.common.system.getEnvironmentVariable
+import com.wolfram.jlink.Expr
+import com.wolfram.jlink.JLinkClassLoader
+import com.wolfram.jlink.KernelLink
+import com.wolfram.jlink.LoopbackLink
+import com.wolfram.jlink.MLFunction
+import com.wolfram.jlink.MathLink
+import com.wolfram.jlink.MathLinkException
+import com.wolfram.jlink.MathLinkFactory
+import com.wolfram.jlink.PacketListener
 
+/**
+ *
+ */
 fun getLinkName(): String {
-	var linkName = System.getenv("MATH_KERNEL")
-	if (linkName == null) {
-		val os = detectOperatingSystem()
-		linkName = when {
-			os == OperatingSystem.LINUX -> "math -mathlink"
-			os == OperatingSystem.MAC_OS_X -> "/Applications/Mathematica.app/Contents/MacOS/MathKernel -mathlink"
-			os == OperatingSystem.WINDOWS -> "C:\\Program Files\\Wolfram Research\\Mathematica\\10.0\\mathkernel"
-			else -> null
-		}
-	}
-
-	if (linkName == null) throw IllegalArgumentException(
-		"It was not possible to automatically identify the path to the MathKernel. Try to set the environment variable MATH_KERNEL."
-	)
-
-	return linkName
+	return getEnvironmentVariable(listOf("MATH_KERNEL"))
+		?: throw IllegalArgumentException(
+			"It was not possible to automatically identify the path to the MathKernel. Try to set the environment variable MATH_KERNEL."
+		)
 }
 
 /**
- * TODO Try to automatically support Windows and Linux as well.
+ *
  */
 class Mathematica(
 	linkMode: String = "launch",
@@ -46,8 +45,8 @@ class Mathematica(
 	 *
 	 */
 	fun createOrReplaceKernelLink(
-		linkMode: String = "launch",
-		linkName: String = "/Applications/Mathematica.app/Contents/MacOS/MathKernel -mathlink"
+		linkMode: String,
+		linkName: String
 	): KernelLink {
 		val parameters = arrayOf("-linkmode", linkMode, "-linkname", linkName)
 

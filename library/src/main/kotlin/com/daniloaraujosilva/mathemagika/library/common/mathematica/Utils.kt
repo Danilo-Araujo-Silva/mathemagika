@@ -91,3 +91,8 @@ inline fun <reified Return> convertFromMathematica(any: Any?, @Suppress("UNUSED_
 		}
 	} as Return
 }
+
+/**
+ *
+ */
+fun l(vararg arguments: Any?): MutableList<Any?> = arguments.toMutableList()

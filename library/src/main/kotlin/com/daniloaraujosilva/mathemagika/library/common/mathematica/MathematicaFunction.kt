@@ -11,7 +11,7 @@ const val type = "type"
 /**
  *
  */
-data class MathematicaFunction (
+open class MathematicaFunction (
 
 	/**
 	 *

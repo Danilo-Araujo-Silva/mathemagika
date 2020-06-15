@@ -13,3 +13,10 @@ actual fun executeSystemCommand(commands: List<String>): String {
 actual fun getEnvironmentVariable(candidates: List<String>, default: String?): String? {
 	TODO()
 }
+
+/**
+ *
+ */
+actual fun getProperty(candidates: List<String>, default: String?): String? {
+	TODO()
+}

@@ -23,3 +23,10 @@ fun executeSystemCommand(command: String): String {
 fun getEnvironmentVariable(vararg candidates: String, default: String?): String? {
 	return getEnvironmentVariable(candidates.toList(), default)
 }
+
+/**
+ *
+ */
+fun getProperty(vararg candidates: String, default: String?): String? {
+	return getProperty(candidates.toList(), default)
+}

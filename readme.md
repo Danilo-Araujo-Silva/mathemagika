@@ -99,7 +99,7 @@ repositories {
 }
 
 dependencies {
-  implementation("com.daniloaraujosilva.mathemagika:library-jvm:1.0.0")
+  implementation("com.daniloaraujosilva:mathemagika-jvm:1.0.0")
 }
 ```
 <!--
@@ -110,7 +110,7 @@ repositories {
 }
 
 dependencies {
-  implementation("com.daniloaraujosilva.mathemagika:library-jvm:1.0.0")
+  implementation("com.daniloaraujosilva:mathemagika-jvm:1.0.0")
   implementation(mapOf("name" to "JLink"))
 }
 ```
@@ -125,7 +125,7 @@ repositories {
 }
 
 dependencies {
-  implementation "com.daniloaraujosilva.mathemagika:library-jvm:1.0.0"
+  implementation "com.daniloaraujosilva:mathemagika-jvm:1.0.0"
 }
 ```
 
@@ -137,7 +137,7 @@ repositories {
 }
 
 dependencies {
-  implementation "com.daniloaraujosilva.mathemagika:library-jvm:1.0.0"
+  implementation "com.daniloaraujosilva:mathemagika-jvm:1.0.0"
   implementation name "JLink"
 }
 ```
@@ -162,8 +162,8 @@ Configuration for Maven projects:
 
   <dependencies>
     <dependency>
-      <groupId>com.daniloaraujosilva.mathemagika</groupId>
-      <artifactId>library-jvm</artifactId>
+      <groupId>com.daniloaraujosilva</groupId>
+      <artifactId>mathemagika-jvm</artifactId>
       <version>1.0.0</version>
     </dependency>
   </dependencies>
@@ -184,7 +184,7 @@ Configuration for Maven projects:
   <dependencies>
     <dependency>
       <groupId>com.daniloaraujosilva</groupId>
-      <artifactId>mathemagika</artifactId>
+      <artifactId>mathemagika-jvm</artifactId>
       <version>1.0.0</version>
     </dependency>
     <dependency>

@@ -38,10 +38,21 @@ fun run(command: String, options: Map<String, Any?> = mutableMapOf()): String {
 @ExperimentalUnsignedTypes
 @ExperimentalStdlibApi
 inline fun <reified Return> run(command: String, @Suppress("UNUSED_PARAMETER") options: Map<String, Any?> = mutableMapOf()): Return {
-	return convertFromMathematica(
-		executeSystemCommand(wolframScriptPath, wolframScriptArguments, command)
-			.trimEnd('\n')
-	)
+	var result: String = ""
+
+	return try {
+		result = executeSystemCommand(wolframScriptPath, wolframScriptArguments, command).trimEnd('\n')
+
+		convertFromMathematica(result)
+	} catch (exception: Exception) {
+		throw Exception("""
+			An error occurred when running a command on Mathematica.
+			Command: $command
+			Options: $options
+			Result: $result
+			Error: ${exception.message}
+			""".trimIndent(), exception)
+	}
 }
 
 /**

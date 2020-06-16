@@ -297,11 +297,12 @@ fun main() {
 
   /*
     We also have a lot of possibilities for automatic conversions.
-    Here we are using the invoke operator with a type `<List<Int>>()`, this tells Kotlin to automatically convert the
-      result from Mathematica (which comes in String form) to a list of integers for us (`List<Int>`).
-    We can also use `run<List<Int>>()` or other helpful conversions like: `<Int>()`, `<Long>()`, `<Double>()`,
+    Here we are using the invoke operator with a type `<List<String>>()`, this tells Kotlin to automatically convert the
+      result from Mathematica (which comes in String form) to a list of strings for us (`List<String>`).
+    We can also use `run<List<String>>()` or other helpful conversions like: `<Int>()`, `<Long>()`, `<Double>()`,
       and so on.
     Also we are mapping our literal function `f` as well.
+    Please note that iterables like <List<String>>() have a limited support for now.
   */
   val range = map(f, range(5))<List<String>>()
 

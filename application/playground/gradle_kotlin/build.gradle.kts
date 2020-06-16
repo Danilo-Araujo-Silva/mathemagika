@@ -19,10 +19,7 @@ apply(plugin = "java")
 dependencies {
 	implementation(kotlin("stdlib-jdk8"))
 
-//	implementation("com.daniloaraujosilva:mathemagika:0.0.1")
-
-//	implementation("com.daniloaraujosilva.mathemagika:library-jvm:0.0.1")
-	implementation("com.daniloaraujosilva.mathemagika:library-jvm:0.0.1")
+	implementation("com.daniloaraujosilva:mathemagika:1.0.0")
 
 
 //	implementation(mapOf("name" to "JLink"))

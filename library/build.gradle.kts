@@ -349,9 +349,7 @@ publishing {
 		publications.withType<MavenPublication>().all {
 			group = "com.daniloaraujosilva"
 
-			if (name != "KotlinMultiplatform") {
-				artifactId = "mathemagika-$name"
-			}
+			artifactId = if (name != "kotlinMultiplatform") "mathemagika-$name" else "mathemagika"
 
 			customizeForMavenCentral(pom)
 
@@ -414,12 +412,12 @@ tasks.named("bintrayUpload") {
 configure<BintrayExtension> {
 	user = getProperty(listOf("bintray.user"))
 	key = getProperty(listOf("bintray.key"))
-	setPublications("jvm")
+	setPublications(*publishing.publications.names.toTypedArray())
 	publish = true
 	override = true
 	pkg.apply {
 		repo = "mathemagika"
-		name = "mathemagika-jvm"
+		name = "mathemagika"
 		desc = "Mathemagika is a Kotlin multiplatform library to communicate with Mathematica®. All over 6000+ bult-in Mathematica functions are supported out of the box."
 		userOrg = "danilo-araujo-silva"
 		websiteUrl = "https://github.com/Danilo-Araujo-Silva/mathemagika"

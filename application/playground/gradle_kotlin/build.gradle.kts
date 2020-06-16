@@ -37,7 +37,7 @@ repositories {
 	jcenter()
 	maven( url = "https://dl.bintray.com/kotlin/kotlin-eap" )
 //	flatDir { dirs(System.getenv("JLINK_HOME")) }
-	maven ( url = "https://dl.bintray.com/danilo-araujo-silva/mathemagika")
+//	maven ( url = "https://dl.bintray.com/danilo-araujo-silva/mathemagika")
 }
 
 tasks.withType<ShadowJar> {

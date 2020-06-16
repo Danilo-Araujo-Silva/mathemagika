@@ -1,10 +1,6 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 import java.lang.IllegalArgumentException
 
-plugins {
-	kotlin("multiplatform")
-}
-
 buildscript {
 	// TODO Due to Gradle limitation we needed to bundle all code of the plugins together.
 	apply("plugin/bundle.gradle.kts")
@@ -38,7 +34,7 @@ buildscript {
 
 	dependencies {
 		// This is important for force Kotlin/Native use the latest Kotlin version. Unfortunately this is breaking Kotlin/JS.
-//		classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion")
+		classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion")
 
 		// TODO See if we can move this only for the module that needs it.
 		// This classpath dependency is needed for JVM modules generate fat jars.
@@ -59,6 +55,8 @@ fun <T> uncheckedCast(target: Any?): T = target as T
 val getProperty = uncheckedCast<(keys: List<String>) -> String>(extra["getProperty"])
 val getPropertyOrNull = uncheckedCast<(keys: List<String>) -> String?>(extra["getPropertyOrNull"])
 val getPropertyOrDefault = uncheckedCast<(keys: List<String>, default: String) -> String>(extra["getPropertyOrDefault"])
+
+apply(plugin = "kotlin-multiplatform")
 
 val projectGroup = getProperty(listOf("project.group"))
 val projectVersion = getProperty(listOf("project.version"))

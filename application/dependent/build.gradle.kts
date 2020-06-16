@@ -8,7 +8,12 @@ plugins {
 
 dependencies {
 	implementation(kotlin("stdlib-jdk8"))
+
 	implementation(project(":library"))
+
+//	implementation(
+//		mapOf("name" to "JLink")
+//	)
 
 	testImplementation(kotlin("test"))
 	testImplementation(kotlin("test-junit"))
@@ -18,9 +23,9 @@ repositories {
 	mavenCentral()
 	mavenLocal()
 	maven( url = "https://dl.bintray.com/kotlin/kotlin-eap" )
-	flatDir { dirs(
-		"/Applications/Mathematica.app/Contents/SystemFiles/Links/JLink"
-	) }
+//	flatDir { dirs(
+//		"/Applications/Mathematica.app/Contents/SystemFiles/Links/JLink"
+//	) }
 }
 
 tasks.withType<ShadowJar> {

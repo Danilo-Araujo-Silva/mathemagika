@@ -16,19 +16,11 @@ plugins {
 apply plugin: "com.github.johnrengelman.shadow"
 apply plugin: "java"
 
-repositories {
-	mavenCentral()
-	mavenLocal()
-	jcenter()
-	maven { url "https://dl.bintray.com/kotlin/kotlin-eap" }
-}
-
 dependencies {
 	implementation "org.jetbrains.kotlin:kotlin-stdlib"
 
-	implementation "com.daniloaraujosilva.mathemagika:library-jvm:0.0.1"
+	implementation "com.daniloaraujosilva:mathemagika-jvm:1.0.0"
 
-//	implementation "com.daniloaraujosilva:mathemagika:0.0.1"
 //	implementation name: "JLink"
 }
 
@@ -36,8 +28,9 @@ repositories {
 	mavenLocal()
 	mavenCentral()
 	jcenter()
-	maven{ url "https://dl.bintray.com/kotlin/kotlin-eap" }
+	maven { url "https://dl.bintray.com/kotlin/kotlin-eap" }
 //	flatDir { dirs(System.env.JLINK_HOME) }
+	maven { url "https://dl.bintray.com/danilo-araujo-silva/mathemagika" }
 }
 
 shadowJar {

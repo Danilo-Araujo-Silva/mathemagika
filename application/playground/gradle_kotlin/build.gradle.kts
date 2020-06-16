@@ -19,7 +19,7 @@ apply(plugin = "java")
 dependencies {
 	implementation(kotlin("stdlib-jdk8"))
 
-	implementation("com.daniloaraujosilva:mathemagika:1.0.0")
+	implementation("com.daniloaraujosilva:mathemagika-jvm:1.0.0")
 
 
 //	implementation(mapOf("name" to "JLink"))
@@ -29,12 +29,12 @@ dependencies {
 }
 
 repositories {
-	mavenLocal()
+//	mavenLocal()
 	mavenCentral()
 	jcenter()
 	maven( url = "https://dl.bintray.com/kotlin/kotlin-eap" )
 //	flatDir { dirs(System.getenv("JLINK_HOME")) }
-//	maven ( url = "https://dl.bintray.com/danilo-araujo-silva/mathemagika")
+	maven ( url = "https://dl.bintray.com/danilo-araujo-silva/mathemagika")
 }
 
 tasks.withType<ShadowJar> {

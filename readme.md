@@ -301,18 +301,15 @@ fun main() {
       result from Mathematica (which comes in String form) to a list of integers for us (`List<Int>`).
     We can also use `run<List<Int>>()` or other helpful conversions like: `<Int>()`, `<Long>()`, `<Double>()`,
       and so on.
+    Also we are mapping our literal function `f` as well.
   */
-  val range = map(f, range(5))<List<Int>>()
+  val range = map(f, range(5))<List<String>>()
 
   for (i in range) { // It is cool tha we can immediately iterate over the result.
     println(i)
   }
 
   println("Zeta[4] //N".run<Double>()) // We can also run "raw" strings this way.
-
-  r = apply(f, l(1, 2, 3, 4))() // Here we are applying our literal function `f` to a list.
-
-  print(r)
 
   // The possibilities are our imagination.
 }

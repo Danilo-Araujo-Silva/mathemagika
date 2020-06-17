@@ -3,6 +3,8 @@ import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
 import org.jetbrains.kotlin.gradle.plugin.KotlinSourceSet
 import com.jfrog.bintray.gradle.BintrayExtension
 import java.util.Date
+import com.jfrog.bintray.gradle.tasks.BintrayUploadTask
+import org.gradle.api.publish.maven.internal.artifact.FileBasedMavenArtifact
 
 plugins {
 	kotlin("multiplatform")
@@ -402,8 +404,22 @@ fun customizeForMavenCentral(pom: org.gradle.api.publish.maven.MavenPom) = pom.w
 	}
 }
 
-tasks.named("bintrayUpload") {
-	dependsOn("publishToMavenLocal")
+/**
+ *
+ */
+tasks.withType<BintrayUploadTask> {
+	doFirst {
+		publishing.publications
+			.filterIsInstance<MavenPublication>()
+			.forEach { publication ->
+				val moduleFile = buildDir.resolve("publications/${publication.name}/module.json")
+				if (moduleFile.exists()) {
+					publication.artifact(object : FileBasedMavenArtifact(moduleFile) {
+						override fun getDefaultExtension() = "module"
+					})
+				}
+			}
+	}
 }
 
 /**

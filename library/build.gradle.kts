@@ -300,6 +300,14 @@ fun configureSourceSet(sourceSet: KotlinSourceSet, packageName: String) {
 publishing {
 	repositories {
 		mavenLocal()
+		maven {
+			name = "bintray"
+			url = uri("https://api.bintray.com/maven/danilo-araujo-silva/mathemagika/mathemagika/;publish=1;override=1")
+			credentials {
+				username = getProperty(listOf("bintray.user"))
+				password = getProperty(listOf("bintray.key"))
+			}
+		}
 	}
 }
 
@@ -404,47 +412,47 @@ fun customizeForMavenCentral(pom: org.gradle.api.publish.maven.MavenPom) = pom.w
 	}
 }
 
-/**
- *
- */
-tasks.withType<BintrayUploadTask> {
-	doFirst {
-		publishing.publications
-			.filterIsInstance<MavenPublication>()
-			.forEach { publication ->
-				val moduleFile = buildDir.resolve("publications/${publication.name}/module.json")
-				if (moduleFile.exists()) {
-					publication.artifact(object : FileBasedMavenArtifact(moduleFile) {
-						override fun getDefaultExtension() = "module"
-					})
-				}
-			}
-	}
-}
-
-/**
- *
- */
-configure<BintrayExtension> {
-	user = getProperty(listOf("bintray.user"))
-	key = getProperty(listOf("bintray.key"))
-	setPublications(*publishing.publications.names.toTypedArray())
-	publish = true
-	override = true
-	pkg.apply {
-		repo = "mathemagika"
-		name = "mathemagika"
-		desc = "Mathemagika is a Kotlin multiplatform library to communicate with Mathematica®. All over 6000+ bult-in Mathematica functions are supported out of the box."
-		userOrg = "danilo-araujo-silva"
-		websiteUrl = "https://github.com/Danilo-Araujo-Silva/mathemagika"
-		vcsUrl = "https://github.com/Danilo-Araujo-Silva/mathemagika"
-		issueTrackerUrl = "https://github.com/Danilo-Araujo-Silva/mathemagika/issues"
-		setLicenses("Apache-2.0")
-		setLabels("Mathemagika", "Mathematica", "Kotlin", "Multiplatform")
-		version.apply {
-			name = project.version.toString()
-			desc = project.version.toString()
-			released = Date().toString()
-		}
-	}
-}
+///**
+// *
+// */
+//tasks.withType<BintrayUploadTask> {
+//	doFirst {
+//		publishing.publications
+//			.filterIsInstance<MavenPublication>()
+//			.forEach { publication ->
+//				val moduleFile = buildDir.resolve("publications/${publication.name}/module.json")
+//				if (moduleFile.exists()) {
+//					publication.artifact(object : FileBasedMavenArtifact(moduleFile) {
+//						override fun getDefaultExtension() = "module"
+//					})
+//				}
+//			}
+//	}
+//}
+//
+///**
+// *
+// */
+//configure<BintrayExtension> {
+//	user = getProperty(listOf("bintray.user"))
+//	key = getProperty(listOf("bintray.key"))
+//	setPublications(*publishing.publications.names.toTypedArray())
+//	publish = true
+//	override = true
+//	pkg.apply {
+//		repo = "mathemagika"
+//		name = "mathemagika"
+//		desc = "Mathemagika is a Kotlin multiplatform library to communicate with Mathematica®. All over 6000+ bult-in Mathematica functions are supported out of the box."
+//		userOrg = "danilo-araujo-silva"
+//		websiteUrl = "https://github.com/Danilo-Araujo-Silva/mathemagika"
+//		vcsUrl = "https://github.com/Danilo-Araujo-Silva/mathemagika"
+//		issueTrackerUrl = "https://github.com/Danilo-Araujo-Silva/mathemagika/issues"
+//		setLicenses("Apache-2.0")
+//		setLabels("Mathemagika", "Mathematica", "Kotlin", "Multiplatform")
+//		version.apply {
+//			name = project.version.toString()
+//			desc = project.version.toString()
+//			released = Date().toString()
+//		}
+//	}
+//}

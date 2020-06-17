@@ -1,5 +1,7 @@
 rootProject.name = "playground_gradle_kotlin"
 
+enableFeaturePreview("GRADLE_METADATA")
+
 pluginManagement {
 	repositories {
 		mavenLocal()

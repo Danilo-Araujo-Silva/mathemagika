@@ -1,5 +1,7 @@
 rootProject.name = "mathemagika"
 
+enableFeaturePreview("GRADLE_METADATA")
+
 // TODO Due to Gradle limitation we needed to bundle all code of the plugins together.
 apply("plugin/bundle.gradle.kts")
 @Suppress("unchecked_cast", "nothing_to_inline")

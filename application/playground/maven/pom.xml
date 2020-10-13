@@ -35,7 +35,7 @@
 
 	<properties>
 		<kotlin.version>1.4-M2</kotlin.version>
-		<junit.version>4.12</junit.version>
+		<junit.version>4.13.1</junit.version>
 		<main.class>com.daniloaraujosilva.mathemagika.application.playground.MainKt</main.class>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
